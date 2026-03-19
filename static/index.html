@@ -9,46 +9,55 @@
   <body>
     <main class="layout">
       <section class="hero card">
-        <div>
+        <div class="hero-copy">
           <p class="eyebrow">CS2 strat builder</p>
-          <h1>Build a CS2 numpad config from map-specific strategies</h1>
+          <h1>Set up your CS2 numpad binds for each map</h1>
           <p class="lead">
-            Pick a map and side, then customize each numpad bind with predefined strategy calls or your own manual edits.
+            Pick a map, choose T or CT, and edit your numpad binds in one place. Team chat is added automatically, so you only have to write the actual call.
           </p>
+        </div>
+        <div class="hero-badge" aria-hidden="true">
+          <span>9 hotkeys</span>
+          <strong>Quick config export</strong>
         </div>
       </section>
 
       <section class="builder card">
         <div class="builder-sidebar">
-          <h2>Choose map and side</h2>
+          <h2>Map and side</h2>
 
           <label>
             Map
             <select id="mapSelect"></select>
           </label>
 
-          <fieldset class="side-picker">
-            <legend>Side</legend>
-            <label><input type="radio" name="side" value="T" checked /> T</label>
-            <label><input type="radio" name="side" value="CT" /> CT</label>
-          </fieldset>
+          <section class="side-picker" aria-labelledby="sidePickerLabel">
+            <div class="side-picker-header">
+              <span id="sidePickerLabel">Side</span>
+              <small class="muted">Switch between T and CT presets.</small>
+            </div>
+            <div class="side-button-group" role="group" aria-label="Pick side">
+              <button type="button" class="side-button is-selected" data-side="T" aria-pressed="true">T Side</button>
+              <button type="button" class="side-button" data-side="CT" aria-pressed="false">CT Side</button>
+            </div>
+          </section>
 
           <div class="button-stack">
-            <button id="copyButton" class="primary">Copy config to clipboard</button>
+            <button id="copyButton" class="primary">Copy config</button>
             <button id="showButton">Show config</button>
           </div>
 
           <p id="copyStatus" class="status"></p>
           <p class="muted compact-note">
-            The bind list on the right is editable. Use “Pick strat” on each row to pull a predefined command for that numpad key.
+            Use “Pick strat” to pull in a preset, or type your own callout without <code>say_team</code>.
           </p>
         </div>
 
         <div class="builder-editor">
           <div class="editor-header">
             <div>
-              <h2>KP bind editor</h2>
-              <p class="muted">Each row maps to one numpad key in CS2. You can mix predefined strategy calls and manual edits.</p>
+              <h2>Numpad binds</h2>
+              <p class="muted">Each card is one numpad key. Presets and manual edits both export as team chat binds automatically.</p>
             </div>
           </div>
 
@@ -60,7 +69,7 @@
     <dialog id="commandDialog">
       <form method="dialog" class="dialog-content">
         <div class="dialog-header">
-          <h3>Select and copy the config manually</h3>
+          <h3>Copy the config manually</h3>
           <button>Close</button>
         </div>
         <textarea id="dialogTextarea" rows="8" readonly></textarea>
