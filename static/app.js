@@ -10,6 +10,8 @@ const NUMPAD_KEYS = {
   9: "KP_PGUP",
 };
 
+const TEAM_CHAT_PREFIX = "say_team";
+
 const state = {
   maps: [],
   strategies: [],
@@ -30,6 +32,7 @@ const dialogTextarea = document.querySelector("#dialogTextarea");
 const slotDialog = document.querySelector("#slotDialog");
 const slotDialogTitle = document.querySelector("#slotDialogTitle");
 const slotDialogOptions = document.querySelector("#slotDialogOptions");
+const sideButtons = Array.from(document.querySelectorAll("[data-side]"));
 
 init();
 
@@ -44,9 +47,14 @@ function registerEvents() {
     resetBindingsFromSelection();
   });
 
-  document.querySelectorAll('input[name="side"]').forEach((input) => {
-    input.addEventListener("change", () => {
-      state.selectedSide = input.value;
+  sideButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (state.selectedSide === button.dataset.side) {
+        return;
+      }
+
+      state.selectedSide = button.dataset.side;
+      syncSideButtons();
       resetBindingsFromSelection();
     });
   });
@@ -54,22 +62,22 @@ function registerEvents() {
   copyButton.addEventListener("click", async () => {
     const command = buildCommandFromState();
     if (!command) {
-      copyStatus.textContent = "Add at least one bind before exporting the config.";
+      copyStatus.textContent = "Add at least one bind before exporting.";
       return;
     }
 
     try {
       await navigator.clipboard.writeText(command);
-      copyStatus.textContent = "The config was copied to your clipboard.";
+      copyStatus.textContent = "Copied to clipboard.";
     } catch (error) {
-      copyStatus.textContent = "Clipboard access failed. Use “Show config” as a fallback.";
+      copyStatus.textContent = "Clipboard access failed. Use “Show config” instead.";
     }
   });
 
   showButton.addEventListener("click", () => {
     const command = buildCommandFromState();
     if (!command) {
-      copyStatus.textContent = "Add at least one bind before exporting the config.";
+      copyStatus.textContent = "Add at least one bind before exporting.";
       return;
     }
 
@@ -87,6 +95,7 @@ async function loadData() {
   state.strategies = data.strategies;
   state.selectedMap = state.maps[0]?.slug || "";
   populateMapOptions();
+  syncSideButtons();
   resetBindingsFromSelection();
 }
 
@@ -95,6 +104,14 @@ function populateMapOptions() {
   state.maps.forEach((map) => {
     const selected = map.slug === state.selectedMap;
     mapSelect.add(new Option(map.name, map.slug, selected, selected));
+  });
+}
+
+function syncSideButtons() {
+  sideButtons.forEach((button) => {
+    const isSelected = button.dataset.side === state.selectedSide;
+    button.classList.toggle("is-selected", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
   });
 }
 
@@ -110,7 +127,7 @@ function getSlotOptions(slot) {
     .map((strategy) => ({
       strategyId: strategy.id,
       strategyName: strategy.name,
-      command: strategy.bindings[String(slot)],
+      command: normalizeCommand(strategy.bindings[String(slot)]),
     }));
 }
 
@@ -141,12 +158,12 @@ function renderBindingsEditor() {
           <small>${escapeHTML(state.slotMeta[slot] || "Manual / empty")}</small>
         </div>
         <label class="binding-input-wrap">
-          <span class="sr-only">Command for numpad ${slot}</span>
+          <span class="sr-only">Team call for numpad ${slot}</span>
           <input
             type="text"
             data-slot-input="${slot}"
-            value="${escapeHTML(state.bindings[slot] || "")}" 
-            placeholder="Leave empty to skip this bind"
+            value="${escapeHTML(state.bindings[slot] || "")}"
+            placeholder="Type the callout only"
           />
         </label>
         <button type="button" data-slot-pick="${slot}">Pick strat</button>
@@ -157,8 +174,9 @@ function renderBindingsEditor() {
   bindingsEditor.querySelectorAll("[data-slot-input]").forEach((input) => {
     input.addEventListener("input", () => {
       const slot = Number(input.dataset.slotInput);
-      state.bindings[slot] = input.value;
-      state.slotMeta[slot] = input.value.trim() ? "Manual edit" : "Manual / empty";
+      const normalizedValue = normalizeCommand(input.value);
+      state.bindings[slot] = normalizedValue;
+      state.slotMeta[slot] = normalizedValue ? "Manual edit" : "Manual / empty";
     });
   });
 
@@ -191,7 +209,7 @@ function openSlotDialog(slot) {
   if (options.length === 0) {
     cards.push(`
       <div class="slot-empty-state">
-        No predefined commands were found for this key on the selected map and side. You can still type a custom command manually.
+        No preset was found for this key on the selected map and side. You can still type your own callout.
       </div>
     `);
   }
@@ -216,7 +234,7 @@ function openSlotDialog(slot) {
 }
 
 function applySlotOption(slot, command, strategyName) {
-  state.bindings[slot] = command;
+  state.bindings[slot] = normalizeCommand(command);
   state.slotMeta[slot] = command ? `Preset: ${strategyName}` : "Manual / empty";
   renderBindingsEditor();
 }
@@ -225,20 +243,23 @@ function buildCommandFromState() {
   const commands = [];
 
   for (let slot = 1; slot <= 9; slot += 1) {
-    const rawValue = state.bindings[slot] || "";
-    const cleanedValue = sanitizeCommand(rawValue);
+    const cleanedValue = normalizeCommand(state.bindings[slot] || "");
     if (!cleanedValue) {
       continue;
     }
-    const escapedValue = cleanedValue.replaceAll('"', "'");
+
+    const escapedValue = `${TEAM_CHAT_PREFIX} ${cleanedValue}`.replaceAll('"', "'");
     commands.push(`bind ${NUMPAD_KEYS[slot]} "${escapedValue}"`);
   }
 
   return commands.join("; ");
 }
 
-function sanitizeCommand(value) {
-  return value.trim().replace(/\s+/g, " ");
+function normalizeCommand(value) {
+  return String(value)
+    .trim()
+    .replace(/^say_team\s+/i, "")
+    .replace(/\s+/g, " ");
 }
 
 function escapeHTML(value) {

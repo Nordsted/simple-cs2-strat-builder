@@ -117,6 +117,17 @@ def sanitize_command(command):
     return " ".join(command.strip().split())
 
 
+def strip_team_chat_prefix(command):
+    normalized = sanitize_command(command)
+    if normalized.lower().startswith("say_team "):
+        return normalized[9:].strip()
+    return normalized
+
+
+def normalize_binding_command(command):
+    return strip_team_chat_prefix(str(command))
+
+
 def validate_strategy(payload):
     map_slug = str(payload.get("mapSlug", "")).strip().lower()
     side = str(payload.get("side", "")).strip().upper()
@@ -138,7 +149,7 @@ def validate_strategy(payload):
         slot_text = str(slot).strip()
         if slot_text not in NUMPAD_KEYS:
             raise ValueError(f"Unknown numpad slot: {slot_text}")
-        command = sanitize_command(str(raw_command))
+        command = normalize_binding_command(raw_command)
         if command:
             cleaned_bindings[slot_text] = command
 
@@ -159,13 +170,18 @@ def validate_strategy(payload):
 def build_command(bindings):
     commands = []
     for slot in sorted(bindings, key=int):
-        command = bindings[slot].replace('"', "'")
-        commands.append(f'bind {NUMPAD_KEYS[slot]} "{command}"')
+        message = normalize_binding_command(bindings[slot]).replace('"', "'")
+        commands.append(f'bind {NUMPAD_KEYS[slot]} "say_team {message}"')
     return "; ".join(commands)
 
 
 def serialize_strategy(row):
-    bindings = json.loads(row["bindings_json"])
+    raw_bindings = json.loads(row["bindings_json"])
+    bindings = {
+        slot: normalize_binding_command(command)
+        for slot, command in raw_bindings.items()
+        if normalize_binding_command(command)
+    }
     return {
         "id": row["id"],
         "mapSlug": row["map_slug"],

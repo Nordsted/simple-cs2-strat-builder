@@ -39,7 +39,7 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual(strategy["mapSlug"], "mirage")
         self.assertEqual(strategy["side"], "CT")
         self.assertEqual(strategy["creator"], "Team")
-        self.assertEqual(strategy["bindings"], {"2": "say_team Flash now"})
+        self.assertEqual(strategy["bindings"], {"2": "Flash now"})
 
     def test_build_command_orders_numpad_slots(self):
         command = app.build_command({"9": "say_team last", "1": "say_team first", "5": 'say_team "mid"'})
@@ -48,6 +48,10 @@ class AppTestCase(unittest.TestCase):
             command,
             'bind KP_END "say_team first"; bind KP_5 "say_team \'mid\'"; bind KP_PGUP "say_team last"',
         )
+
+    def test_normalize_binding_command_strips_team_chat_prefix(self):
+        self.assertEqual(app.normalize_binding_command(" say_team   smoke window "), "smoke window")
+        self.assertEqual(app.normalize_binding_command("flash over"), "flash over")
 
     def test_read_strategy_seed_rejects_invalid_payload(self):
         invalid_file = app.STRATS_DIR / "broken.json"
@@ -97,6 +101,7 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual([entry["slug"] for entry in maps], ["inferno", "mirage"])
         self.assertEqual(len(strategies), 2)
         self.assertEqual({strategy["source"] for strategy in strategies}, {"inferno.json", "mirage.json"})
+        self.assertEqual(strategies[0]["bindings"], {"2": "molly banana"})
 
     def test_insert_strategy_defaults_source_to_database(self):
         self.write_seed(
