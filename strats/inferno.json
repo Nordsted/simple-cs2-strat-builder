@@ -1,0 +1,18 @@
+{
+  "mapSlug": "inferno",
+  "mapName": "Inferno",
+  "strategies": [
+    {
+      "side": "T",
+      "name": "Banana control",
+      "description": "Early utility plan for car, sandbags, CT smoke, and a timing flash over banana.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team Inferno: HE car",
+        "2": "say_team Inferno: molly sandbags",
+        "3": "say_team Inferno: smoke CT",
+        "4": "say_team Inferno: flash over banana"
+      }
+    }
+  ]
+}

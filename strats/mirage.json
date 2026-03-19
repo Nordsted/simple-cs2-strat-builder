@@ -1,0 +1,31 @@
+{
+  "mapSlug": "mirage",
+  "mapName": "Mirage",
+  "strategies": [
+    {
+      "side": "T",
+      "name": "A execute with jungle smoke",
+      "description": "Classic A execute with binds for jungle, stairs, CT, flash, and triple molly calls.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team Mirage A: smoke jungle",
+        "2": "say_team Mirage A: smoke stairs",
+        "3": "say_team Mirage A: smoke CT",
+        "4": "say_team Mirage A: flash over A",
+        "5": "say_team Mirage A: molly triple"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B hold with retake setup",
+      "description": "Defensive B setup with info, flash, and a clean market fallback call.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team Mirage B: smoke apps",
+        "2": "say_team Mirage B: flash site",
+        "3": "say_team Mirage B: molly bench",
+        "4": "say_team Mirage B: fallback market"
+      }
+    }
+  ]
+}

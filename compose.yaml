@@ -1,0 +1,11 @@
+services:
+  cs2-strat-builder:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - cs2_strat_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  cs2_strat_data:

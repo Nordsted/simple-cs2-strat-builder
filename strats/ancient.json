@@ -1,0 +1,18 @@
+{
+  "mapSlug": "ancient",
+  "mapName": "Ancient",
+  "strategies": [
+    {
+      "side": "CT",
+      "name": "A retake protocol",
+      "description": "Fast retake setup with cave, donut, temple, and defuse cover calls.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team Ancient A: wait cave smoke",
+        "2": "say_team Ancient A: swing donut",
+        "3": "say_team Ancient A: flash temple",
+        "4": "say_team Ancient A: defuse cover"
+      }
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+:root {
+  color-scheme: dark;
+  --bg: #0e1525;
+  --panel: #162032;
+  --panel-light: #1d2b43;
+  --accent: #56d364;
+  --accent-strong: #3fb950;
+  --text: #f5f7fb;
+  --muted: #a6b1c2;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: linear-gradient(180deg, #0c111d, var(--bg));
+  color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.layout {
+  width: min(1100px, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(22, 32, 50, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hero-note {
+  max-width: 280px;
+  background: var(--panel-light);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.lead,
+.muted,
+.status,
+.strategy-meta,
+summary,
+details p {
+  color: var(--muted);
+}
+
+label,
+fieldset {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+select,
+input,
+textarea,
+button {
+  background: #0c1422;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent-strong);
+  color: #08110a;
+  font-weight: 700;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.side-picker {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.side-picker legend {
+  padding: 0 0.35rem;
+}
+
+.command-box,
+#dialogTextarea {
+  width: 100%;
+  background: #09101a;
+  border-radius: 14px;
+  padding: 1rem;
+  min-height: 120px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid var(--border);
+}
+
+.strategy-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.strategy-form > .binding-grid,
+.strategy-form > button,
+.strategy-form > .status,
+.strategy-form > .muted {
+  grid-column: 1 / -1;
+}
+
+.binding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.binding-field {
+  background: rgba(12, 20, 34, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.75rem;
+}
+
+dialog {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 0;
+  background: var(--panel);
+  color: var(--text);
+  width: min(760px, calc(100vw - 2rem));
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dialog-content {
+  padding: 1rem;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    width: min(100vw, calc(100vw - 1rem));
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+}
