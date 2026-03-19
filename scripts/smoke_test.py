@@ -79,6 +79,8 @@ def main():
         status, html = fetch_text("/")
         assert status == 200
         assert "CS2 Strat Builder" in html
+        assert "Python" not in html
+        assert "Add your own strategy" not in html
 
         status, created = fetch_json(
             "/api/strategies",

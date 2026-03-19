@@ -11,20 +11,17 @@
       <section class="hero card">
         <div>
           <p class="eyebrow">CS2 strat builder</p>
-          <h1>Build map-specific CS2 binds for numpad 1-9</h1>
+          <h1>Build a CS2 numpad config from map-specific strategies</h1>
           <p class="lead">
-            Pick a map, choose T or CT, then export one combined command that can be pasted directly into the CS2 console.
+            Pick a map and side, then customize each numpad bind with predefined strategy calls or your own manual edits.
           </p>
-        </div>
-        <div class="hero-note">
-          <strong>Low resource footprint</strong>
-          <p>Python stdlib backend + SQLite + static frontend in one container, well suited for Raspberry Pi.</p>
         </div>
       </section>
 
-      <section class="grid">
-        <div class="card">
-          <h2>1. Choose a strat</h2>
+      <section class="builder card">
+        <div class="builder-sidebar">
+          <h2>Choose map and side</h2>
+
           <label>
             Map
             <select id="mapSelect"></select>
@@ -36,72 +33,47 @@
             <label><input type="radio" name="side" value="CT" /> CT</label>
           </fieldset>
 
-          <label>
-            Strategy
-            <select id="strategySelect"></select>
-          </label>
-
-          <div id="strategyMeta" class="strategy-meta"></div>
-        </div>
-
-        <div class="card">
-          <h2>2. Export the command</h2>
-          <div class="command-box" id="commandPreview">Choose a map and strategy first.</div>
-          <div class="button-row">
-            <button id="copyButton" class="primary">Copy to clipboard</button>
-            <button id="showButton">Show command</button>
+          <div class="button-stack">
+            <button id="copyButton" class="primary">Copy config to clipboard</button>
+            <button id="showButton">Show config</button>
           </div>
-          <p id="copyStatus" class="status"></p>
-          <details>
-            <summary>Why is there a “Show command” fallback?</summary>
-            <p>
-              Some browsers or embedded webviews cannot access the clipboard API. This fallback opens the command in a selectable text field instead.
-            </p>
-          </details>
-        </div>
-      </section>
 
-      <section class="card">
-        <h2>3. Add your own strategy</h2>
-        <p class="muted">
-          Steam login can be added later. This version already supports database-backed community strategies, so authentication can be layered on top without changing the core workflow.
-        </p>
-        <form id="strategyForm" class="strategy-form">
-          <label>
-            Your name or team
-            <input type="text" name="creator" placeholder="Example: Team Midrush" />
-          </label>
-          <label>
-            Map
-            <select name="mapSlug" id="formMapSelect"></select>
-          </label>
-          <fieldset class="side-picker">
-            <legend>Side</legend>
-            <label><input type="radio" name="formSide" value="T" checked /> T</label>
-            <label><input type="radio" name="formSide" value="CT" /> CT</label>
-          </fieldset>
-          <label>
-            Strategy name
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Short description
-            <textarea name="description" rows="3" required></textarea>
-          </label>
-          <div id="bindingFields" class="binding-grid"></div>
-          <button type="submit" class="primary">Save strategy</button>
-          <p id="formStatus" class="status"></p>
-        </form>
+          <p id="copyStatus" class="status"></p>
+          <p class="muted compact-note">
+            The bind list on the right is editable. Use “Pick strat” on each row to pull a predefined command for that numpad key.
+          </p>
+        </div>
+
+        <div class="builder-editor">
+          <div class="editor-header">
+            <div>
+              <h2>KP bind editor</h2>
+              <p class="muted">Each row maps to one numpad key in CS2. You can mix predefined strategy calls and manual edits.</p>
+            </div>
+          </div>
+
+          <div id="bindingsEditor" class="bindings-editor"></div>
+        </div>
       </section>
     </main>
 
     <dialog id="commandDialog">
       <form method="dialog" class="dialog-content">
         <div class="dialog-header">
-          <h3>Select and copy the command manually</h3>
+          <h3>Select and copy the config manually</h3>
           <button>Close</button>
         </div>
         <textarea id="dialogTextarea" rows="8" readonly></textarea>
+      </form>
+    </dialog>
+
+    <dialog id="slotDialog">
+      <form method="dialog" class="dialog-content">
+        <div class="dialog-header">
+          <h3 id="slotDialogTitle">Pick a strat</h3>
+          <button>Close</button>
+        </div>
+        <div id="slotDialogOptions" class="slot-dialog-options"></div>
       </form>
     </dialog>
 
