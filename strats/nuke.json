@@ -1,0 +1,168 @@
+{
+  "mapSlug": "nuke",
+  "mapName": "Nuke",
+  "strategies": [
+    {
+      "side": "T",
+      "name": "T slot 1",
+      "description": "Nuke T preset for numpad 1: outside smoke wall cross to secret.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team outside smoke wall cross to secret"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 2",
+      "description": "Nuke T preset for numpad 2: rush ramp flash ramp.",
+      "creator": "System",
+      "bindings": {
+        "2": "say_team rush ramp flash ramp"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 3",
+      "description": "Nuke T preset for numpad 3: hut + squeaky go A flash door.",
+      "creator": "System",
+      "bindings": {
+        "3": "say_team hut + squeaky go A flash door"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 4",
+      "description": "Nuke T preset for numpad 4: [fake] hut noise go ramp.",
+      "creator": "System",
+      "bindings": {
+        "4": "say_team [fake] hut noise go ramp"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 5",
+      "description": "Nuke T preset for numpad 5: outside control smoke cross + garage.",
+      "creator": "System",
+      "bindings": {
+        "5": "say_team outside control smoke cross + garage"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 6",
+      "description": "Nuke T preset for numpad 6: A site smoke heaven + main.",
+      "creator": "System",
+      "bindings": {
+        "6": "say_team A site smoke heaven + main"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 7",
+      "description": "Nuke T preset for numpad 7: vent drop B smoke decon.",
+      "creator": "System",
+      "bindings": {
+        "7": "say_team vent drop B smoke decon"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 8",
+      "description": "Nuke T preset for numpad 8: lobby control flash hut.",
+      "creator": "System",
+      "bindings": {
+        "8": "say_team lobby control flash hut"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 9",
+      "description": "Nuke T preset for numpad 9: hide lobby till 1:00 then ramp + secret split B smoke decon.",
+      "creator": "System",
+      "bindings": {
+        "9": "say_team hide lobby till 1:00 then ramp + secret split B smoke decon"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 1",
+      "description": "Nuke CT preset for numpad 1: outside control.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team outside control"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 2",
+      "description": "Nuke CT preset for numpad 2: ramp aggressive.",
+      "creator": "System",
+      "bindings": {
+        "2": "say_team ramp aggressive"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 3",
+      "description": "Nuke CT preset for numpad 3: 2 A crossfire.",
+      "creator": "System",
+      "bindings": {
+        "3": "say_team 2 A crossfire"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 4",
+      "description": "Nuke CT preset for numpad 4: stack lower.",
+      "creator": "System",
+      "bindings": {
+        "4": "say_team stack lower"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 5",
+      "description": "Nuke CT preset for numpad 5: lobby push.",
+      "creator": "System",
+      "bindings": {
+        "5": "say_team lobby push"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 6",
+      "description": "Nuke CT preset for numpad 6: heaven rotate.",
+      "creator": "System",
+      "bindings": {
+        "6": "say_team heaven rotate"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 7",
+      "description": "Nuke CT preset for numpad 7: yard push flash.",
+      "creator": "System",
+      "bindings": {
+        "7": "say_team yard push flash"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 8",
+      "description": "Nuke CT preset for numpad 8: retake lower.",
+      "creator": "System",
+      "bindings": {
+        "8": "say_team retake lower"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 9",
+      "description": "Nuke CT preset for numpad 9: double ramp.",
+      "creator": "System",
+      "bindings": {
+        "9": "say_team double ramp"
+      }
+    }
+  ]
+}

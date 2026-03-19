@@ -1,0 +1,168 @@
+{
+  "mapSlug": "overpass",
+  "mapName": "Overpass",
+  "strategies": [
+    {
+      "side": "T",
+      "name": "T slot 1",
+      "description": "Overpass T preset for numpad 1: rush B monster smoke bridge flash over.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team rush B monster smoke bridge flash over"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 2",
+      "description": "Overpass T preset for numpad 2: monster + short split smoke heaven.",
+      "creator": "System",
+      "bindings": {
+        "2": "say_team monster + short split smoke heaven"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 3",
+      "description": "Overpass T preset for numpad 3: mid control connector smoke.",
+      "creator": "System",
+      "bindings": {
+        "3": "say_team mid control connector smoke"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 4",
+      "description": "Overpass T preset for numpad 4: long + short go A smoke truck.",
+      "creator": "System",
+      "bindings": {
+        "4": "say_team long + short go A smoke truck"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 5",
+      "description": "Overpass T preset for numpad 5: [fake] long smoke A go B monster.",
+      "creator": "System",
+      "bindings": {
+        "5": "say_team [fake] long smoke A go B monster"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 6",
+      "description": "Overpass T preset for numpad 6: B site smoke heaven + bridge.",
+      "creator": "System",
+      "bindings": {
+        "6": "say_team B site smoke heaven + bridge"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 7",
+      "description": "Overpass T preset for numpad 7: A long contact flash.",
+      "creator": "System",
+      "bindings": {
+        "7": "say_team A long contact flash"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 8",
+      "description": "Overpass T preset for numpad 8: fast B explode flash monster.",
+      "creator": "System",
+      "bindings": {
+        "8": "say_team fast B explode flash monster"
+      }
+    },
+    {
+      "side": "T",
+      "name": "T slot 9",
+      "description": "Overpass T preset for numpad 9: hide connector till 1:00 then go A smoke truck + bank.",
+      "creator": "System",
+      "bindings": {
+        "9": "say_team hide connector till 1:00 then go A smoke truck + bank"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 1",
+      "description": "Overpass CT preset for numpad 1: fountain control.",
+      "creator": "System",
+      "bindings": {
+        "1": "say_team fountain control"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 2",
+      "description": "Overpass CT preset for numpad 2: 3 B hold.",
+      "creator": "System",
+      "bindings": {
+        "2": "say_team 3 B hold"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 3",
+      "description": "Overpass CT preset for numpad 3: push monster.",
+      "creator": "System",
+      "bindings": {
+        "3": "say_team push monster"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 4",
+      "description": "Overpass CT preset for numpad 4: A crossfire.",
+      "creator": "System",
+      "bindings": {
+        "4": "say_team A crossfire"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 5",
+      "description": "Overpass CT preset for numpad 5: stack B.",
+      "creator": "System",
+      "bindings": {
+        "5": "say_team stack B"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 6",
+      "description": "Overpass CT preset for numpad 6: retake A.",
+      "creator": "System",
+      "bindings": {
+        "6": "say_team retake A"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 7",
+      "description": "Overpass CT preset for numpad 7: connector control.",
+      "creator": "System",
+      "bindings": {
+        "7": "say_team connector control"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 8",
+      "description": "Overpass CT preset for numpad 8: long push.",
+      "creator": "System",
+      "bindings": {
+        "8": "say_team long push"
+      }
+    },
+    {
+      "side": "CT",
+      "name": "CT slot 9",
+      "description": "Overpass CT preset for numpad 9: save setup.",
+      "creator": "System",
+      "bindings": {
+        "9": "say_team save setup"
+      }
+    }
+  ]
+}

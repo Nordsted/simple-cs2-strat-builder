@@ -25,8 +25,12 @@ This stack is intentionally small to keep CPU, RAM, and disk usage low, making i
 Built-in strategy seed data now lives in one file per map:
 
 - `strats/ancient.json`
+- `strats/anubis.json`
+- `strats/dust2.json`
 - `strats/inferno.json`
 - `strats/mirage.json`
+- `strats/nuke.json`
+- `strats/overpass.json`
 
 That makes it easy to add or edit map-specific strategies without touching the backend code.
 

@@ -1,20 +1,20 @@
 {
-  "mapSlug": "ancient",
-  "mapName": "Ancient",
+  "mapSlug": "anubis",
+  "mapName": "Anubis",
   "strategies": [
     {
       "side": "T",
       "name": "T slot 1",
-      "description": "Ancient T preset for numpad 1: rush B main smoke CT + cave flash.",
+      "description": "Anubis T preset for numpad 1: rush B main smoke CT + heaven flash.",
       "creator": "System",
       "bindings": {
-        "1": "say_team rush B main smoke CT + cave flash"
+        "1": "say_team rush B main smoke CT + heaven flash"
       }
     },
     {
       "side": "T",
       "name": "T slot 2",
-      "description": "Ancient T preset for numpad 2: B main + mid split smoke CT.",
+      "description": "Anubis T preset for numpad 2: B main + mid split smoke CT.",
       "creator": "System",
       "bindings": {
         "2": "say_team B main + mid split smoke CT"
@@ -23,106 +23,106 @@
     {
       "side": "T",
       "name": "T slot 3",
-      "description": "Ancient T preset for numpad 3: mid control smoke donut go A.",
+      "description": "Anubis T preset for numpad 3: mid control smoke connector.",
       "creator": "System",
       "bindings": {
-        "3": "say_team mid control smoke donut go A"
+        "3": "say_team mid control smoke connector"
       }
     },
     {
       "side": "T",
       "name": "T slot 4",
-      "description": "Ancient T preset for numpad 4: [fake] A main smoke temple go B.",
+      "description": "Anubis T preset for numpad 4: A main + mid split smoke heaven.",
       "creator": "System",
       "bindings": {
-        "4": "say_team [fake] A main smoke temple go B"
+        "4": "say_team A main + mid split smoke heaven"
       }
     },
     {
       "side": "T",
       "name": "T slot 5",
-      "description": "Ancient T preset for numpad 5: A site smoke temple + CT flash.",
+      "description": "Anubis T preset for numpad 5: [fake] A main smoke CT go B.",
       "creator": "System",
       "bindings": {
-        "5": "say_team A site smoke temple + CT flash"
+        "5": "say_team [fake] A main smoke CT go B"
       }
     },
     {
       "side": "T",
       "name": "T slot 6",
-      "description": "Ancient T preset for numpad 6: donut + temple go A smoke CT.",
+      "description": "Anubis T preset for numpad 6: B site smoke CT + heaven.",
       "creator": "System",
       "bindings": {
-        "6": "say_team donut + temple go A smoke CT"
+        "6": "say_team B site smoke CT + heaven"
       }
     },
     {
       "side": "T",
       "name": "T slot 7",
-      "description": "Ancient T preset for numpad 7: explode B main flash out.",
+      "description": "Anubis T preset for numpad 7: [silent] A main popflash.",
       "creator": "System",
       "bindings": {
-        "7": "say_team explode B main flash out"
+        "7": "say_team [silent] A main popflash"
       }
     },
     {
       "side": "T",
       "name": "T slot 8",
-      "description": "Ancient T preset for numpad 8: mid to cave pressure smoke mid.",
+      "description": "Anubis T preset for numpad 8: mid to B explode flash out.",
       "creator": "System",
       "bindings": {
-        "8": "say_team mid to cave pressure smoke mid"
+        "8": "say_team mid to B explode flash out"
       }
     },
     {
       "side": "T",
       "name": "T slot 9",
-      "description": "Ancient T preset for numpad 9: hide mid till 1:00 then go A smoke CT + temple.",
+      "description": "Anubis T preset for numpad 9: hide B main till 1:00 then go B smoke CT + heaven.",
       "creator": "System",
       "bindings": {
-        "9": "say_team hide mid till 1:00 then go A smoke CT + temple"
+        "9": "say_team hide B main till 1:00 then go B smoke CT + heaven"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 1",
-      "description": "Ancient CT preset for numpad 1: 3 B start.",
+      "description": "Anubis CT preset for numpad 1: mid aggressive.",
       "creator": "System",
       "bindings": {
-        "1": "say_team 3 B start"
+        "1": "say_team mid aggressive"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 2",
-      "description": "Ancient CT preset for numpad 2: push cave.",
+      "description": "Anubis CT preset for numpad 2: 3 B hold.",
       "creator": "System",
       "bindings": {
-        "2": "say_team push cave"
+        "2": "say_team 3 B hold"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 3",
-      "description": "Ancient CT preset for numpad 3: A hold.",
+      "description": "Anubis CT preset for numpad 3: push canals.",
       "creator": "System",
       "bindings": {
-        "3": "say_team A hold"
+        "3": "say_team push canals"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 4",
-      "description": "Ancient CT preset for numpad 4: mid control.",
+      "description": "Anubis CT preset for numpad 4: A main control.",
       "creator": "System",
       "bindings": {
-        "4": "say_team mid control"
+        "4": "say_team A main control"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 5",
-      "description": "Ancient CT preset for numpad 5: stack B.",
+      "description": "Anubis CT preset for numpad 5: stack B.",
       "creator": "System",
       "bindings": {
         "5": "say_team stack B"
@@ -131,34 +131,34 @@
     {
       "side": "CT",
       "name": "CT slot 6",
-      "description": "Ancient CT preset for numpad 6: temple + donut.",
+      "description": "Anubis CT preset for numpad 6: retake A.",
       "creator": "System",
       "bindings": {
-        "6": "say_team temple + donut"
+        "6": "say_team retake A"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 7",
-      "description": "Ancient CT preset for numpad 7: retake A.",
+      "description": "Anubis CT preset for numpad 7: mid boost.",
       "creator": "System",
       "bindings": {
-        "7": "say_team retake A"
+        "7": "say_team mid boost"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 8",
-      "description": "Ancient CT preset for numpad 8: double cave.",
+      "description": "Anubis CT preset for numpad 8: double mid.",
       "creator": "System",
       "bindings": {
-        "8": "say_team double cave"
+        "8": "say_team double mid"
       }
     },
     {
       "side": "CT",
       "name": "CT slot 9",
-      "description": "Ancient CT preset for numpad 9: save crossfire.",
+      "description": "Anubis CT preset for numpad 9: save crossfire.",
       "creator": "System",
       "bindings": {
         "9": "say_team save crossfire"
