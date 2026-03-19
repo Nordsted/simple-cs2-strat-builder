@@ -1,0 +1,94 @@
+name: Verify application
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile Python sources
+        run: python -m py_compile app.py tests/test_app.py scripts/smoke_test.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Run smoke test against local server
+        run: python scripts/smoke_test.py
+
+  verify-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate Docker Compose configuration
+        run: docker compose config
+
+      - name: Start application in Docker
+        run: docker compose up --build -d
+
+      - name: Wait for health endpoint
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8080/healthz; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+
+      - name: Verify seeded data and strategy creation in Docker
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+
+          def request_json(path, method='GET', payload=None):
+              data = None if payload is None else json.dumps(payload).encode('utf-8')
+              request = urllib.request.Request(
+                  f'http://127.0.0.1:8080{path}',
+                  data=data,
+                  method=method,
+                  headers={'Content-Type': 'application/json'},
+              )
+              with urllib.request.urlopen(request, timeout=10) as response:
+                  return response.status, json.loads(response.read().decode('utf-8'))
+
+          status, health = request_json('/healthz')
+          assert status == 200 and health == {'status': 'ok'}
+
+          status, data = request_json('/api/data')
+          assert status == 200
+          assert len(data['maps']) >= 3
+          assert len(data['strategies']) >= 4
+
+          status, created = request_json(
+              '/api/strategies',
+              method='POST',
+              payload={
+                  'creator': 'CI Bot',
+                  'mapSlug': 'mirage',
+                  'side': 'T',
+                  'name': 'CI smoke test',
+                  'description': 'Ensure POST works inside Docker.',
+                  'bindings': {'1': 'say_team smoke window'},
+              },
+          )
+          assert status == 201
+          assert created['source'] == 'database'
+          assert 'bind KP_END' in created['command']
+          PY
+
+      - name: Stop Docker services
+        if: always()
+        run: docker compose down -v

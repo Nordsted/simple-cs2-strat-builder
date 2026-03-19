@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS2 Strat Builder</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">CS2 strat builder</p>
+          <h1>Build a CS2 numpad config from map-specific strategies</h1>
+          <p class="lead">
+            Pick a map and side, then customize each numpad bind with predefined strategy calls or your own manual edits.
+          </p>
+        </div>
+      </section>
+
+      <section class="builder card">
+        <div class="builder-sidebar">
+          <h2>Choose map and side</h2>
+
+          <label>
+            Map
+            <select id="mapSelect"></select>
+          </label>
+
+          <fieldset class="side-picker">
+            <legend>Side</legend>
+            <label><input type="radio" name="side" value="T" checked /> T</label>
+            <label><input type="radio" name="side" value="CT" /> CT</label>
+          </fieldset>
+
+          <div class="button-stack">
+            <button id="copyButton" class="primary">Copy config to clipboard</button>
+            <button id="showButton">Show config</button>
+          </div>
+
+          <p id="copyStatus" class="status"></p>
+          <p class="muted compact-note">
+            The bind list on the right is editable. Use “Pick strat” on each row to pull a predefined command for that numpad key.
+          </p>
+        </div>
+
+        <div class="builder-editor">
+          <div class="editor-header">
+            <div>
+              <h2>KP bind editor</h2>
+              <p class="muted">Each row maps to one numpad key in CS2. You can mix predefined strategy calls and manual edits.</p>
+            </div>
+          </div>
+
+          <div id="bindingsEditor" class="bindings-editor"></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="commandDialog">
+      <form method="dialog" class="dialog-content">
+        <div class="dialog-header">
+          <h3>Select and copy the config manually</h3>
+          <button>Close</button>
+        </div>
+        <textarea id="dialogTextarea" rows="8" readonly></textarea>
+      </form>
+    </dialog>
+
+    <dialog id="slotDialog">
+      <form method="dialog" class="dialog-content">
+        <div class="dialog-header">
+          <h3 id="slotDialogTitle">Pick a strat</h3>
+          <button>Close</button>
+        </div>
+        <div id="slotDialogOptions" class="slot-dialog-options"></div>
+      </form>
+    </dialog>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
