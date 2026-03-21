@@ -180,17 +180,16 @@ function renderSlotRow(slot) {
 
   return `
     <article class="strategy-row" data-slot-row="${slot.slotNumber}">
-      <div class="strategy-slot-column">
-        <strong>Numpad ${slot.slotNumber}</strong>
-      </div>
       <div class="strategy-main-column">
         <div class="strategy-row-header">
-          <div>
+          <div class="strategy-title-row">
+            <span class="strategy-slot-label">Numpad ${slot.slotNumber}</span>
             <h3>${escapeHTML(title)}</h3>
-            <p>${escapeHTML(description)}</p>
           </div>
+          <div class="strategy-badges strategy-badges-primary">${renderSlotBadges(slot, "primary")}</div>
         </div>
-        <div class="strategy-badges" data-slot-badges="${slot.slotNumber}">${renderSlotBadges(slot)}</div>
+        <p class="strategy-row-description">${escapeHTML(description)}</p>
+        <div class="strategy-badges strategy-badges-secondary" data-slot-badges="${slot.slotNumber}">${renderSlotBadges(slot, "secondary")}</div>
         <div class="strategy-controls-row">
           <label class="strategy-message-input">
             <span class="sr-only">Message for numpad ${slot.slotNumber}</span>
@@ -211,12 +210,9 @@ function renderSlotRow(slot) {
   `;
 }
 
-function renderSlotBadges(slot) {
-  const statusLabel = getSlotStatusLabel(slot);
-  return [
-    ...renderMetaBadges(slot.strategy?.meta || {}),
-    statusLabel ? renderBadge(statusLabel, "status") : "",
-  ].join("");
+function renderSlotBadges(slot, group) {
+  const badges = group === "primary" ? renderPrimaryBadges(slot) : renderSecondaryBadges(slot);
+  return badges.join("");
 }
 
 function getSlotStatusLabel(slot) {
@@ -233,7 +229,7 @@ function updateSlotStatus(slotNumber) {
   const badgeContainer = bindingsEditor.querySelector(`[data-slot-badges="${slotNumber}"]`);
   const slot = state.slots[slotNumber - 1];
   if (badgeContainer) {
-    badgeContainer.innerHTML = renderSlotBadges(slot);
+    badgeContainer.innerHTML = renderSlotBadges(slot, "secondary");
   }
 }
 
@@ -241,11 +237,37 @@ function renderBadge(label, tone) {
   return `<span class="meta-badge meta-badge-${tone}">${escapeHTML(label)}</span>`;
 }
 
-function renderMetaBadges(meta) {
+function renderPrimaryBadges(slot) {
+  const metaEntries = getVisibleMetaEntries(slot.strategy?.meta || {});
+  const priorityKeys = ["tags", "difficulty"];
+  return priorityKeys
+    .filter((key) => key in metaEntries)
+    .map((key) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(metaEntries[key])}`, "meta"));
+}
+
+function renderSecondaryBadges(slot) {
+  const metaEntries = getVisibleMetaEntries(slot.strategy?.meta || {});
+  const secondaryKeys = ["goodWhen", "purpose"];
+  const orderedBadges = [
+    ...secondaryKeys
+      .filter((key) => key in metaEntries)
+      .map((key) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(metaEntries[key])}`, "meta")),
+    ...Object.entries(metaEntries)
+      .filter(([key]) => !["tags", "difficulty", ...secondaryKeys].includes(key))
+      .map(([key, value]) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(value)}`, "meta")),
+  ];
+
+  const statusLabel = getSlotStatusLabel(slot);
+  if (statusLabel) {
+    orderedBadges.push(renderBadge(statusLabel, "status"));
+  }
+
+  return orderedBadges;
+}
+
+function getVisibleMetaEntries(meta) {
   const hiddenMetaKeys = new Set(["notes"]);
-  return Object.entries(meta)
-    .filter(([key]) => !hiddenMetaKeys.has(key))
-    .map(([key, value]) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(value)}`, "meta"));
+  return Object.fromEntries(Object.entries(meta).filter(([key]) => !hiddenMetaKeys.has(key)));
 }
 
 function humanizeKey(key) {
