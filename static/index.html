@@ -11,14 +11,14 @@
       <section class="hero card">
         <div class="hero-copy">
           <p class="eyebrow">CS2 strat builder</p>
-          <h1>Set up your CS2 numpad binds for each map</h1>
+          <h1>Build ordered CS2 numpad strategy binds for each map</h1>
           <p class="lead">
-            Pick a map, choose T or CT, and edit your numpad binds in one place. Team chat is added automatically, so you only have to write the actual call.
+            Pick a map and side to load the ordered strategy list. The first nine strategies automatically fill numpad slots 1-9, and every row shows its metadata inline while you edit the message.
           </p>
         </div>
         <div class="hero-badge" aria-hidden="true">
-          <span>9 hotkeys</span>
-          <strong>Quick config export</strong>
+          <span>Ordered presets</span>
+          <strong>Compact 1×9 bind list</strong>
         </div>
       </section>
 
@@ -34,7 +34,7 @@
           <section class="side-picker" aria-labelledby="sidePickerLabel">
             <div class="side-picker-header">
               <span id="sidePickerLabel">Side</span>
-              <small class="muted">Switch between T and CT presets.</small>
+              <small class="muted">Strategies are filtered only by map and side.</small>
             </div>
             <div class="side-button-group" role="group" aria-label="Pick side">
               <button type="button" class="side-button is-selected" data-side="T" aria-pressed="true">T Side</button>
@@ -48,16 +48,18 @@
           </div>
 
           <p id="copyStatus" class="status"></p>
-          <p class="muted compact-note">
-            Use “Pick strat” to pull in a preset, or type your own callout without <code>say_team</code>.
-          </p>
+          <div class="muted compact-note">
+            <p>The first 9 ordered strategies auto-fill the numpad.</p>
+            <p>“Pick strat” shows every strategy for the selected map and side.</p>
+            <p>Choosing a strategy replaces the currently targeted slot.</p>
+          </div>
         </div>
 
         <div class="builder-editor">
           <div class="editor-header">
             <div>
-              <h2>Numpad binds</h2>
-              <p class="muted">Each card is one numpad key. Presets and manual edits both export as team chat binds automatically.</p>
+              <h2>Numpad strategy rows</h2>
+              <p class="muted">Each row is one numpad key, with metadata rendered inline and <code>say_team</code> added automatically on export.</p>
             </div>
           </div>
 

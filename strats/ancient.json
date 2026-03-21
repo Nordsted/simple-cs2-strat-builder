@@ -7,162 +7,144 @@
       "name": "T slot 1",
       "description": "Ancient T preset for numpad 1: rush B main smoke CT + cave flash.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team rush B main smoke CT + cave flash"
-      }
+      "message": "rush B main smoke CT + cave flash",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 2",
       "description": "Ancient T preset for numpad 2: B main + mid split smoke CT.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team B main + mid split smoke CT"
-      }
+      "message": "B main + mid split smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 3",
       "description": "Ancient T preset for numpad 3: mid control smoke donut go A.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team mid control smoke donut go A"
-      }
+      "message": "mid control smoke donut go A",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 4",
       "description": "Ancient T preset for numpad 4: [fake] A main smoke temple go B.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team [fake] A main smoke temple go B"
-      }
+      "message": "[fake] A main smoke temple go B",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 5",
       "description": "Ancient T preset for numpad 5: A site smoke temple + CT flash.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team A site smoke temple + CT flash"
-      }
+      "message": "A site smoke temple + CT flash",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 6",
       "description": "Ancient T preset for numpad 6: donut + temple go A smoke CT.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team donut + temple go A smoke CT"
-      }
+      "message": "donut + temple go A smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 7",
       "description": "Ancient T preset for numpad 7: explode B main flash out.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team explode B main flash out"
-      }
+      "message": "explode B main flash out",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 8",
       "description": "Ancient T preset for numpad 8: mid to cave pressure smoke mid.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team mid to cave pressure smoke mid"
-      }
+      "message": "mid to cave pressure smoke mid",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 9",
       "description": "Ancient T preset for numpad 9: hide mid till 1:00 then go A smoke CT + temple.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team hide mid till 1:00 then go A smoke CT + temple"
-      }
+      "message": "hide mid till 1:00 then go A smoke CT + temple",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 1",
       "description": "Ancient CT preset for numpad 1: 3 B start.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team 3 B start"
-      }
+      "message": "3 B start",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 2",
       "description": "Ancient CT preset for numpad 2: push cave.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team push cave"
-      }
+      "message": "push cave",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 3",
       "description": "Ancient CT preset for numpad 3: A hold.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team A hold"
-      }
+      "message": "A hold",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 4",
       "description": "Ancient CT preset for numpad 4: mid control.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team mid control"
-      }
+      "message": "mid control",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 5",
       "description": "Ancient CT preset for numpad 5: stack B.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team stack B"
-      }
+      "message": "stack B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 6",
       "description": "Ancient CT preset for numpad 6: temple + donut.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team temple + donut"
-      }
+      "message": "temple + donut",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 7",
       "description": "Ancient CT preset for numpad 7: retake A.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team retake A"
-      }
+      "message": "retake A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 8",
       "description": "Ancient CT preset for numpad 8: double cave.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team double cave"
-      }
+      "message": "double cave",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 9",
       "description": "Ancient CT preset for numpad 9: save crossfire.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team save crossfire"
-      }
+      "message": "save crossfire",
+      "meta": {}
     }
   ]
 }

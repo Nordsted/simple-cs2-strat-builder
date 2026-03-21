@@ -7,162 +7,144 @@
       "name": "T slot 1",
       "description": "Dust II T preset for numpad 1: fast long smoke cross flash over.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team fast long smoke cross flash over"
-      }
+      "message": "fast long smoke cross flash over",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 2",
       "description": "Dust II T preset for numpad 2: long + short go A smoke CT.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team long + short go A smoke CT"
-      }
+      "message": "long + short go A smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 3",
       "description": "Dust II T preset for numpad 3: rush B tunnels flash out.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team rush B tunnels flash out"
-      }
+      "message": "rush B tunnels flash out",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 4",
       "description": "Dust II T preset for numpad 4: mid to B smoke CT doors.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team mid to B smoke CT doors"
-      }
+      "message": "mid to B smoke CT doors",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 5",
       "description": "Dust II T preset for numpad 5: [fake] B tunnels go A long.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team [fake] B tunnels go A long"
-      }
+      "message": "[fake] B tunnels go A long",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 6",
       "description": "Dust II T preset for numpad 6: late long smoke cross.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team late long smoke cross"
-      }
+      "message": "late long smoke cross",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 7",
       "description": "Dust II T preset for numpad 7: [silent] B tunnels popflash.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team [silent] B tunnels popflash"
-      }
+      "message": "[silent] B tunnels popflash",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 8",
       "description": "Dust II T preset for numpad 8: short explode smoke CT.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team short explode smoke CT"
-      }
+      "message": "short explode smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 9",
       "description": "Dust II T preset for numpad 9: smoke xbox take short go A.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team smoke xbox take short go A"
-      }
+      "message": "smoke xbox take short go A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 1",
       "description": "Dust II CT preset for numpad 1: 3 long.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team 3 long"
-      }
+      "message": "3 long",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 2",
       "description": "Dust II CT preset for numpad 2: mid peek.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team mid peek"
-      }
+      "message": "mid peek",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 3",
       "description": "Dust II CT preset for numpad 3: push tunnels.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team push tunnels"
-      }
+      "message": "push tunnels",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 4",
       "description": "Dust II CT preset for numpad 4: 2 B hold.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team 2 B hold"
-      }
+      "message": "2 B hold",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 5",
       "description": "Dust II CT preset for numpad 5: stack A.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team stack A"
-      }
+      "message": "stack A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 6",
       "description": "Dust II CT preset for numpad 6: retake B.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team retake B"
-      }
+      "message": "retake B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 7",
       "description": "Dust II CT preset for numpad 7: short control.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team short control"
-      }
+      "message": "short control",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 8",
       "description": "Dust II CT preset for numpad 8: double mid.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team double mid"
-      }
+      "message": "double mid",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 9",
       "description": "Dust II CT preset for numpad 9: save crossfire.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team save crossfire"
-      }
+      "message": "save crossfire",
+      "meta": {}
     }
   ]
 }
