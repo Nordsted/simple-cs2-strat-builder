@@ -7,162 +7,144 @@
       "name": "T slot 1",
       "description": "Anubis T preset for numpad 1: rush B main smoke CT + heaven flash.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team rush B main smoke CT + heaven flash"
-      }
+      "message": "rush B main smoke CT + heaven flash",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 2",
       "description": "Anubis T preset for numpad 2: B main + mid split smoke CT.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team B main + mid split smoke CT"
-      }
+      "message": "B main + mid split smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 3",
       "description": "Anubis T preset for numpad 3: mid control smoke connector.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team mid control smoke connector"
-      }
+      "message": "mid control smoke connector",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 4",
       "description": "Anubis T preset for numpad 4: A main + mid split smoke heaven.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team A main + mid split smoke heaven"
-      }
+      "message": "A main + mid split smoke heaven",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 5",
       "description": "Anubis T preset for numpad 5: [fake] A main smoke CT go B.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team [fake] A main smoke CT go B"
-      }
+      "message": "[fake] A main smoke CT go B",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 6",
       "description": "Anubis T preset for numpad 6: B site smoke CT + heaven.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team B site smoke CT + heaven"
-      }
+      "message": "B site smoke CT + heaven",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 7",
       "description": "Anubis T preset for numpad 7: [silent] A main popflash.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team [silent] A main popflash"
-      }
+      "message": "[silent] A main popflash",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 8",
       "description": "Anubis T preset for numpad 8: mid to B explode flash out.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team mid to B explode flash out"
-      }
+      "message": "mid to B explode flash out",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 9",
       "description": "Anubis T preset for numpad 9: hide B main till 1:00 then go B smoke CT + heaven.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team hide B main till 1:00 then go B smoke CT + heaven"
-      }
+      "message": "hide B main till 1:00 then go B smoke CT + heaven",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 1",
       "description": "Anubis CT preset for numpad 1: mid aggressive.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team mid aggressive"
-      }
+      "message": "mid aggressive",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 2",
       "description": "Anubis CT preset for numpad 2: 3 B hold.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team 3 B hold"
-      }
+      "message": "3 B hold",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 3",
       "description": "Anubis CT preset for numpad 3: push canals.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team push canals"
-      }
+      "message": "push canals",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 4",
       "description": "Anubis CT preset for numpad 4: A main control.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team A main control"
-      }
+      "message": "A main control",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 5",
       "description": "Anubis CT preset for numpad 5: stack B.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team stack B"
-      }
+      "message": "stack B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 6",
       "description": "Anubis CT preset for numpad 6: retake A.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team retake A"
-      }
+      "message": "retake A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 7",
       "description": "Anubis CT preset for numpad 7: mid boost.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team mid boost"
-      }
+      "message": "mid boost",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 8",
       "description": "Anubis CT preset for numpad 8: double mid.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team double mid"
-      }
+      "message": "double mid",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 9",
       "description": "Anubis CT preset for numpad 9: save crossfire.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team save crossfire"
-      }
+      "message": "save crossfire",
+      "meta": {}
     }
   ]
 }

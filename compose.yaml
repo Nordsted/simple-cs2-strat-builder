@@ -5,6 +5,18 @@ services:
       - "8080:8080"
     volumes:
       - cs2_strat_data:/app/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import json, urllib.request; response = urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=5); payload = json.loads(response.read().decode('utf-8')); raise SystemExit(0 if response.status == 200 and payload == {'status': 'ok'} else 1)",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
     restart: unless-stopped
 
 volumes:

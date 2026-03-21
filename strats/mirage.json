@@ -7,162 +7,144 @@
       "name": "T slot 1",
       "description": "Mirage T preset for numpad 1: 5 A ramp smoke jungle + stairs flash over.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team 5 A ramp smoke jungle + stairs flash over"
-      }
+      "message": "5 A ramp smoke jungle + stairs flash over",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 2",
       "description": "Mirage T preset for numpad 2: 3 A ramp 2 palace smoke CT + jungle.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team 3 A ramp 2 palace smoke CT + jungle"
-      }
+      "message": "3 A ramp 2 palace smoke CT + jungle",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 3",
       "description": "Mirage T preset for numpad 3: take mid smoke window flash top mid go connector.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team take mid smoke window flash top mid go connector"
-      }
+      "message": "take mid smoke window flash top mid go connector",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 4",
       "description": "Mirage T preset for numpad 4: [silent] B apps popflash out apps.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team [silent] B apps popflash out apps"
-      }
+      "message": "[silent] B apps popflash out apps",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 5",
       "description": "Mirage T preset for numpad 5: [fake] A ramp smoke jungle go B apps.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team [fake] A ramp smoke jungle go B apps"
-      }
+      "message": "[fake] A ramp smoke jungle go B apps",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 6",
       "description": "Mirage T preset for numpad 6: mid control smoke window + short go A.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team mid control smoke window + short go A"
-      }
+      "message": "mid control smoke window + short go A",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 7",
       "description": "Mirage T preset for numpad 7: fast mid smoke window + connector go B.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team fast mid smoke window + connector go B"
-      }
+      "message": "fast mid smoke window + connector go B",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 8",
       "description": "Mirage T preset for numpad 8: A ramp smoke CT + stairs + jungle flash over.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team A ramp smoke CT + stairs + jungle flash over"
-      }
+      "message": "A ramp smoke CT + stairs + jungle flash over",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 9",
       "description": "Mirage T preset for numpad 9: hide B apps till 1:00 then smoke market door + window go B.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team hide B apps till 1:00 then smoke market door + window go B"
-      }
+      "message": "hide B apps till 1:00 then smoke market door + window go B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 1",
       "description": "Mirage CT preset for numpad 1: 2 A 1 mid 2 B.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team 2 A 1 mid 2 B"
-      }
+      "message": "2 A 1 mid 2 B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 2",
       "description": "Mirage CT preset for numpad 2: mid peek window.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team mid peek window"
-      }
+      "message": "mid peek window",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 3",
       "description": "Mirage CT preset for numpad 3: push B apps early.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team push B apps early"
-      }
+      "message": "push B apps early",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 4",
       "description": "Mirage CT preset for numpad 4: retake A.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team retake A"
-      }
+      "message": "retake A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 5",
       "description": "Mirage CT preset for numpad 5: stack B.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team stack B"
-      }
+      "message": "stack B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 6",
       "description": "Mirage CT preset for numpad 6: connector control.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team connector control"
-      }
+      "message": "connector control",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 7",
       "description": "Mirage CT preset for numpad 7: double ramp hold.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team double ramp hold"
-      }
+      "message": "double ramp hold",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 8",
       "description": "Mirage CT preset for numpad 8: mid boost.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team mid boost"
-      }
+      "message": "mid boost",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 9",
       "description": "Mirage CT preset for numpad 9: save crossfire.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team save crossfire"
-      }
+      "message": "save crossfire",
+      "meta": {}
     }
   ]
 }

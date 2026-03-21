@@ -12,6 +12,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PORT = 18080
 BASE_URL = f"http://127.0.0.1:{PORT}"
+HEALTH_PAYLOAD = {"status": "ok"}
+TRANSIENT_HEALTH_ERRORS = (
+    urllib.error.URLError,
+    TimeoutError,
+    ConnectionError,
+    OSError,
+    ValueError,
+)
 
 
 def fetch_json(path, method="GET", payload=None):
@@ -31,17 +39,32 @@ def fetch_text(path):
         return response.status, response.read().decode("utf-8")
 
 
-def wait_for_server():
+def wait_for_json_response(url, expected_payload, attempts=50, delay_seconds=0.2, timeout=5):
     last_error = None
-    for _ in range(50):
+    for _ in range(attempts):
         try:
-            status, payload = fetch_json("/healthz")
-            if status == 200 and payload == {"status": "ok"}:
-                return
-        except (urllib.error.URLError, ConnectionError, TimeoutError) as error:
+            with urllib.request.urlopen(url, timeout=timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+                if response.status == 200 and payload == expected_payload:
+                    return payload
+                last_error = RuntimeError(
+                    f"unexpected response from {url}: {response.status} {payload}"
+                )
+        except TRANSIENT_HEALTH_ERRORS as error:
             last_error = error
-            time.sleep(0.2)
-    raise RuntimeError(f"Server did not become ready: {last_error}")
+        time.sleep(delay_seconds)
+
+    raise RuntimeError(f"Server did not become ready at {url}: {last_error}")
+
+
+def wait_for_server():
+    return wait_for_json_response(
+        f"{BASE_URL}/healthz",
+        HEALTH_PAYLOAD,
+        attempts=50,
+        delay_seconds=0.2,
+        timeout=5,
+    )
 
 
 def main():
@@ -64,7 +87,7 @@ def main():
 
         status, health = fetch_json("/healthz")
         assert status == 200
-        assert health == {"status": "ok"}
+        assert health == HEALTH_PAYLOAD
 
         status, data = fetch_json("/api/data")
         assert status == 200
@@ -91,15 +114,14 @@ def main():
                 "side": "CT",
                 "name": "A fast rotate",
                 "description": "Rotate quickly and call the crossfire.",
-                "bindings": {
-                    "1": "say_team smoke short",
-                    "2": "say_team flash site",
-                },
+                "message": "smoke short then flash site",
+                "meta": {"origin": "smoke-test"},
             },
         )
         assert status == 201
         assert created["source"] == "database"
-        assert "bind KP_END" in created["command"]
+        assert created["message"] == "smoke short then flash site"
+        assert created["meta"] == {"origin": "smoke-test"}
     finally:
         process.terminate()
         try:

@@ -7,162 +7,144 @@
       "name": "T slot 1",
       "description": "Inferno T preset for numpad 1: rush B banana flash over car smoke CT.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team rush B banana flash over car smoke CT"
-      }
+      "message": "rush B banana flash over car smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 2",
       "description": "Inferno T preset for numpad 2: take banana molly car smoke CT.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team take banana molly car smoke CT"
-      }
+      "message": "take banana molly car smoke CT",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 3",
       "description": "Inferno T preset for numpad 3: apps + short go A smoke moto + library.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team apps + short go A smoke moto + library"
-      }
+      "message": "apps + short go A smoke moto + library",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 4",
       "description": "Inferno T preset for numpad 4: [fake] banana smoke CT go A short.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team [fake] banana smoke CT go A short"
-      }
+      "message": "[fake] banana smoke CT go A short",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 5",
       "description": "Inferno T preset for numpad 5: A site smoke moto + library flash over.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team A site smoke moto + library flash over"
-      }
+      "message": "A site smoke moto + library flash over",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 6",
       "description": "Inferno T preset for numpad 6: [silent] apps popflash out balcony.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team [silent] apps popflash out balcony"
-      }
+      "message": "[silent] apps popflash out balcony",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 7",
       "description": "Inferno T preset for numpad 7: mid to B smoke CT + coffins.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team mid to B smoke CT + coffins"
-      }
+      "message": "mid to B smoke CT + coffins",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 8",
       "description": "Inferno T preset for numpad 8: B site smoke CT + coffins flash over.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team B site smoke CT + coffins flash over"
-      }
+      "message": "B site smoke CT + coffins flash over",
+      "meta": {}
     },
     {
       "side": "T",
       "name": "T slot 9",
       "description": "Inferno T preset for numpad 9: hide banana till 1:00 then explode B smoke CT + coffins.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team hide banana till 1:00 then explode B smoke CT + coffins"
-      }
+      "message": "hide banana till 1:00 then explode B smoke CT + coffins",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 1",
       "description": "Inferno CT preset for numpad 1: 3 B banana.",
       "creator": "System",
-      "bindings": {
-        "1": "say_team 3 B banana"
-      }
+      "message": "3 B banana",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 2",
       "description": "Inferno CT preset for numpad 2: push banana early.",
       "creator": "System",
-      "bindings": {
-        "2": "say_team push banana early"
-      }
+      "message": "push banana early",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 3",
       "description": "Inferno CT preset for numpad 3: 2 B hold.",
       "creator": "System",
-      "bindings": {
-        "3": "say_team 2 B hold"
-      }
+      "message": "2 B hold",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 4",
       "description": "Inferno CT preset for numpad 4: arch + short A.",
       "creator": "System",
-      "bindings": {
-        "4": "say_team arch + short A"
-      }
+      "message": "arch + short A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 5",
       "description": "Inferno CT preset for numpad 5: stack A.",
       "creator": "System",
-      "bindings": {
-        "5": "say_team stack A"
-      }
+      "message": "stack A",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 6",
       "description": "Inferno CT preset for numpad 6: retake B.",
       "creator": "System",
-      "bindings": {
-        "6": "say_team retake B"
-      }
+      "message": "retake B",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 7",
       "description": "Inferno CT preset for numpad 7: mid push info.",
       "creator": "System",
-      "bindings": {
-        "7": "say_team mid push info"
-      }
+      "message": "mid push info",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 8",
       "description": "Inferno CT preset for numpad 8: double apps.",
       "creator": "System",
-      "bindings": {
-        "8": "say_team double apps"
-      }
+      "message": "double apps",
+      "meta": {}
     },
     {
       "side": "CT",
       "name": "CT slot 9",
       "description": "Inferno CT preset for numpad 9: save crossfire.",
       "creator": "System",
-      "bindings": {
-        "9": "say_team save crossfire"
-      }
+      "message": "save crossfire",
+      "meta": {}
     }
   ]
 }
