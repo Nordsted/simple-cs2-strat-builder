@@ -382,19 +382,10 @@ button.primary {
   background: linear-gradient(180deg, rgba(5, 19, 12, 0.96), rgba(5, 17, 11, 0.9));
 }
 
-.slot-picker-panel-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.slot-picker-panel-header h4 {
-  margin: 0;
-}
 
 .slot-picker-panel-actions {
   display: inline-flex;
+  justify-content: flex-end;
   gap: 0.45rem;
   flex-wrap: wrap;
 }
@@ -481,7 +472,6 @@ button.primary {
   .strategy-row-header,
   .strategy-controls-row,
   .strategy-row-actions,
-  .slot-picker-panel-header,
   .dialog-header,
   .slot-option-header {
     flex-direction: column;
