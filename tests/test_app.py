@@ -69,12 +69,15 @@ class AppTestCase(unittest.TestCase):
                 }
             )
 
-    def test_build_command_uses_ordered_message_list(self):
-        command = app.build_command(["say_team first", "", 'say_team "mid"', "last"])
+    def test_build_command_uses_cs2_keypad_binds_and_summary_slot(self):
+        command = app.build_command(
+            ["say_team first", "", 'say_team "mid"', "last"],
+            ["First strat", "", 'Mid "split"', "Last call"],
+        )
 
         self.assertEqual(
             command,
-            'bind KP_END "say_team first"; bind KP_PGDN "say_team \'mid\'"; bind KP_LEFTARROW "say_team last"',
+            'bind kp_1 "say_team first"; bind kp_3 "say_team \'mid\'"; bind kp_4 "say_team last"; bind kp_0 "say_team 1. First strat | 3. Mid \'split\' | 4. Last call"',
         )
 
     def test_read_strategy_seed_rejects_invalid_payload(self):

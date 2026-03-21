@@ -14,16 +14,18 @@ DATABASE_PATH = Path(os.getenv("DATABASE_PATH", DATA_DIR / "strats.db"))
 PORT = int(os.getenv("PORT", "8080"))
 
 NUMPAD_KEYS = {
-    "1": "KP_END",
-    "2": "KP_DOWNARROW",
-    "3": "KP_PGDN",
-    "4": "KP_LEFTARROW",
-    "5": "KP_5",
-    "6": "KP_RIGHTARROW",
-    "7": "KP_HOME",
-    "8": "KP_UPARROW",
-    "9": "KP_PGUP",
+    "1": "kp_1",
+    "2": "kp_2",
+    "3": "kp_3",
+    "4": "kp_4",
+    "5": "kp_5",
+    "6": "kp_6",
+    "7": "kp_7",
+    "8": "kp_8",
+    "9": "kp_9",
 }
+
+SUMMARY_BIND_KEY = "kp_0"
 
 STRATEGIES_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS strategies (
@@ -239,7 +241,20 @@ def validate_strategy(payload):
     }
 
 
-def build_command(messages):
+def build_summary_command(titles):
+    summary_parts = []
+    for index, title in enumerate(titles[:9], start=1):
+        normalized_title = sanitize_command(title)
+        if not normalized_title:
+            continue
+        summary_parts.append(f"{index}. {normalized_title}")
+    if not summary_parts:
+        return ""
+    summary_text = " | ".join(summary_parts).replace('"', "'")
+    return f"say_team {summary_text}"
+
+
+def build_command(messages, titles=None):
     commands = []
     for index, message in enumerate(messages[:9], start=1):
         normalized_message = normalize_strategy_message(message)
@@ -247,6 +262,9 @@ def build_command(messages):
             continue
         escaped_message = normalized_message.replace('"', "'")
         commands.append(f'bind {NUMPAD_KEYS[str(index)]} "say_team {escaped_message}"')
+    summary_command = build_summary_command(titles or [])
+    if summary_command:
+        commands.append(f'bind {SUMMARY_BIND_KEY} "{summary_command}"')
     return "; ".join(commands)
 
 
