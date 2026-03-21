@@ -180,52 +180,47 @@ function renderSlotRow(slot) {
 
   return `
     <article class="strategy-row" data-slot-row="${slot.slotNumber}">
-      <div class="strategy-slot-column">
-        <strong>Numpad ${slot.slotNumber}</strong>
-        <span>${NUMPAD_KEYS[slot.slotNumber]}</span>
-      </div>
       <div class="strategy-main-column">
         <div class="strategy-row-header">
-          <div>
+          <div class="strategy-title-row">
+            <span class="strategy-slot-label">Numpad ${slot.slotNumber}</span>
             <h3>${escapeHTML(title)}</h3>
-            <p>${escapeHTML(description)}</p>
           </div>
+          <div class="strategy-badges strategy-badges-primary">${renderSlotBadges(slot, "primary")}</div>
+        </div>
+        <p class="strategy-row-description">${escapeHTML(description)}</p>
+        <div class="strategy-badges strategy-badges-secondary" data-slot-badges="${slot.slotNumber}">${renderSlotBadges(slot, "secondary")}</div>
+        <div class="strategy-controls-row">
+          <label class="strategy-message-input">
+            <span class="sr-only">Message for numpad ${slot.slotNumber}</span>
+            <input
+              type="text"
+              data-slot-input="${slot.slotNumber}"
+              value="${escapeHTML(slot.message)}"
+              placeholder="Type the team message only"
+            />
+          </label>
           <div class="strategy-row-actions">
             <button type="button" class="ghost-button" data-slot-pick="${slot.slotNumber}">Pick strat</button>
             <button type="button" class="ghost-button" data-slot-clear="${slot.slotNumber}">Clear</button>
           </div>
         </div>
-        <div class="strategy-badges" data-slot-badges="${slot.slotNumber}">${renderSlotBadges(slot)}</div>
-        <label class="strategy-message-input">
-          <span class="sr-only">Message for numpad ${slot.slotNumber}</span>
-          <input
-            type="text"
-            data-slot-input="${slot.slotNumber}"
-            value="${escapeHTML(slot.message)}"
-            placeholder="Type the team message only"
-          />
-        </label>
       </div>
     </article>
   `;
 }
 
-function renderSlotBadges(slot) {
-  return [
-    renderBadge(`Numpad ${slot.slotNumber}`, "slot"),
-    renderBadge(NUMPAD_KEYS[slot.slotNumber], "key"),
-    renderBadge(slot.strategy ? slot.strategy.creator : "No strategy", "creator"),
-    renderBadge(getSlotStatusLabel(slot), "status"),
-    ...renderMetaBadges(slot.strategy?.meta || {}),
-  ].join("");
+function renderSlotBadges(slot, group) {
+  const badges = group === "primary" ? renderPrimaryBadges(slot) : renderSecondaryBadges(slot);
+  return badges.join("");
 }
 
 function getSlotStatusLabel(slot) {
   if (slot.isManualEdit) {
-    return "Manual edit";
+    return "Edited";
   }
   if (slot.strategy) {
-    return "Preset";
+    return "";
   }
   return slot.message ? "Custom" : "Empty";
 }
@@ -234,7 +229,7 @@ function updateSlotStatus(slotNumber) {
   const badgeContainer = bindingsEditor.querySelector(`[data-slot-badges="${slotNumber}"]`);
   const slot = state.slots[slotNumber - 1];
   if (badgeContainer) {
-    badgeContainer.innerHTML = renderSlotBadges(slot);
+    badgeContainer.innerHTML = renderSlotBadges(slot, "secondary");
   }
 }
 
@@ -242,8 +237,37 @@ function renderBadge(label, tone) {
   return `<span class="meta-badge meta-badge-${tone}">${escapeHTML(label)}</span>`;
 }
 
-function renderMetaBadges(meta) {
-  return Object.entries(meta).map(([key, value]) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(value)}`, "meta"));
+function renderPrimaryBadges(slot) {
+  const metaEntries = getVisibleMetaEntries(slot.strategy?.meta || {});
+  const priorityKeys = ["tags", "difficulty"];
+  return priorityKeys
+    .filter((key) => key in metaEntries)
+    .map((key) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(metaEntries[key])}`, "meta"));
+}
+
+function renderSecondaryBadges(slot) {
+  const metaEntries = getVisibleMetaEntries(slot.strategy?.meta || {});
+  const secondaryKeys = ["goodWhen", "purpose"];
+  const orderedBadges = [
+    ...secondaryKeys
+      .filter((key) => key in metaEntries)
+      .map((key) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(metaEntries[key])}`, "meta")),
+    ...Object.entries(metaEntries)
+      .filter(([key]) => !["tags", "difficulty", ...secondaryKeys].includes(key))
+      .map(([key, value]) => renderBadge(`${humanizeKey(key)}: ${formatMetaValue(value)}`, "meta")),
+  ];
+
+  const statusLabel = getSlotStatusLabel(slot);
+  if (statusLabel) {
+    orderedBadges.push(renderBadge(statusLabel, "status"));
+  }
+
+  return orderedBadges;
+}
+
+function getVisibleMetaEntries(meta) {
+  const hiddenMetaKeys = new Set(["notes"]);
+  return Object.fromEntries(Object.entries(meta).filter(([key]) => !hiddenMetaKeys.has(key)));
 }
 
 function humanizeKey(key) {
