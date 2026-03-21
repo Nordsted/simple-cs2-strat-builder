@@ -3,39 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CS2 Strat Builder</title>
+    <title>CS2 Chat Strat Builder</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <main class="layout">
       <section class="hero card">
         <div class="hero-copy">
-          <p class="eyebrow">CS2 strat builder</p>
-          <h1>Build ordered CS2 numpad strategy binds for each map</h1>
+          <p class="eyebrow">CS2 Chat Strat builder</p>
+          <h1>Strats in chat made easy</h1>
           <p class="lead">
-            Pick a map and side to load the ordered strategy list. The first nine strategies automatically fill numpad slots 1-9, with each row focused on the strat name, quick context, and message you want to bind.
+            Select map and side, you now have your preferred strats at the tip of your fingers.
           </p>
-        </div>
-        <div class="hero-badge" aria-hidden="true">
-          <span>Ordered presets</span>
-          <strong>Compact 1×9 bind list</strong>
         </div>
       </section>
 
       <section class="builder card">
         <div class="builder-sidebar">
-          <h2>Map and side</h2>
-
           <label>
-            Map
             <select id="mapSelect"></select>
           </label>
 
           <section class="side-picker" aria-labelledby="sidePickerLabel">
-            <div class="side-picker-header">
-              <span id="sidePickerLabel">Side</span>
-              <small class="muted">Strategies are filtered only by map and side.</small>
-            </div>
             <div class="side-button-group" role="group" aria-label="Pick side">
               <button type="button" class="side-button is-selected" data-side="T" aria-pressed="true">T Side</button>
               <button type="button" class="side-button" data-side="CT" aria-pressed="false">CT Side</button>
@@ -48,18 +37,12 @@
           </div>
 
           <p id="copyStatus" class="status"></p>
-          <div class="muted compact-note">
-            <p>The first 9 ordered strategies auto-fill the numpad.</p>
-            <p>“Pick strat” shows every strategy for the selected map and side.</p>
-            <p>Choosing a strategy replaces the currently targeted slot.</p>
-          </div>
         </div>
 
         <div class="builder-editor">
           <div class="editor-header">
             <div>
-              <h2>Numpad strategy rows</h2>
-              <p class="muted">Each row stays compact while <code>say_team</code> is still added automatically on export.</p>
+              <h2>Numpad binds</h2>
             </div>
           </div>
 
