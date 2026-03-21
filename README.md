@@ -1,6 +1,6 @@
-# CS2 Strat Builder
+# CS2 Chat Strat Builder
 
-A lightweight web app for Counter-Strike 2 strategies. Users can choose a map, pick a side, select a strategy, and generate one combined console command with binds for numpad 1-9.
+A lightweight web app for Counter-Strike 2 strategies in team chat. Users can choose a map, pick a side, select a strategy, and generate one combined console command with binds for numpad 1-9.
 
 ## Tech stack
 
