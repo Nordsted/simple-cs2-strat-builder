@@ -70,6 +70,20 @@ docker compose up --build
 
 The app is exposed on `http://localhost:8080`, and the SQLite database is stored in the Docker volume `cs2_strat_data`.
 
+## Deploy on Railway with Railpack
+
+This repository now includes a root `railway.json` that forces Railway to use the `RAILPACK` builder even though the project also keeps a local `Dockerfile` for Docker Compose deployments.
+
+Railway will run the app with:
+
+```bash
+python3 app.py
+```
+
+and use `GET /healthz` as the deployment health check.
+
+If you create a persistent Railway volume, set `DATABASE_PATH` to a file inside that mounted volume so community strategies survive redeploys.
+
 ## Raspberry Pi notes
 
 The app avoids heavy frameworks and external runtime dependencies, so it remains simple to run on a Raspberry Pi both directly and in Docker.
