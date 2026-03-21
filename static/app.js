@@ -203,12 +203,10 @@ function renderSlotRow(slot) {
     <article class="strategy-row" data-slot-row="${slot.slotNumber}">
       <div class="strategy-main-column">
         <div class="strategy-row-header">
-          <div class="strategy-title-copy">
-            <div class="strategy-title-row">
-              <span class="strategy-slot-label">Numpad ${slot.slotNumber}</span>
-              <h3>${escapeHTML(title)}</h3>
-            </div>
-            <p class="strategy-row-description">${escapeHTML(description)}</p>
+          <div class="strategy-title-row">
+            <span class="strategy-slot-label">Numpad ${slot.slotNumber}</span>
+            <h3>${escapeHTML(title)}</h3>
+            <span class="strategy-row-description">${escapeHTML(description)}</span>
           </div>
           <div class="strategy-badges strategy-badges-primary">${renderSlotBadges(slot, "primary")}</div>
         </div>
