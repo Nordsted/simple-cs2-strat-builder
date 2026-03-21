@@ -7,12 +7,12 @@
       "name": "Fast A ramp",
       "description": "Hit A quickly from ramp with entry utility.",
       "creator": "System",
-      "message": "5 A ramp smoke jungle + stairs flash over",
+      "message": "5 A ramp, smoke jungle + stairs, flash over -> go A",
       "meta": {
-        "purpose": "Take A fast before mid or B rotations arrive",
+        "purpose": "",
         "goodWhen": [
-          "your team has strong A spawns",
-          "enemy A site plays passive"
+          "good for low-coordination rounds",
+          "good on eco or half-buy"
         ],
         "notes": [
           "best with one fast entry",
@@ -31,12 +31,12 @@
       "name": "A split ramp palace",
       "description": "Pressure A from ramp and palace.",
       "creator": "System",
-      "message": "3 A ramp 2 palace smoke CT + jungle",
+      "message": "3 A ramp, 2 palace, smoke CT + jungle -> go A",
       "meta": {
-        "purpose": "Split A and block common rotates into ticket and jungle",
+        "purpose": "enter A from two lanes",
         "goodWhen": [
-          "your team has palace spawn",
-          "enemy jungle player is active"
+          "best on full-buy",
+          "good if 2 players can take the second lane"
         ],
         "notes": [
           "needs timing between ramp and palace",
@@ -56,12 +56,12 @@
       "name": "Mid to connector",
       "description": "Take mid and convert it into connector pressure.",
       "creator": "System",
-      "message": "take mid smoke window flash top mid go connector",
+      "message": "take mid, smoke window, flash top mid -> go connector",
       "meta": {
-        "purpose": "Gain connector and open A split or cat pressure",
+        "purpose": "",
         "goodWhen": [
-          "your team has good top mid spawn",
-          "enemy window control looks weak"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "window smoke is key",
@@ -80,12 +80,12 @@
       "name": "Silent B apps",
       "description": "Walk B apps and burst with one flash.",
       "creator": "System",
-      "message": "[silent] B apps popflash out apps",
+      "message": "walk B apps, popflash out -> go B",
       "meta": {
-        "purpose": "Catch B anchors before full rotate is ready",
+        "purpose": "reduce the early sound cue",
         "goodWhen": [
-          "enemy mid setup is heavy",
-          "B player overpeeks apps"
+          "good on eco or half-buy",
+          "good if the team can stay quiet"
         ],
         "notes": [
           "stay quiet until contact",
@@ -104,12 +104,12 @@
       "name": "Fake A to B",
       "description": "Show A utility then hit B through apps.",
       "creator": "System",
-      "message": "[fake] A ramp smoke jungle go B apps",
+      "message": "show A ramp, smoke jungle -> rotate B apps",
       "meta": {
-        "purpose": "Pull connector and ticket attention away from B",
+        "purpose": "pull rotation before the real hit",
         "goodWhen": [
-          "enemy rotates early",
-          "your team lacks mid control"
+          "best on full-buy",
+          "good if the team will rotate together"
         ],
         "notes": [
           "do not overfight on A",
@@ -129,12 +129,12 @@
       "name": "Mid short to A",
       "description": "Take middle and split A through short.",
       "creator": "System",
-      "message": "mid control smoke window + short go A",
+      "message": "take mid control, smoke window + short -> go A",
       "meta": {
-        "purpose": "Create an A split without needing palace",
+        "purpose": "",
         "goodWhen": [
-          "you control top mid early",
-          "enemy short control is weak"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "needs one player to clear ladder/short",
@@ -154,12 +154,12 @@
       "name": "Fast mid to B",
       "description": "Use mid utility and flow into B quickly.",
       "creator": "System",
-      "message": "fast mid smoke window + connector go B",
+      "message": "fast mid, smoke window + connector -> go B",
       "meta": {
-        "purpose": "Force fast rotation path through market and short",
+        "purpose": "enter B through a second lane",
         "goodWhen": [
-          "enemy B is usually solo",
-          "mid is lightly contested"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "need one player to cut market rotate",
@@ -178,12 +178,12 @@
       "name": "Full A site hit",
       "description": "Commit to A with core site-blocking smokes.",
       "creator": "System",
-      "message": "A ramp smoke CT + stairs + jungle flash over",
+      "message": "A ramp, smoke CT + stairs + jungle, flash over -> go A",
       "meta": {
-        "purpose": "Block core A angles and overwhelm anchors",
+        "purpose": "",
         "goodWhen": [
-          "team has full buy utility",
-          "you want simple coordinated pressure"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "ticket remains contestable after smokes fade",
@@ -202,12 +202,12 @@
       "name": "Delayed B apps",
       "description": "Hide in apps and hit B after the clock reaches one minute.",
       "creator": "System",
-      "message": "hide B apps till 1:00 then smoke market door + window go B",
+      "message": "hide B apps till 1:00, then, smoke market door + window -> go B",
       "meta": {
-        "purpose": "Punish early mid/A rotations and late B re-clear",
+        "purpose": "punish early info pushes",
         "goodWhen": [
-          "CTs rotate fast",
-          "enemy B players push for info early"
+          "good if the team will wait for the timing",
+          "best on full-buy"
         ],
         "notes": [
           "stay silent until the hit",
@@ -226,12 +226,12 @@
       "name": "Palace contact A",
       "description": "Hold palace pressure and burst when A shows weakness.",
       "creator": "System",
-      "message": "2 palace hold 3 A ramp then swing A smoke CT",
+      "message": "2 palace hold 3 A ramp, then swing A, smoke CT -> go A",
       "meta": {
-        "purpose": "Use palace late timing to break default A crossfires",
+        "purpose": "",
         "goodWhen": [
-          "enemy ramp fights hard",
-          "palace is usually unpressured"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "needs patient palace players",
@@ -250,12 +250,12 @@
       "name": "Underpass to connector",
       "description": "Use underpass to pressure connector while teammates show mid.",
       "creator": "System",
-      "message": "1 underpass 4 top mid smoke window go connector",
+      "message": "1 underpass 4 top mid, smoke window -> go connector",
       "meta": {
-        "purpose": "Break connector control from two timings",
+        "purpose": "",
         "goodWhen": [
-          "enemy window player is isolated",
-          "you want A split without palace"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "underpass player must not get spotted early",
@@ -274,12 +274,12 @@
       "name": "Fast cat to B split",
       "description": "Use cat pressure to help a B split.",
       "creator": "System",
-      "message": "take cat 2 B apps smoke market window go B",
+      "message": "take cat 2 B apps, smoke market window -> go B",
       "meta": {
-        "purpose": "Pin market and bench from two directions",
+        "purpose": "enter B from two lanes",
         "goodWhen": [
-          "mid is free",
-          "B anchor hides bench/van often"
+          "best on full-buy",
+          "good if 2 players can take the second lane"
         ],
         "notes": [
           "cat player must arrive with apps hit",
@@ -301,10 +301,10 @@
       "creator": "System",
       "message": "2 A 1 mid 2 B",
       "meta": {
-        "purpose": "Cover all lanes with flexible rotate paths",
+        "purpose": "",
         "goodWhen": [
-          "you do not know enemy habits yet",
-          "your team wants simple roles"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "mid player must communicate fast",
@@ -324,10 +324,10 @@
       "creator": "System",
       "message": "mid peek window",
       "meta": {
-        "purpose": "Contest top mid early and learn T direction",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "you have AWP or good spawn",
-          "Ts favor mid utility late"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "do not repeat every round",
@@ -348,10 +348,10 @@
       "creator": "System",
       "message": "push B apps early",
       "meta": {
-        "purpose": "Deny silent apps control and gather info",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "enemy likes B contact",
-          "you have strong flash support"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "do not dry swing alone",
@@ -372,10 +372,10 @@
       "creator": "System",
       "message": "retake A",
       "meta": {
-        "purpose": "Avoid bad first duels and use rotation utility later",
+        "purpose": "save utility for the A retake",
         "goodWhen": [
-          "enemy favors heavy A executes",
-          "your A anchors get traded too fast"
+          "good if the team will save utility",
+          "good when economy matters"
         ],
         "notes": [
           "save jungle and ticket utility",
@@ -395,10 +395,10 @@
       "creator": "System",
       "message": "stack B",
       "meta": {
-        "purpose": "Shut down repeated B apps rounds",
+        "purpose": "",
         "goodWhen": [
-          "Ts hit B often",
-          "you lost several B rounds in a row"
+          "good after a read",
+          "good for low-utility rounds"
         ],
         "notes": [
           "weakens A and mid",
@@ -418,10 +418,10 @@
       "creator": "System",
       "message": "connector control",
       "meta": {
-        "purpose": "Cut mid splits and help both sites rotate faster",
+        "purpose": "",
         "goodWhen": [
-          "window player gets pressured",
-          "Ts like short splits"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "needs support flash or top mid info",
@@ -442,10 +442,10 @@
       "creator": "System",
       "message": "double ramp hold",
       "meta": {
-        "purpose": "Punish simple ramp hits before smokes land",
+        "purpose": "",
         "goodWhen": [
-          "enemy keeps five-man rushing A",
-          "your A spawns are good"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "leaves mid lighter",
@@ -466,10 +466,10 @@
       "creator": "System",
       "message": "mid boost",
       "meta": {
-        "purpose": "Get an unusual angle into top mid control",
+        "purpose": "",
         "goodWhen": [
-          "Ts repeat same mid pathing",
-          "you need info without full push"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "not for every round",
@@ -490,10 +490,10 @@
       "creator": "System",
       "message": "save crossfire",
       "meta": {
-        "purpose": "Protect weapons and force Ts to clear multiple angles",
+        "purpose": "protect weapons and avoid isolated duels",
         "goodWhen": [
-          "economy is fragile",
-          "you have man disadvantage early"
+          "good when economy is weak",
+          "good if the team will not overpeek"
         ],
         "notes": [
           "do not give solo duels",
@@ -513,10 +513,10 @@
       "creator": "System",
       "message": "mid push with short help",
       "meta": {
-        "purpose": "Disrupt T mid control before they stabilize",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "Ts smoke window every round",
-          "short player can support fast"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "must be synchronized",
@@ -537,10 +537,10 @@
       "creator": "System",
       "message": "A hold ticket + jungle",
       "meta": {
-        "purpose": "Trade better against full A utility",
+        "purpose": "",
         "goodWhen": [
-          "enemy uses strong A smokes",
-          "you want safer A defense"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "do not overfight ramp early",
@@ -561,10 +561,10 @@
       "creator": "System",
       "message": "hold B anti-rush van + bench",
       "meta": {
-        "purpose": "Stall apps burst long enough for short rotation",
+        "purpose": "",
         "goodWhen": [
-          "Ts favor fast apps rounds",
-          "you have supportive flash available"
+          "good if 2 players anchor together",
+          "good against simple rush rounds"
         ],
         "notes": [
           "first player delays, second trades",

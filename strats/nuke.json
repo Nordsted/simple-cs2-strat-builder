@@ -7,12 +7,12 @@
       "name": "Outside to secret",
       "description": "Use wall smokes and cross to secret.",
       "creator": "System",
-      "message": "outside smoke wall cross to secret",
+      "message": "outside, smoke wall cross to secret",
       "meta": {
-        "purpose": "Gain lower pressure without first fighting upper",
+        "purpose": "",
         "goodWhen": [
-          "your team can throw wall cleanly",
-          "CT upper setup is strong"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "watch garage aggression",
@@ -31,12 +31,12 @@
       "name": "Fast ramp",
       "description": "Hit ramp quickly with flash support.",
       "creator": "System",
-      "message": "rush ramp flash ramp",
+      "message": "group ramp, flash ramp",
       "meta": {
-        "purpose": "Beat ramp setup and open lower split options",
+        "purpose": "",
         "goodWhen": [
-          "CT ramp player is isolated",
-          "team has good ramp spawn"
+          "good for low-coordination rounds",
+          "good on eco or half-buy"
         ],
         "notes": [
           "need fast spacing",
@@ -55,12 +55,12 @@
       "name": "Hut squeaky A",
       "description": "Pressure upper A through hut and squeaky.",
       "creator": "System",
-      "message": "hut + squeaky go A flash door",
+      "message": "hut + squeaky, flash door -> go A",
       "meta": {
-        "purpose": "Overwhelm site from two entry points",
+        "purpose": "",
         "goodWhen": [
-          "outside feels weak value",
-          "CT heaven player is passive"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "must clear rafters",
@@ -80,12 +80,12 @@
       "name": "Fake hut to ramp",
       "description": "Make noise upper then pivot into ramp.",
       "creator": "System",
-      "message": "[fake] hut noise go ramp",
+      "message": "show make noise hut -> rotate ramp",
       "meta": {
-        "purpose": "Pull upper rotation and open lower path",
+        "purpose": "pull rotation before the real hit",
         "goodWhen": [
-          "CTs overrotate upper quickly",
-          "ramp is usually solo"
+          "best on full-buy",
+          "good if the team will rotate together"
         ],
         "notes": [
           "do not commit upper players",
@@ -104,12 +104,12 @@
       "name": "Outside control",
       "description": "Take outside with wall and garage pressure.",
       "creator": "System",
-      "message": "outside control smoke cross + garage",
+      "message": "take outside control, smoke cross + garage -> go secret",
       "meta": {
-        "purpose": "Own yard space and keep multiple follow-up options",
+        "purpose": "",
         "goodWhen": [
-          "outside player is strong",
-          "enemy yard control is passive"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "garage lurk helps a lot",
@@ -128,12 +128,12 @@
       "name": "Upper A execute",
       "description": "Commit to upper with core site smokes.",
       "creator": "System",
-      "message": "A site smoke heaven + main",
+      "message": "A site, smoke heaven + main -> go A",
       "meta": {
-        "purpose": "Cut heaven and vision lines while taking upper",
+        "purpose": "",
         "goodWhen": [
-          "team has full buy utility",
-          "CT AWP plays heaven often"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "rafters must still be cleared",
@@ -152,12 +152,12 @@
       "name": "Vent drop B",
       "description": "Drop vent and pressure lower with decon smoke.",
       "creator": "System",
-      "message": "vent drop B smoke decon",
+      "message": "vent drop B, smoke decon -> go B",
       "meta": {
-        "purpose": "Arrive lower quickly and reduce decon swing risk",
+        "purpose": "",
         "goodWhen": [
-          "upper gets little contest",
-          "CT lower rotates are slow"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "watch vent room timing",
@@ -176,12 +176,12 @@
       "name": "Lobby control",
       "description": "Use lobby pressure to open upper options.",
       "creator": "System",
-      "message": "lobby control flash hut",
+      "message": "lobby control, flash hut",
       "meta": {
-        "purpose": "Take space safely before choosing upper or vent route",
+        "purpose": "",
         "goodWhen": [
-          "enemy pushes lobby often",
-          "you want simpler upper pressure"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "great anti-push opener",
@@ -200,12 +200,12 @@
       "name": "Delayed lower split",
       "description": "Wait in lobby and hit lower after one minute.",
       "creator": "System",
-      "message": "hide lobby till 1:00 then ramp + secret split B smoke decon",
+      "message": "hide lobby till 1:00, ramp + secret, smoke decon -> go B",
       "meta": {
-        "purpose": "Punish early CT lobby aggression and lower rotations",
+        "purpose": "punish early info pushes",
         "goodWhen": [
-          "CTs push lobby",
-          "ramp setup rotates too early"
+          "good if the team will wait for the timing",
+          "best on full-buy"
         ],
         "notes": [
           "discipline is critical",
@@ -226,12 +226,12 @@
       "name": "Garage to secret",
       "description": "Pressure garage to support an outside lower route.",
       "creator": "System",
-      "message": "2 garage 3 outside smoke wall go secret",
+      "message": "2 garage 3 outside, smoke wall -> go secret",
       "meta": {
-        "purpose": "Force yard defenders to split attention",
+        "purpose": "",
         "goodWhen": [
-          "garage is weak",
-          "outside smoke wall is reliable"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "garage player should call heaven rotate",
@@ -251,12 +251,12 @@
       "name": "Squeaky late A",
       "description": "Hold squeaky pressure and burst A later.",
       "creator": "System",
-      "message": "hold squeaky till 1:00 then hut + door go A smoke heaven",
+      "message": "hold squeaky till 1:00, then hut + door -> go A, smoke heaven",
       "meta": {
-        "purpose": "Punish CTs that rotate off upper too early",
+        "purpose": "punish early info pushes",
         "goodWhen": [
-          "outside shows enough pressure",
-          "heaven player leaves often"
+          "good if the team will wait for the timing",
+          "best on full-buy"
         ],
         "notes": [
           "works best with one hut lurk",
@@ -276,12 +276,12 @@
       "name": "Ramp to upper",
       "description": "Show ramp and come back upper through hut.",
       "creator": "System",
-      "message": "show ramp 2 then 5 hut + squeaky go A flash door",
+      "message": "show ramp 2, then 5 hut + squeaky, flash door -> go A",
       "meta": {
-        "purpose": "Move rotation down before snapping back upper",
+        "purpose": "",
         "goodWhen": [
-          "CT ramp rotates aggressively",
-          "you need a fake without outside"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "fake players must survive",
@@ -303,10 +303,10 @@
       "creator": "System",
       "message": "outside control",
       "meta": {
-        "purpose": "Deny easy wall smokes and secret access",
+        "purpose": "",
         "goodWhen": [
-          "you have strong outside spawn",
-          "Ts rely on lower openings"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "garage can support",
@@ -327,10 +327,10 @@
       "creator": "System",
       "message": "ramp aggressive",
       "meta": {
-        "purpose": "Prevent free lower pressure and learn lobby spread",
+        "purpose": "",
         "goodWhen": [
-          "Ts favor ramp often",
-          "you have support flash"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "dangerous if lobby can trade",
@@ -351,10 +351,10 @@
       "creator": "System",
       "message": "2 A crossfire",
       "meta": {
-        "purpose": "Stabilize upper against hut and door pressure",
+        "purpose": "",
         "goodWhen": [
-          "enemy likes upper hits",
-          "outside can be handled lighter"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "rafters and site roles should be clear",
@@ -375,10 +375,10 @@
       "creator": "System",
       "message": "stack lower",
       "meta": {
-        "purpose": "Shut down secret and ramp-to-B rounds",
+        "purpose": "",
         "goodWhen": [
-          "Ts hit lower repeatedly",
-          "outside pressure is obvious"
+          "good after a read",
+          "good for low-utility rounds"
         ],
         "notes": [
           "upper becomes weaker",
@@ -399,10 +399,10 @@
       "creator": "System",
       "message": "lobby push",
       "meta": {
-        "purpose": "Catch passive defaults and disrupt hut/squeaky setup",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "Ts play slow lobby often",
-          "support flash is available"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "strong reward but risky",
@@ -423,10 +423,10 @@
       "creator": "System",
       "message": "heaven rotate",
       "meta": {
-        "purpose": "Support upper or outside from a central rotate position",
+        "purpose": "",
         "goodWhen": [
-          "enemy mixes upper and yard pressure",
-          "AWP can watch from heaven"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "do not get isolated by smoke",
@@ -447,10 +447,10 @@
       "creator": "System",
       "message": "yard push flash",
       "meta": {
-        "purpose": "Punish outside wall setups before they form",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "you know T outside patterns",
-          "support player is ready"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "not for every round",
@@ -471,10 +471,10 @@
       "creator": "System",
       "message": "retake lower",
       "meta": {
-        "purpose": "Avoid isolated lower deaths against split pressure",
+        "purpose": "save utility for the B retake",
         "goodWhen": [
-          "Ts use good decon utility",
-          "lower anchors get overwhelmed"
+          "good if the team will save utility",
+          "good when economy matters"
         ],
         "notes": [
           "save utility where possible",
@@ -495,10 +495,10 @@
       "creator": "System",
       "message": "double ramp",
       "meta": {
-        "purpose": "Stop free ramp access and punish simple lower setups",
+        "purpose": "",
         "goodWhen": [
-          "Ts hit ramp often",
-          "you can spare less upper presence"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "outside must be called quickly",
@@ -519,10 +519,10 @@
       "creator": "System",
       "message": "garage + outside hold",
       "meta": {
-        "purpose": "Create layered vision on wall-cross attempts",
+        "purpose": "",
         "goodWhen": [
-          "enemy repeats outside",
-          "garage player is comfortable anchoring"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "watch mini timing",
@@ -543,10 +543,10 @@
       "creator": "System",
       "message": "upper anti-rush hut + rafters",
       "meta": {
-        "purpose": "Delay quick A floods until rotates can help",
+        "purpose": "",
         "goodWhen": [
-          "Ts rush upper often",
-          "you have strong upper anchor duo"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "first player slows, second trades",
@@ -567,10 +567,10 @@
       "creator": "System",
       "message": "save compact",
       "meta": {
-        "purpose": "Reduce opening picks and preserve rifles",
+        "purpose": "protect weapons and avoid isolated duels",
         "goodWhen": [
-          "economy is weak",
-          "enemy has stronger buy"
+          "good when economy is weak",
+          "good if the team will not overpeek"
         ],
         "notes": [
           "avoid solo ramp and yard peeks",

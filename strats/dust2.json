@@ -7,12 +7,12 @@
       "name": "Fast long",
       "description": "Take long quickly with a cross smoke and flashes.",
       "creator": "System",
-      "message": "fast long smoke cross flash over",
+      "message": "fast long, smoke cross, flash over -> go A",
       "meta": {
-        "purpose": "Secure long before CT setup stabilizes",
+        "purpose": "",
         "goodWhen": [
-          "your team has good long spawns",
-          "enemy long setup is weak"
+          "good for low-coordination rounds",
+          "good on eco or half-buy"
         ],
         "notes": [
           "one player clears pit",
@@ -31,12 +31,12 @@
       "name": "Long short A",
       "description": "Pressure A from long and cat.",
       "creator": "System",
-      "message": "long + short go A smoke CT",
+      "message": "long + short, smoke CT -> go A",
       "meta": {
-        "purpose": "Split A and deny CT rotation line from spawn",
+        "purpose": "",
         "goodWhen": [
-          "mid to cat is open",
-          "enemy A anchor plays static"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "cat timing must match long",
@@ -56,12 +56,12 @@
       "name": "Rush B tunnels",
       "description": "Fast burst from tunnels onto B.",
       "creator": "System",
-      "message": "rush B tunnels flash out",
+      "message": "group B tunnels, flash out -> go B",
       "meta": {
-        "purpose": "Overwhelm B before rotates from mid and A",
+        "purpose": "",
         "goodWhen": [
-          "team has B spawns",
-          "enemy B anchor is isolated"
+          "good for low-coordination rounds",
+          "good on eco or half-buy"
         ],
         "notes": [
           "window/door crossfire still needs clearing",
@@ -80,12 +80,12 @@
       "name": "Mid to B",
       "description": "Come through mid doors pressure into B.",
       "creator": "System",
-      "message": "mid to B smoke CT doors",
+      "message": "take mid, smoke CT doors -> go B",
       "meta": {
-        "purpose": "Split B through doors and tunnels angles",
+        "purpose": "enter B through a second lane",
         "goodWhen": [
-          "mid is free",
-          "B site is hard to rush directly"
+          "good if 1 player knows the smoke",
+          "good if 2+ players will go mid"
         ],
         "notes": [
           "needs one tunnels partner",
@@ -104,12 +104,12 @@
       "name": "Fake B to A long",
       "description": "Show B pressure and rotate into long.",
       "creator": "System",
-      "message": "[fake] B tunnels go A long",
+      "message": "show B tunnels -> rotate A long",
       "meta": {
-        "purpose": "Pull CT rotation toward B and thin A hold",
+        "purpose": "pull rotation before the real hit",
         "goodWhen": [
-          "CTs rotate hard on B contact",
-          "long control can still be taken"
+          "best on full-buy",
+          "good if the team will rotate together"
         ],
         "notes": [
           "do not lose players in fake",
@@ -129,12 +129,12 @@
       "name": "Late long take",
       "description": "Take long later in the round and finish A.",
       "creator": "System",
-      "message": "late long smoke cross",
+      "message": "late long, smoke cross -> go A",
       "meta": {
-        "purpose": "Punish CTs that leave long after early quiet rounds",
+        "purpose": "punish early info pushes",
         "goodWhen": [
-          "enemy gives long after opening fight",
-          "team wants simple late A"
+          "good if the team will wait for the timing",
+          "best on full-buy"
         ],
         "notes": [
           "message is short by design",
@@ -153,12 +153,12 @@
       "name": "Silent B tunnels",
       "description": "Walk tunnels and pop onto B with one flash.",
       "creator": "System",
-      "message": "[silent] B tunnels popflash",
+      "message": "walk walk B tunnels, popflash -> go B",
       "meta": {
-        "purpose": "Catch B anchors before they call full rotate",
+        "purpose": "reduce the early sound cue",
         "goodWhen": [
-          "enemy mid is overactive",
-          "B player peeks too much"
+          "good on eco or half-buy",
+          "good if the team can stay quiet"
         ],
         "notes": [
           "stay quiet in upper tunnels",
@@ -177,12 +177,12 @@
       "name": "Short burst A",
       "description": "Take cat and burst onto A.",
       "creator": "System",
-      "message": "short explode smoke CT",
+      "message": "short explode, smoke CT -> go A",
       "meta": {
-        "purpose": "Hit A through cat with limited utility demand",
+        "purpose": "",
         "goodWhen": [
-          "short is free",
-          "long fight is unfavorable"
+          "good for low-coordination rounds",
+          "good on eco or half-buy"
         ],
         "notes": [
           "goose still needs clearing",
@@ -201,12 +201,12 @@
       "name": "Xbox short A",
       "description": "Use xbox smoke to claim short and scale A.",
       "creator": "System",
-      "message": "smoke xbox take short go A",
+      "message": "smoke xbox, take short -> go A",
       "meta": {
-        "purpose": "Cross mid safely and gain cat control",
+        "purpose": "",
         "goodWhen": [
-          "mid cross is contested",
-          "you want reliable short access"
+          "good on full-buy",
+          "good for simple low-comms rounds"
         ],
         "notes": [
           "one player should watch lower tunnels push",
@@ -226,12 +226,12 @@
       "name": "Long control to split",
       "description": "Take long first, then add short players for A split.",
       "creator": "System",
-      "message": "take long 3 then 2 short go A smoke CT",
+      "message": "take long 3, then 2 short -> go A, smoke CT",
       "meta": {
-        "purpose": "Force A anchor to fight two fronts",
+        "purpose": "enter A from two lanes",
         "goodWhen": [
-          "long control is easy",
-          "cat can join late safely"
+          "best on full-buy",
+          "good if 2 players can take the second lane"
         ],
         "notes": [
           "good against goose-only holds",
@@ -251,12 +251,12 @@
       "name": "Delayed B tunnels",
       "description": "Stay hidden and hit B after one minute.",
       "creator": "System",
-      "message": "hide tunnels till 1:00 then go B flash out",
+      "message": "hide tunnels till 1:00, then -> go B, flash out",
       "meta": {
-        "purpose": "Punish tunnel pushes and early rotate assumptions",
+        "purpose": "punish early info pushes",
         "goodWhen": [
-          "CT B pushes for info",
-          "A defender rotates off too soon"
+          "good if the team will wait for the timing",
+          "best on full-buy"
         ],
         "notes": [
           "silence is important",
@@ -275,12 +275,12 @@
       "name": "Mid split A",
       "description": "Use mid and cat pressure into A without full long fight.",
       "creator": "System",
-      "message": "mid take xbox smoke 3 short 2 mid doors go A",
+      "message": "mid take xbox, smoke 3 short 2 mid doors -> go A",
       "meta": {
-        "purpose": "Hit A without depending on long control",
+        "purpose": "enter A from two lanes",
         "goodWhen": [
-          "CT long setup is strong",
-          "your spawns favor mid"
+          "best on full-buy",
+          "good if 2 players can take the second lane"
         ],
         "notes": [
           "watch CT lower pushes",
@@ -302,10 +302,10 @@
       "creator": "System",
       "message": "3 long",
       "meta": {
-        "purpose": "Deny T long and establish early map control",
+        "purpose": "",
         "goodWhen": [
-          "you have strong long spawns",
-          "Ts favor fast long often"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "leaves B and mid lighter",
@@ -326,10 +326,10 @@
       "creator": "System",
       "message": "mid peek",
       "meta": {
-        "purpose": "Learn if Ts cross mid or favor lower tunnels",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "you have favorable spawn",
-          "enemy repeats xbox smoke patterns"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "avoid repeating predictably",
@@ -350,10 +350,10 @@
       "creator": "System",
       "message": "push tunnels",
       "meta": {
-        "purpose": "Punish passive tunnel rounds and gather quick B info",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "Ts like slow B",
-          "you have support flash"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "dangerous versus anti-push hold",
@@ -374,10 +374,10 @@
       "creator": "System",
       "message": "2 B hold",
       "meta": {
-        "purpose": "Keep B stable while leaving enough A/mid support",
+        "purpose": "",
         "goodWhen": [
-          "you need balance",
-          "enemy site choice is mixed"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "window and platform roles should be clear",
@@ -398,10 +398,10 @@
       "creator": "System",
       "message": "stack A",
       "meta": {
-        "purpose": "Stop repeated A long and short rounds decisively",
+        "purpose": "",
         "goodWhen": [
-          "Ts keep ending A",
-          "you have good read on spawns/patterns"
+          "good after a read",
+          "good for low-utility rounds"
         ],
         "notes": [
           "B becomes vulnerable",
@@ -421,10 +421,10 @@
       "creator": "System",
       "message": "retake B",
       "meta": {
-        "purpose": "Avoid dying to tunnel bursts and window splits",
+        "purpose": "save utility for the B retake",
         "goodWhen": [
-          "T utility is strong",
-          "B anchor often gets isolated"
+          "good if the team will save utility",
+          "good when economy matters"
         ],
         "notes": [
           "save nades for site retake",
@@ -444,10 +444,10 @@
       "creator": "System",
       "message": "short control",
       "meta": {
-        "purpose": "Prevent easy short A hits and support mid",
+        "purpose": "",
         "goodWhen": [
-          "Ts use xbox smoke often",
-          "A site needs extra help"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "do not get isolated from site",
@@ -468,10 +468,10 @@
       "creator": "System",
       "message": "double mid",
       "meta": {
-        "purpose": "Shut down mid-to-B and cat buildup",
+        "purpose": "",
         "goodWhen": [
-          "enemy likes mid splits",
-          "your B player can anchor safely"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "long becomes lighter",
@@ -492,10 +492,10 @@
       "creator": "System",
       "message": "save setup",
       "meta": {
-        "purpose": "Protect rifles and avoid giving opening picks",
+        "purpose": "protect weapons and avoid isolated duels",
         "goodWhen": [
-          "economy is weak",
-          "you are up or down a key weapon"
+          "good when economy is weak",
+          "good if the team will not overpeek"
         ],
         "notes": [
           "avoid solo fights",
@@ -515,10 +515,10 @@
       "creator": "System",
       "message": "long hold pit + car",
       "meta": {
-        "purpose": "Make long retake harder for Ts after first contest",
+        "purpose": "",
         "goodWhen": [
-          "you win long opening often",
-          "pit player is comfortable anchoring"
+          "good as a default opener",
+          "good for low coordination"
         ],
         "notes": [
           "mid must still be called quickly",
@@ -540,10 +540,10 @@
       "creator": "System",
       "message": "B anti-rush window + platform",
       "meta": {
-        "purpose": "Delay B rushes until mid rotates can help",
+        "purpose": "",
         "goodWhen": [
-          "Ts open many B rounds",
-          "you have supportive flash"
+          "good if 2 players anchor together",
+          "good against simple rush rounds"
         ],
         "notes": [
           "first contact should fall into second player",
@@ -564,10 +564,10 @@
       "creator": "System",
       "message": "push short for info",
       "meta": {
-        "purpose": "Find out if Ts are building cat or crossing mid elsewhere",
+        "purpose": "get early info and fall back if needed",
         "goodWhen": [
-          "enemy lacks strong short presence",
-          "you need info fast"
+          "good if one teammate can trade",
+          "good if you have flash support"
         ],
         "notes": [
           "dangerous versus held top mid",
