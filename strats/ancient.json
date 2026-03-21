@@ -4,147 +4,579 @@
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Ancient T preset for numpad 1: rush B main smoke CT + cave flash.",
+      "name": "Fast B main",
+      "description": "Quick B hit from main with cave support flash.",
       "creator": "System",
       "message": "rush B main smoke CT + cave flash",
-      "meta": {}
+      "meta": {
+        "purpose": "Beat B defenders before rotations stabilize",
+        "goodWhen": [
+          "team has strong B spawns",
+          "enemy B hold is passive"
+        ],
+        "notes": [
+          "site corners still need clearing",
+          "simple and strong opener"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "main",
+          "rush"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Ancient T preset for numpad 2: B main + mid split smoke CT.",
+      "name": "B main mid split",
+      "description": "Pressure B from main and mid together.",
       "creator": "System",
       "message": "B main + mid split smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Split B and deny comfortable CT trading",
+        "goodWhen": [
+          "mid can be taken",
+          "enemy B setup is static"
+        ],
+        "notes": [
+          "mid timing matters a lot",
+          "great against single cave focus"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "main",
+          "mid",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Ancient T preset for numpad 3: mid control smoke donut go A.",
+      "name": "Mid to A",
+      "description": "Take mid and convert it into A pressure.",
       "creator": "System",
       "message": "mid control smoke donut go A",
-      "meta": {}
+      "meta": {
+        "purpose": "Open A through donut and reduce direct main dependence",
+        "goodWhen": [
+          "mid is available",
+          "enemy donut control is weak"
+        ],
+        "notes": [
+          "A main can still support later",
+          "watch lane swing timing"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "mid",
+          "donut"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Ancient T preset for numpad 4: [fake] A main smoke temple go B.",
+      "name": "Fake A to B",
+      "description": "Show A presence and rotate to B.",
       "creator": "System",
       "message": "[fake] A main smoke temple go B",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull temple and donut attention before real B finish",
+        "goodWhen": [
+          "enemy rotates off A utility",
+          "B main remains available"
+        ],
+        "notes": [
+          "do not commit too hard on A",
+          "rotate cleanly"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "A",
+          "B"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Ancient T preset for numpad 5: A site smoke temple + CT flash.",
+      "name": "A site hit",
+      "description": "Simple A commitment with temple/CT denial.",
       "creator": "System",
       "message": "A site smoke temple + CT flash",
-      "meta": {}
+      "meta": {
+        "purpose": "Isolate A defenders and limit rotate lines",
+        "goodWhen": [
+          "full buy utility is available",
+          "team wants low-complexity call"
+        ],
+        "notes": [
+          "donut and lane must still be checked",
+          "good with one lurk mid"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "group",
+          "smokes"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Ancient T preset for numpad 6: donut + temple go A smoke CT.",
+      "name": "Donut temple A",
+      "description": "Split A through donut and main/temple pressure.",
       "creator": "System",
       "message": "donut + temple go A smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Break A setup from layered routes",
+        "goodWhen": [
+          "mid is free",
+          "enemy A anchors overfocus main"
+        ],
+        "notes": [
+          "good against temple-only holds",
+          "timing matters"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "donut",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Ancient T preset for numpad 7: explode B main flash out.",
+      "name": "B main burst",
+      "description": "Simple flash burst from B main.",
       "creator": "System",
       "message": "explode B main flash out",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish passive or utility-light B anchors",
+        "goodWhen": [
+          "team lacks full execute utility",
+          "enemy hides site often"
+        ],
+        "notes": [
+          "strong on force buys too",
+          "needs confident entry"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "main",
+          "burst"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Ancient T preset for numpad 8: mid to cave pressure smoke mid.",
+      "name": "Mid cave pressure",
+      "description": "Use mid pressure to support cave and B options.",
       "creator": "System",
       "message": "mid to cave pressure smoke mid",
-      "meta": {}
+      "meta": {
+        "purpose": "Pin B defenders and open split timing",
+        "goodWhen": [
+          "mid is open",
+          "enemy cave control is contested poorly"
+        ],
+        "notes": [
+          "good setup round",
+          "can convert to B or reset"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "cave",
+          "pressure"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Ancient T preset for numpad 9: hide mid till 1:00 then go A smoke CT + temple.",
+      "name": "Delayed A",
+      "description": "Hide mid and hit A after one minute.",
       "creator": "System",
       "message": "hide mid till 1:00 then go A smoke CT + temple",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish early CT mid re-clear and late A complacency",
+        "goodWhen": [
+          "CTs push mid for info",
+          "A rotates early to B"
+        ],
+        "notes": [
+          "stay silent",
+          "good anti-info round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "delay",
+          "mid"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "A main late support",
+      "description": "Use A main late while mid opens the site.",
+      "creator": "System",
+      "message": "take mid 3 then 2 A main go A smoke temple + CT",
+      "meta": {
+        "purpose": "Make A harder to read and split defenders late",
+        "goodWhen": [
+          "mid is easier than direct A main",
+          "enemy temple player is overactive"
+        ],
+        "notes": [
+          "good structured pug call",
+          "main players must wait"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "A",
+          "mid",
+          "main",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Cave to B split",
+      "description": "Add cave timing to a B main finish.",
+      "creator": "System",
+      "message": "2 cave 3 B main smoke CT go B",
+      "meta": {
+        "purpose": "Trade out site anchor from two directions",
+        "goodWhen": [
+          "cave can be reached",
+          "B defender hides default angles"
+        ],
+        "notes": [
+          "needs timing",
+          "good versus static site setups"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "cave",
+          "main",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Silent A main",
+      "description": "Walk A main and burst with minimal warning.",
+      "creator": "System",
+      "message": "[silent] A main walk then swing site smoke temple",
+      "meta": {
+        "purpose": "Catch A defenders before a full rotate call",
+        "goodWhen": [
+          "A main is uncontested",
+          "enemy mid player overfocuses donut"
+        ],
+        "notes": [
+          "stay quiet until swing",
+          "works on mixed buys too"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "main",
+          "silent"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Ancient CT preset for numpad 1: 3 B start.",
+      "name": "Triple B start",
+      "description": "Open with heavier B control.",
       "creator": "System",
       "message": "3 B start",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny early B main and cave pressure",
+        "goodWhen": [
+          "Ts favor B",
+          "your team has strong B spawns"
+        ],
+        "notes": [
+          "A gets lighter",
+          "rotate out after early info if needed"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "control",
+          "start"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Ancient CT preset for numpad 2: push cave.",
+      "name": "Cave push",
+      "description": "Fight for cave aggressively.",
       "creator": "System",
       "message": "push cave",
-      "meta": {}
+      "meta": {
+        "purpose": "Remove a key split route and gather B info",
+        "goodWhen": [
+          "enemy uses slow cave defaults",
+          "you have support flash"
+        ],
+        "notes": [
+          "risky versus anti-push hold",
+          "fall after contact"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "cave",
+          "push"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Ancient CT preset for numpad 3: A hold.",
+      "name": "A hold",
+      "description": "Stable A defense.",
       "creator": "System",
       "message": "A hold",
-      "meta": {}
+      "meta": {
+        "purpose": "Keep A solid while mid and B manage information",
+        "goodWhen": [
+          "you want a safe baseline",
+          "enemy site choice is mixed"
+        ],
+        "notes": [
+          "temple and donut roles should be clear",
+          "safe opener"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hold",
+          "standard"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Ancient CT preset for numpad 4: mid control.",
+      "name": "Mid control",
+      "description": "Contest and stabilize around mid.",
       "creator": "System",
       "message": "mid control",
-      "meta": {}
+      "meta": {
+        "purpose": "Stop easy donut routes and read T direction",
+        "goodWhen": [
+          "enemy relies on mid openings",
+          "you need stronger rotate info"
+        ],
+        "notes": [
+          "do not overextend into T-held lines",
+          "good on full buys"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Ancient CT preset for numpad 5: stack B.",
+      "name": "B stack",
+      "description": "Gamble extra defenders on B.",
       "creator": "System",
       "message": "stack B",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish repeated B ends hard",
+        "goodWhen": [
+          "Ts keep finishing B",
+          "A pressure has been light"
+        ],
+        "notes": [
+          "A becomes weaker",
+          "best after a pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Ancient CT preset for numpad 6: temple + donut.",
+      "name": "Temple donut hold",
+      "description": "Layer A defense around temple and donut.",
       "creator": "System",
       "message": "temple + donut",
-      "meta": {}
+      "meta": {
+        "purpose": "Trade better versus A splits from mid",
+        "goodWhen": [
+          "enemy likes donut pressure",
+          "A site needs tighter structure"
+        ],
+        "notes": [
+          "lane still needs awareness",
+          "strong versus mid-based A rounds"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "temple",
+          "donut",
+          "hold"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Ancient CT preset for numpad 7: retake A.",
+      "name": "A retake",
+      "description": "Delay A and retake later.",
       "creator": "System",
       "message": "retake A",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid bad fights into layered A utility",
+        "goodWhen": [
+          "enemy A executes are strong",
+          "A anchor gets isolated too often"
+        ],
+        "notes": [
+          "save utility where possible",
+          "call site loss early"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Ancient CT preset for numpad 8: double cave.",
+      "name": "Double cave",
+      "description": "Use two players to stabilize cave.",
       "creator": "System",
       "message": "double cave",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny cave as a reliable T split route",
+        "goodWhen": [
+          "enemy uses cave often",
+          "B setup needs more certainty"
+        ],
+        "notes": [
+          "mid becomes lighter",
+          "good anti-B split round"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "cave",
+          "hold"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Ancient CT preset for numpad 9: save crossfire.",
+      "name": "Save crossfire",
+      "description": "Compact economy-conscious hold.",
       "creator": "System",
       "message": "save crossfire",
-      "meta": {}
+      "meta": {
+        "purpose": "Protect rifles and force Ts to clear multiple layers",
+        "goodWhen": [
+          "economy is fragile",
+          "you lose opening duel"
+        ],
+        "notes": [
+          "avoid solo peeks",
+          "pair angles intentionally"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B anti-rush",
+      "description": "Prepare to stop fast B main rounds.",
+      "creator": "System",
+      "message": "B anti-rush main + site",
+      "meta": {
+        "purpose": "Delay a direct B flood before rotates arrive",
+        "goodWhen": [
+          "Ts rush B often",
+          "you have support flash"
+        ],
+        "notes": [
+          "first player slows, second trades",
+          "do not both get blinded"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "anti-rush",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Donut info",
+      "description": "Play for donut information without full push.",
+      "creator": "System",
+      "message": "donut info then fall",
+      "meta": {
+        "purpose": "See if T mid converts toward A without risking too much",
+        "goodWhen": [
+          "mid is contested",
+          "you need quick rotate info"
+        ],
+        "notes": [
+          "fall after first contact",
+          "good with stable temple support"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "mid",
+          "donut",
+          "info"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Lane support A",
+      "description": "Support A from lane against direct site pressure.",
+      "creator": "System",
+      "message": "lane + site A hold",
+      "meta": {
+        "purpose": "Trade better against A main and lane bursts",
+        "goodWhen": [
+          "enemy favors direct A",
+          "your temple player needs help"
+        ],
+        "notes": [
+          "watch donut split timing",
+          "good anti-rush A option"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "lane",
+          "hold"
+        ]
+      }
     }
   ]
 }

@@ -4,147 +4,584 @@
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Nuke T preset for numpad 1: outside smoke wall cross to secret.",
+      "name": "Outside to secret",
+      "description": "Use wall smokes and cross to secret.",
       "creator": "System",
       "message": "outside smoke wall cross to secret",
-      "meta": {}
+      "meta": {
+        "purpose": "Gain lower pressure without first fighting upper",
+        "goodWhen": [
+          "your team can throw wall cleanly",
+          "CT upper setup is strong"
+        ],
+        "notes": [
+          "watch garage aggression",
+          "secret timing matters"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "outside",
+          "secret",
+          "control"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Nuke T preset for numpad 2: rush ramp flash ramp.",
+      "name": "Fast ramp",
+      "description": "Hit ramp quickly with flash support.",
       "creator": "System",
       "message": "rush ramp flash ramp",
-      "meta": {}
+      "meta": {
+        "purpose": "Beat ramp setup and open lower split options",
+        "goodWhen": [
+          "CT ramp player is isolated",
+          "team has good ramp spawn"
+        ],
+        "notes": [
+          "need fast spacing",
+          "heaven rotates can still punish"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "ramp",
+          "rush",
+          "lower"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Nuke T preset for numpad 3: hut + squeaky go A flash door.",
+      "name": "Hut squeaky A",
+      "description": "Pressure upper A through hut and squeaky.",
       "creator": "System",
       "message": "hut + squeaky go A flash door",
-      "meta": {}
+      "meta": {
+        "purpose": "Overwhelm site from two entry points",
+        "goodWhen": [
+          "outside feels weak value",
+          "CT heaven player is passive"
+        ],
+        "notes": [
+          "must clear rafters",
+          "door flash timing matters"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hut",
+          "squeaky",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Nuke T preset for numpad 4: [fake] hut noise go ramp.",
+      "name": "Fake hut to ramp",
+      "description": "Make noise upper then pivot into ramp.",
       "creator": "System",
       "message": "[fake] hut noise go ramp",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull upper rotation and open lower path",
+        "goodWhen": [
+          "CTs overrotate upper quickly",
+          "ramp is usually solo"
+        ],
+        "notes": [
+          "do not commit upper players",
+          "ramp entry must be ready"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "hut",
+          "ramp"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Nuke T preset for numpad 5: outside control smoke cross + garage.",
+      "name": "Outside control",
+      "description": "Take outside with wall and garage pressure.",
       "creator": "System",
       "message": "outside control smoke cross + garage",
-      "meta": {}
+      "meta": {
+        "purpose": "Own yard space and keep multiple follow-up options",
+        "goodWhen": [
+          "outside player is strong",
+          "enemy yard control is passive"
+        ],
+        "notes": [
+          "garage lurk helps a lot",
+          "secret is not mandatory"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "outside",
+          "yard",
+          "control"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Nuke T preset for numpad 6: A site smoke heaven + main.",
+      "name": "Upper A execute",
+      "description": "Commit to upper with core site smokes.",
       "creator": "System",
       "message": "A site smoke heaven + main",
-      "meta": {}
+      "meta": {
+        "purpose": "Cut heaven and vision lines while taking upper",
+        "goodWhen": [
+          "team has full buy utility",
+          "CT AWP plays heaven often"
+        ],
+        "notes": [
+          "rafters must still be cleared",
+          "good simple call for pugs"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "upper",
+          "group"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Nuke T preset for numpad 7: vent drop B smoke decon.",
+      "name": "Vent drop B",
+      "description": "Drop vent and pressure lower with decon smoke.",
       "creator": "System",
       "message": "vent drop B smoke decon",
-      "meta": {}
+      "meta": {
+        "purpose": "Arrive lower quickly and reduce decon swing risk",
+        "goodWhen": [
+          "upper gets little contest",
+          "CT lower rotates are slow"
+        ],
+        "notes": [
+          "watch vent room timing",
+          "needs quick pathing"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "lower",
+          "vent"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Nuke T preset for numpad 8: lobby control flash hut.",
+      "name": "Lobby control",
+      "description": "Use lobby pressure to open upper options.",
       "creator": "System",
       "message": "lobby control flash hut",
-      "meta": {}
+      "meta": {
+        "purpose": "Take space safely before choosing upper or vent route",
+        "goodWhen": [
+          "enemy pushes lobby often",
+          "you want simpler upper pressure"
+        ],
+        "notes": [
+          "great anti-push opener",
+          "can transition late to A"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "lobby",
+          "control",
+          "upper"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Nuke T preset for numpad 9: hide lobby till 1:00 then ramp + secret split B smoke decon.",
+      "name": "Delayed lower split",
+      "description": "Wait in lobby and hit lower after one minute.",
       "creator": "System",
       "message": "hide lobby till 1:00 then ramp + secret split B smoke decon",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish early CT lobby aggression and lower rotations",
+        "goodWhen": [
+          "CTs push lobby",
+          "ramp setup rotates too early"
+        ],
+        "notes": [
+          "discipline is critical",
+          "needs clean secret timing"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "B",
+          "delay",
+          "ramp",
+          "secret",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Garage to secret",
+      "description": "Pressure garage to support an outside lower route.",
+      "creator": "System",
+      "message": "2 garage 3 outside smoke wall go secret",
+      "meta": {
+        "purpose": "Force yard defenders to split attention",
+        "goodWhen": [
+          "garage is weak",
+          "outside smoke wall is reliable"
+        ],
+        "notes": [
+          "garage player should call heaven rotate",
+          "good versus yard AWP"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "outside",
+          "garage",
+          "secret",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Squeaky late A",
+      "description": "Hold squeaky pressure and burst A later.",
+      "creator": "System",
+      "message": "hold squeaky till 1:00 then hut + door go A smoke heaven",
+      "meta": {
+        "purpose": "Punish CTs that rotate off upper too early",
+        "goodWhen": [
+          "outside shows enough pressure",
+          "heaven player leaves often"
+        ],
+        "notes": [
+          "works best with one hut lurk",
+          "clear rafters quickly"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "delay",
+          "squeaky",
+          "hut"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Ramp to upper",
+      "description": "Show ramp and come back upper through hut.",
+      "creator": "System",
+      "message": "show ramp 2 then 5 hut + squeaky go A flash door",
+      "meta": {
+        "purpose": "Move rotation down before snapping back upper",
+        "goodWhen": [
+          "CT ramp rotates aggressively",
+          "you need a fake without outside"
+        ],
+        "notes": [
+          "fake players must survive",
+          "best when lobby is uncontested"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "fake",
+          "ramp",
+          "A",
+          "upper"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Nuke CT preset for numpad 1: outside control.",
+      "name": "Outside control",
+      "description": "Contest yard early.",
       "creator": "System",
       "message": "outside control",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny easy wall smokes and secret access",
+        "goodWhen": [
+          "you have strong outside spawn",
+          "Ts rely on lower openings"
+        ],
+        "notes": [
+          "garage can support",
+          "do not overpeek after first info"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "outside",
+          "yard",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Nuke CT preset for numpad 2: ramp aggressive.",
+      "name": "Ramp aggression",
+      "description": "Fight ramp for space and info.",
       "creator": "System",
       "message": "ramp aggressive",
-      "meta": {}
+      "meta": {
+        "purpose": "Prevent free lower pressure and learn lobby spread",
+        "goodWhen": [
+          "Ts favor ramp often",
+          "you have support flash"
+        ],
+        "notes": [
+          "dangerous if lobby can trade",
+          "fall if they flood"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "ramp",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Nuke CT preset for numpad 3: 2 A crossfire.",
+      "name": "Upper crossfire",
+      "description": "Two-player A site crossfire.",
       "creator": "System",
       "message": "2 A crossfire",
-      "meta": {}
+      "meta": {
+        "purpose": "Stabilize upper against hut and door pressure",
+        "goodWhen": [
+          "enemy likes upper hits",
+          "outside can be handled lighter"
+        ],
+        "notes": [
+          "rafters and site roles should be clear",
+          "safe hold"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "upper",
+          "hold"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Nuke CT preset for numpad 4: stack lower.",
+      "name": "Stack lower",
+      "description": "Gamble heavier lower presence.",
       "creator": "System",
       "message": "stack lower",
-      "meta": {}
+      "meta": {
+        "purpose": "Shut down secret and ramp-to-B rounds",
+        "goodWhen": [
+          "Ts hit lower repeatedly",
+          "outside pressure is obvious"
+        ],
+        "notes": [
+          "upper becomes weaker",
+          "use after clear read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "lower",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Nuke CT preset for numpad 5: lobby push.",
+      "name": "Lobby push",
+      "description": "Push lobby for early information.",
       "creator": "System",
       "message": "lobby push",
-      "meta": {}
+      "meta": {
+        "purpose": "Catch passive defaults and disrupt hut/squeaky setup",
+        "goodWhen": [
+          "Ts play slow lobby often",
+          "support flash is available"
+        ],
+        "notes": [
+          "strong reward but risky",
+          "fall back if multiple contacts"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "lobby",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Nuke CT preset for numpad 6: heaven rotate.",
+      "name": "Heaven rotate setup",
+      "description": "Play upper with faster heaven support rotation.",
       "creator": "System",
       "message": "heaven rotate",
-      "meta": {}
+      "meta": {
+        "purpose": "Support upper or outside from a central rotate position",
+        "goodWhen": [
+          "enemy mixes upper and yard pressure",
+          "AWP can watch from heaven"
+        ],
+        "notes": [
+          "do not get isolated by smoke",
+          "needs clear comms"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "heaven",
+          "rotate"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Nuke CT preset for numpad 7: yard push flash.",
+      "name": "Yard push flash",
+      "description": "Use flash support to take aggressive yard space.",
       "creator": "System",
       "message": "yard push flash",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish outside wall setups before they form",
+        "goodWhen": [
+          "you know T outside patterns",
+          "support player is ready"
+        ],
+        "notes": [
+          "not for every round",
+          "can lose garage if mistimed"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "outside",
+          "push",
+          "yard"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Nuke CT preset for numpad 8: retake lower.",
+      "name": "Lower retake",
+      "description": "Delay lower and retake together.",
       "creator": "System",
       "message": "retake lower",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid isolated lower deaths against split pressure",
+        "goodWhen": [
+          "Ts use good decon utility",
+          "lower anchors get overwhelmed"
+        ],
+        "notes": [
+          "save utility where possible",
+          "call vent and secret timing early"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "lower",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Nuke CT preset for numpad 9: double ramp.",
+      "name": "Double ramp",
+      "description": "Two defenders dedicated to ramp.",
       "creator": "System",
       "message": "double ramp",
-      "meta": {}
+      "meta": {
+        "purpose": "Stop free ramp access and punish simple lower setups",
+        "goodWhen": [
+          "Ts hit ramp often",
+          "you can spare less upper presence"
+        ],
+        "notes": [
+          "outside must be called quickly",
+          "good anti-ramp round"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "ramp",
+          "hold",
+          "double"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Garage support yard",
+      "description": "Use garage to support outside control.",
+      "creator": "System",
+      "message": "garage + outside hold",
+      "meta": {
+        "purpose": "Create layered vision on wall-cross attempts",
+        "goodWhen": [
+          "enemy repeats outside",
+          "garage player is comfortable anchoring"
+        ],
+        "notes": [
+          "watch mini timing",
+          "good versus secret-heavy teams"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "outside",
+          "garage",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Anti-hut rush",
+      "description": "Prepare to stop fast upper hut hits.",
+      "creator": "System",
+      "message": "upper anti-rush hut + rafters",
+      "meta": {
+        "purpose": "Delay quick A floods until rotates can help",
+        "goodWhen": [
+          "Ts rush upper often",
+          "you have strong upper anchor duo"
+        ],
+        "notes": [
+          "first player slows, second trades",
+          "do not both get blinded"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "upper",
+          "anti-rush"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Save compact",
+      "description": "Compact hold for fragile economy.",
+      "creator": "System",
+      "message": "save compact",
+      "meta": {
+        "purpose": "Reduce opening picks and preserve rifles",
+        "goodWhen": [
+          "economy is weak",
+          "enemy has stronger buy"
+        ],
+        "notes": [
+          "avoid solo ramp and yard peeks",
+          "trade in layers"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
     }
   ]
 }

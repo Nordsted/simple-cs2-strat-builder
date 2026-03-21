@@ -130,8 +130,17 @@ def normalize_meta_json(raw_meta):
     return json.dumps(meta, sort_keys=True)
 
 
+def is_strategy_seed_file(strategy_file):
+    return strategy_file.name != "strats_baseline.json"
+
+
+
 def load_strategy_file_paths():
-    strategy_files = sorted(STRATS_DIR.glob("*.json"))
+    strategy_files = sorted(
+        strategy_file
+        for strategy_file in STRATS_DIR.glob("*.json")
+        if is_strategy_seed_file(strategy_file)
+    )
     if not strategy_files:
         raise FileNotFoundError(f"No strategy seed files found in {STRATS_DIR}")
     return strategy_files

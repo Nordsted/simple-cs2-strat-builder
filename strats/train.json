@@ -1,0 +1,588 @@
+{
+  "mapSlug": "train",
+  "mapName": "Train",
+  "strategies": [
+    {
+      "side": "T",
+      "name": "Ivy A split",
+      "description": "Pressure A from main and ivy.",
+      "creator": "System",
+      "message": "3 A main 2 ivy smoke ebox + connector",
+      "meta": {
+        "purpose": "Split A through two lanes and cut key CT vision",
+        "goodWhen": [
+          "you have good ivy timing",
+          "enemy outer setup is static"
+        ],
+        "notes": [
+          "ladder/hell still matter",
+          "entry spacing is important"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "ivy",
+          "main",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast A main",
+      "description": "Hit outer quickly through main.",
+      "creator": "System",
+      "message": "rush A main smoke ebox flash out",
+      "meta": {
+        "purpose": "Overwhelm outer before rotations settle",
+        "goodWhen": [
+          "team has fast main spawns",
+          "enemy outer anchor is passive"
+        ],
+        "notes": [
+          "connector and hell need clearing",
+          "works best with strong first man"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "main",
+          "rush"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Popdog split A",
+      "description": "Use popdog with outer pressure.",
+      "creator": "System",
+      "message": "2 pop 3 A main smoke connector go A",
+      "meta": {
+        "purpose": "Hit outer from multiple heights and timing windows",
+        "goodWhen": [
+          "popdog is lightly watched",
+          "enemy favors ivy focus"
+        ],
+        "notes": [
+          "pop players must not be seen early",
+          "good anti-AWP pattern"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "A",
+          "popdog",
+          "main",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Upper B hit",
+      "description": "Commit into upper B with site utility.",
+      "creator": "System",
+      "message": "upper B smoke connector + lower ramp flash in",
+      "meta": {
+        "purpose": "Take B while reducing rotate and spam pressure",
+        "goodWhen": [
+          "upper is weakly contested",
+          "CT outer setup is strong"
+        ],
+        "notes": [
+          "close upper corners matter",
+          "good simple B call"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "upper",
+          "group"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Lower B split",
+      "description": "Combine upper and ramp timing into B.",
+      "creator": "System",
+      "message": "3 upper 2 lower ramp go B smoke connector",
+      "meta": {
+        "purpose": "Force B defenders to split attention vertically",
+        "goodWhen": [
+          "ramp is available",
+          "enemy B setup is static"
+        ],
+        "notes": [
+          "needs timing",
+          "one player should watch ladder flank"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "upper",
+          "ramp",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fake ivy to B",
+      "description": "Show ivy pressure then rotate into B.",
+      "creator": "System",
+      "message": "[fake] ivy noise go upper B",
+      "meta": {
+        "purpose": "Pull outer rotation and thin B support",
+        "goodWhen": [
+          "CTs overrotate off ivy pressure",
+          "upper entry is free"
+        ],
+        "notes": [
+          "do not die on ivy fake",
+          "move fast through halls"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "ivy",
+          "B"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Ladder to pop A",
+      "description": "Use ladder and pop pressure into outer.",
+      "creator": "System",
+      "message": "take ladder 2 pop 3 A main smoke ebox",
+      "meta": {
+        "purpose": "Create more timing pressure on outer rotates",
+        "goodWhen": [
+          "enemy ignores ladder control",
+          "main can hold pressure quietly"
+        ],
+        "notes": [
+          "ladder player must not overpeek",
+          "good versus rigid outer setups"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "A",
+          "ladder",
+          "popdog",
+          "main"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Silent ivy crunch",
+      "description": "Walk ivy and hit outer with low noise.",
+      "creator": "System",
+      "message": "[silent] ivy walk then swing A smoke ebox",
+      "meta": {
+        "purpose": "Catch outer defenders before full rotate call",
+        "goodWhen": [
+          "ivy is rarely contested",
+          "enemy outer plays deep angles"
+        ],
+        "notes": [
+          "stay quiet until swing",
+          "works best with small main presence"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "ivy",
+          "silent"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Delayed pop A",
+      "description": "Wait around popdog timing and hit outer after one minute.",
+      "creator": "System",
+      "message": "hide pop till 1:00 then 3 A main 2 pop go A smoke connector",
+      "meta": {
+        "purpose": "Punish CTs that stop respecting popdog later in rounds",
+        "goodWhen": [
+          "enemy clears pop only early",
+          "outer rotates get lazy late"
+        ],
+        "notes": [
+          "patience is critical",
+          "needs calm comms"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "A",
+          "delay",
+          "popdog",
+          "main"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast ivy lane A",
+      "description": "Take ivy fast and flow into outer.",
+      "creator": "System",
+      "message": "fast ivy 3 then 2 A main smoke ebox + connector",
+      "meta": {
+        "purpose": "Gain side pressure early and trap outer anchor",
+        "goodWhen": [
+          "you win ivy spawn",
+          "enemy anchor overfocuses main"
+        ],
+        "notes": [
+          "ivy players must keep moving",
+          "hell can still stall site"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "ivy",
+          "main",
+          "fast"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Main to ladder lurk A",
+      "description": "Use ladder timing to help an outer hit.",
+      "creator": "System",
+      "message": "4 A main 1 ladder lurk smoke ebox go A",
+      "meta": {
+        "purpose": "Split CT attention around connector and pop routes",
+        "goodWhen": [
+          "ladder control is free",
+          "enemy watches only main"
+        ],
+        "notes": [
+          "lurker should call rotate path",
+          "simple outer core with one wrinkle"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "main",
+          "ladder",
+          "timing"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Upper hold then B",
+      "description": "Wait in upper and burst B on a late cue.",
+      "creator": "System",
+      "message": "hide upper till 1:00 then upper + lower ramp go B smoke connector",
+      "meta": {
+        "purpose": "Punish early ramp pushes and late B re-clears",
+        "goodWhen": [
+          "CTs get curious on upper",
+          "B support rotates early to outer"
+        ],
+        "notes": [
+          "stay silent in upper",
+          "good anti-info round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "delay",
+          "upper",
+          "ramp"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Standard outer-inner",
+      "description": "Balanced Train setup.",
+      "creator": "System",
+      "message": "3 A 2 B",
+      "meta": {
+        "purpose": "Cover outer lanes while keeping inner stable",
+        "goodWhen": [
+          "you need a safe opener",
+          "enemy patterns are unknown"
+        ],
+        "notes": [
+          "connector rotates matter",
+          "default Train baseline"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "hold",
+          "standard"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Ivy push",
+      "description": "Take ivy aggressively for early info.",
+      "creator": "System",
+      "message": "push ivy early",
+      "meta": {
+        "purpose": "Punish passive ivy defaults and learn outer spread",
+        "goodWhen": [
+          "Ts ignore ivy often",
+          "you have flash support"
+        ],
+        "notes": [
+          "do not overchase",
+          "fall after first info"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "ivy",
+          "push",
+          "info"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Popdog control",
+      "description": "Fight for popdog early.",
+      "creator": "System",
+      "message": "popdog control",
+      "meta": {
+        "purpose": "Remove a major split threat on outer",
+        "goodWhen": [
+          "enemy likes pop splits",
+          "you can support from ladder"
+        ],
+        "notes": [
+          "re-clear timing matters",
+          "do not get isolated"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "popdog",
+          "control"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Inner hold",
+      "description": "Stable two-player inner defense.",
+      "creator": "System",
+      "message": "2 B inner hold",
+      "meta": {
+        "purpose": "Deny simple upper or ramp-to-B rounds",
+        "goodWhen": [
+          "enemy mixes sites",
+          "you want steady B support"
+        ],
+        "notes": [
+          "connector rotate call is crucial",
+          "safe inner baseline"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "hold",
+          "standard"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A stack outer",
+      "description": "Gamble more players on outer.",
+      "creator": "System",
+      "message": "stack A outer",
+      "meta": {
+        "purpose": "Punish repeated outer hits hard",
+        "goodWhen": [
+          "Ts keep ending A",
+          "you have strong read on outer pressure"
+        ],
+        "notes": [
+          "inner gets weaker",
+          "use after pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "stack",
+          "outer"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B retake",
+      "description": "Delay inner and retake with support.",
+      "creator": "System",
+      "message": "retake B inner",
+      "meta": {
+        "purpose": "Avoid isolated deaths to layered B entries",
+        "goodWhen": [
+          "Ts use good B utility",
+          "inner anchors get boxed in"
+        ],
+        "notes": [
+          "save utility when possible",
+          "call connector timing early"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "retake"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Connector rotate focus",
+      "description": "Keep connector ready to support both sites.",
+      "creator": "System",
+      "message": "connector control",
+      "meta": {
+        "purpose": "Improve response to pop, outer and inner transitions",
+        "goodWhen": [
+          "enemy changes sites mid-round",
+          "you need a flexible center player"
+        ],
+        "notes": [
+          "connector can get smoked off",
+          "good communication needed"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "connector",
+          "control",
+          "rotate"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Save crossfire",
+      "description": "Economy-focused compact defense.",
+      "creator": "System",
+      "message": "save crossfire",
+      "meta": {
+        "purpose": "Preserve rifles and force Ts to clear layered angles",
+        "goodWhen": [
+          "money is weak",
+          "you are down a player early"
+        ],
+        "notes": [
+          "avoid solo peeks",
+          "anchor with trade plan"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Main anti-rush",
+      "description": "Prepare to stop fast A main hits.",
+      "creator": "System",
+      "message": "A main anti-rush ebox + site",
+      "meta": {
+        "purpose": "Delay outer floods until rotates can help",
+        "goodWhen": [
+          "Ts rush main often",
+          "you have supportive utility"
+        ],
+        "notes": [
+          "first player slows, second trades",
+          "do not both get blinded"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "main",
+          "anti-rush"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Ladder info",
+      "description": "Take info around ladder and popdog lanes.",
+      "creator": "System",
+      "message": "ladder info",
+      "meta": {
+        "purpose": "Track pop and connector transitions early",
+        "goodWhen": [
+          "enemy hides pop timing",
+          "you want more central information"
+        ],
+        "notes": [
+          "do not overpeek into held angles",
+          "good with pop control round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "ladder",
+          "info",
+          "control"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Ivy anchor outer",
+      "description": "Play deeper ivy while outer holds main lanes.",
+      "creator": "System",
+      "message": "ivy hold + outer crossfire",
+      "meta": {
+        "purpose": "Trade better against ivy-main splits",
+        "goodWhen": [
+          "enemy likes ivy lurks",
+          "your outer player can support well"
+        ],
+        "notes": [
+          "do not leave ivy unsupported too long",
+          "rotate off good info"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "ivy",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Upper anti-rush",
+      "description": "Prepare for fast upper pressure.",
+      "creator": "System",
+      "message": "upper anti-rush",
+      "meta": {
+        "purpose": "Stop simple upper B bursts before connector support arrives",
+        "goodWhen": [
+          "Ts rush upper often",
+          "you have utility ready"
+        ],
+        "notes": [
+          "one player slows, one anchors trade",
+          "do not overpeek upper halls"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "upper",
+          "anti-rush"
+        ]
+      }
+    }
+  ]
+}

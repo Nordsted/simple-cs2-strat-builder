@@ -4,147 +4,579 @@
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Mirage T preset for numpad 1: 5 A ramp smoke jungle + stairs flash over.",
+      "name": "Fast A ramp",
+      "description": "Hit A quickly from ramp with entry utility.",
       "creator": "System",
       "message": "5 A ramp smoke jungle + stairs flash over",
-      "meta": {}
+      "meta": {
+        "purpose": "Take A fast before mid or B rotations arrive",
+        "goodWhen": [
+          "your team has strong A spawns",
+          "enemy A site plays passive"
+        ],
+        "notes": [
+          "best with one fast entry",
+          "ticket stays open so trade quickly"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "rush",
+          "ramp"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Mirage T preset for numpad 2: 3 A ramp 2 palace smoke CT + jungle.",
+      "name": "A split ramp palace",
+      "description": "Pressure A from ramp and palace.",
       "creator": "System",
       "message": "3 A ramp 2 palace smoke CT + jungle",
-      "meta": {}
+      "meta": {
+        "purpose": "Split A and block common rotates into ticket and jungle",
+        "goodWhen": [
+          "your team has palace spawn",
+          "enemy jungle player is active"
+        ],
+        "notes": [
+          "needs timing between ramp and palace",
+          "good anti-AWP option"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "split",
+          "palace",
+          "ramp"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Mirage T preset for numpad 3: take mid smoke window flash top mid go connector.",
+      "name": "Mid to connector",
+      "description": "Take mid and convert it into connector pressure.",
       "creator": "System",
       "message": "take mid smoke window flash top mid go connector",
-      "meta": {}
+      "meta": {
+        "purpose": "Gain connector and open A split or cat pressure",
+        "goodWhen": [
+          "your team has good top mid spawn",
+          "enemy window control looks weak"
+        ],
+        "notes": [
+          "window smoke is key",
+          "watch underpass push"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "connector",
+          "control"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Mirage T preset for numpad 4: [silent] B apps popflash out apps.",
+      "name": "Silent B apps",
+      "description": "Walk B apps and burst with one flash.",
       "creator": "System",
       "message": "[silent] B apps popflash out apps",
-      "meta": {}
+      "meta": {
+        "purpose": "Catch B anchors before full rotate is ready",
+        "goodWhen": [
+          "enemy mid setup is heavy",
+          "B player overpeeks apps"
+        ],
+        "notes": [
+          "stay quiet until contact",
+          "strong on half buy too"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "silent",
+          "apps"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Mirage T preset for numpad 5: [fake] A ramp smoke jungle go B apps.",
+      "name": "Fake A to B",
+      "description": "Show A utility then hit B through apps.",
       "creator": "System",
       "message": "[fake] A ramp smoke jungle go B apps",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull connector and ticket attention away from B",
+        "goodWhen": [
+          "enemy rotates early",
+          "your team lacks mid control"
+        ],
+        "notes": [
+          "do not overfight on A",
+          "sell the fake then leave fast"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "A",
+          "B",
+          "apps"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Mirage T preset for numpad 6: mid control smoke window + short go A.",
+      "name": "Mid short to A",
+      "description": "Take middle and split A through short.",
       "creator": "System",
       "message": "mid control smoke window + short go A",
-      "meta": {}
+      "meta": {
+        "purpose": "Create an A split without needing palace",
+        "goodWhen": [
+          "you control top mid early",
+          "enemy short control is weak"
+        ],
+        "notes": [
+          "needs one player to clear ladder/short",
+          "works well against static A hold"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "mid",
+          "short",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Mirage T preset for numpad 7: fast mid smoke window + connector go B.",
+      "name": "Fast mid to B",
+      "description": "Use mid utility and flow into B quickly.",
       "creator": "System",
       "message": "fast mid smoke window + connector go B",
-      "meta": {}
+      "meta": {
+        "purpose": "Force fast rotation path through market and short",
+        "goodWhen": [
+          "enemy B is usually solo",
+          "mid is lightly contested"
+        ],
+        "notes": [
+          "need one player to cut market rotate",
+          "do not stall in connector"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "mid",
+          "connector"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Mirage T preset for numpad 8: A ramp smoke CT + stairs + jungle flash over.",
+      "name": "Full A site hit",
+      "description": "Commit to A with core site-blocking smokes.",
       "creator": "System",
       "message": "A ramp smoke CT + stairs + jungle flash over",
-      "meta": {}
+      "meta": {
+        "purpose": "Block core A angles and overwhelm anchors",
+        "goodWhen": [
+          "team has full buy utility",
+          "you want simple coordinated pressure"
+        ],
+        "notes": [
+          "ticket remains contestable after smokes fade",
+          "good with palace late lurk"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "group",
+          "smokes"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Mirage T preset for numpad 9: hide B apps till 1:00 then smoke market door + window go B.",
+      "name": "Delayed B apps",
+      "description": "Hide in apps and hit B after the clock reaches one minute.",
       "creator": "System",
       "message": "hide B apps till 1:00 then smoke market door + window go B",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish early mid/A rotations and late B re-clear",
+        "goodWhen": [
+          "CTs rotate fast",
+          "enemy B players push for info early"
+        ],
+        "notes": [
+          "stay silent until the hit",
+          "good anti-push round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "delay",
+          "apps"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Palace contact A",
+      "description": "Hold palace pressure and burst when A shows weakness.",
+      "creator": "System",
+      "message": "2 palace hold 3 A ramp then swing A smoke CT",
+      "meta": {
+        "purpose": "Use palace late timing to break default A crossfires",
+        "goodWhen": [
+          "enemy ramp fights hard",
+          "palace is usually unpressured"
+        ],
+        "notes": [
+          "needs patient palace players",
+          "best if one player lurks top mid"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "palace",
+          "timing"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Underpass to connector",
+      "description": "Use underpass to pressure connector while teammates show mid.",
+      "creator": "System",
+      "message": "1 underpass 4 top mid smoke window go connector",
+      "meta": {
+        "purpose": "Break connector control from two timings",
+        "goodWhen": [
+          "enemy window player is isolated",
+          "you want A split without palace"
+        ],
+        "notes": [
+          "underpass player must not get spotted early",
+          "works best with one flash top mid"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "mid",
+          "underpass",
+          "connector"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast cat to B split",
+      "description": "Use cat pressure to help a B split.",
+      "creator": "System",
+      "message": "take cat 2 B apps smoke market window go B",
+      "meta": {
+        "purpose": "Pin market and bench from two directions",
+        "goodWhen": [
+          "mid is free",
+          "B anchor hides bench/van often"
+        ],
+        "notes": [
+          "cat player must arrive with apps hit",
+          "good against market rotator"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "B",
+          "cat",
+          "apps",
+          "split"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Mirage CT preset for numpad 1: 2 A 1 mid 2 B.",
+      "name": "Standard 2-1-2",
+      "description": "Balanced Mirage setup.",
       "creator": "System",
       "message": "2 A 1 mid 2 B",
-      "meta": {}
+      "meta": {
+        "purpose": "Cover all lanes with flexible rotate paths",
+        "goodWhen": [
+          "you do not know enemy habits yet",
+          "your team wants simple roles"
+        ],
+        "notes": [
+          "mid player must communicate fast",
+          "safe opening setup"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "hold",
+          "standard"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Mirage CT preset for numpad 2: mid peek window.",
+      "name": "Window mid peek",
+      "description": "Take a quick mid info fight from window.",
       "creator": "System",
       "message": "mid peek window",
-      "meta": {}
+      "meta": {
+        "purpose": "Contest top mid early and learn T direction",
+        "goodWhen": [
+          "you have AWP or good spawn",
+          "Ts favor mid utility late"
+        ],
+        "notes": [
+          "do not repeat every round",
+          "needs quick fall back"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "mid",
+          "peek",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Mirage CT preset for numpad 3: push B apps early.",
+      "name": "B apps push",
+      "description": "Fight for apps control early.",
       "creator": "System",
       "message": "push B apps early",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny silent apps control and gather info",
+        "goodWhen": [
+          "enemy likes B contact",
+          "you have strong flash support"
+        ],
+        "notes": [
+          "do not dry swing alone",
+          "fall off if no contact"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "push",
+          "apps"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Mirage CT preset for numpad 4: retake A.",
+      "name": "A retake setup",
+      "description": "Play A to delay and retake instead of hard holding site.",
       "creator": "System",
       "message": "retake A",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid bad first duels and use rotation utility later",
+        "goodWhen": [
+          "enemy favors heavy A executes",
+          "your A anchors get traded too fast"
+        ],
+        "notes": [
+          "save jungle and ticket utility",
+          "communicate when giving site"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Mirage CT preset for numpad 5: stack B.",
+      "name": "B stack",
+      "description": "Gamble extra presence on B.",
       "creator": "System",
       "message": "stack B",
-      "meta": {}
+      "meta": {
+        "purpose": "Shut down repeated B apps rounds",
+        "goodWhen": [
+          "Ts hit B often",
+          "you lost several B rounds in a row"
+        ],
+        "notes": [
+          "weakens A and mid",
+          "best after pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Mirage CT preset for numpad 6: connector control.",
+      "name": "Connector control",
+      "description": "Take more active control around connector.",
       "creator": "System",
       "message": "connector control",
-      "meta": {}
+      "meta": {
+        "purpose": "Cut mid splits and help both sites rotate faster",
+        "goodWhen": [
+          "window player gets pressured",
+          "Ts like short splits"
+        ],
+        "notes": [
+          "needs support flash or top mid info",
+          "watch underpass"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "connector",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Mirage CT preset for numpad 7: double ramp hold.",
+      "name": "Double ramp hold",
+      "description": "Commit two defenders to stopping A ramp control.",
       "creator": "System",
       "message": "double ramp hold",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish simple ramp hits before smokes land",
+        "goodWhen": [
+          "enemy keeps five-man rushing A",
+          "your A spawns are good"
+        ],
+        "notes": [
+          "leaves mid lighter",
+          "one player should still watch palace timing"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hold",
+          "ramp"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Mirage CT preset for numpad 8: mid boost.",
+      "name": "Mid boost",
+      "description": "Use a quick boost for mid info or opening kill.",
       "creator": "System",
       "message": "mid boost",
-      "meta": {}
+      "meta": {
+        "purpose": "Get an unusual angle into top mid control",
+        "goodWhen": [
+          "Ts repeat same mid pathing",
+          "you need info without full push"
+        ],
+        "notes": [
+          "not for every round",
+          "rotate quickly if nothing seen"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "boost",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Mirage CT preset for numpad 9: save crossfire.",
+      "name": "Save crossfire",
+      "description": "Play tight crossfires and avoid risky peeks.",
       "creator": "System",
       "message": "save crossfire",
-      "meta": {}
+      "meta": {
+        "purpose": "Protect weapons and force Ts to clear multiple angles",
+        "goodWhen": [
+          "economy is fragile",
+          "you have man disadvantage early"
+        ],
+        "notes": [
+          "do not give solo duels",
+          "use off-angles together"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "crossfire"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Short support mid push",
+      "description": "Push mid with help from short timing.",
+      "creator": "System",
+      "message": "mid push with short help",
+      "meta": {
+        "purpose": "Disrupt T mid control before they stabilize",
+        "goodWhen": [
+          "Ts smoke window every round",
+          "short player can support fast"
+        ],
+        "notes": [
+          "must be synchronized",
+          "dangerous versus underpass lurk"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "mid",
+          "push",
+          "short"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A passive ticket",
+      "description": "Hold A from deeper ticket and jungle angles.",
+      "creator": "System",
+      "message": "A hold ticket + jungle",
+      "meta": {
+        "purpose": "Trade better against full A utility",
+        "goodWhen": [
+          "enemy uses strong A smokes",
+          "you want safer A defense"
+        ],
+        "notes": [
+          "do not overfight ramp early",
+          "play for teammate trades"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hold",
+          "passive"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B bench anti-rush",
+      "description": "Prepare utility and positions to stop fast B hits.",
+      "creator": "System",
+      "message": "hold B anti-rush van + bench",
+      "meta": {
+        "purpose": "Stall apps burst long enough for short rotation",
+        "goodWhen": [
+          "Ts favor fast apps rounds",
+          "you have supportive flash available"
+        ],
+        "notes": [
+          "first player delays, second trades",
+          "mid player should lean B"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "anti-rush",
+          "hold"
+        ]
+      }
     }
   ]
 }

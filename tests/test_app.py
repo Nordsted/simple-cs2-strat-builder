@@ -84,6 +84,28 @@ class AppTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             app.read_strategy_seed(invalid_file)
 
+    def test_load_strategy_file_paths_skips_baseline_bundle(self):
+        self.write_seed(
+            "mirage.json",
+            {
+                "mapSlug": "mirage",
+                "mapName": "Mirage",
+                "strategies": [],
+            },
+        )
+        self.write_seed(
+            "strats_baseline.json",
+            [
+                {
+                    "mapSlug": "mirage",
+                    "mapName": "Mirage",
+                    "strategies": [],
+                }
+            ],
+        )
+
+        self.assertEqual([path.name for path in app.load_strategy_file_paths()], ["mirage.json"])
+
     def test_health_endpoint_supports_get_and_head(self):
         self.write_seed(
             "mirage.json",

@@ -1,150 +1,585 @@
 {
   "mapSlug": "dust2",
-  "mapName": "Dust II",
+  "mapName": "Dust2",
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Dust II T preset for numpad 1: fast long smoke cross flash over.",
+      "name": "Fast long",
+      "description": "Take long quickly with a cross smoke and flashes.",
       "creator": "System",
       "message": "fast long smoke cross flash over",
-      "meta": {}
+      "meta": {
+        "purpose": "Secure long before CT setup stabilizes",
+        "goodWhen": [
+          "your team has good long spawns",
+          "enemy long setup is weak"
+        ],
+        "notes": [
+          "one player clears pit",
+          "long doors fight matters a lot"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "long",
+          "rush"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Dust II T preset for numpad 2: long + short go A smoke CT.",
+      "name": "Long short A",
+      "description": "Pressure A from long and cat.",
       "creator": "System",
       "message": "long + short go A smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Split A and deny CT rotation line from spawn",
+        "goodWhen": [
+          "mid to cat is open",
+          "enemy A anchor plays static"
+        ],
+        "notes": [
+          "cat timing must match long",
+          "watch goose and ramp"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "split",
+          "long",
+          "short"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Dust II T preset for numpad 3: rush B tunnels flash out.",
+      "name": "Rush B tunnels",
+      "description": "Fast burst from tunnels onto B.",
       "creator": "System",
       "message": "rush B tunnels flash out",
-      "meta": {}
+      "meta": {
+        "purpose": "Overwhelm B before rotates from mid and A",
+        "goodWhen": [
+          "team has B spawns",
+          "enemy B anchor is isolated"
+        ],
+        "notes": [
+          "window/door crossfire still needs clearing",
+          "great simple call"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "tunnels",
+          "rush"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Dust II T preset for numpad 4: mid to B smoke CT doors.",
+      "name": "Mid to B",
+      "description": "Come through mid doors pressure into B.",
       "creator": "System",
       "message": "mid to B smoke CT doors",
-      "meta": {}
+      "meta": {
+        "purpose": "Split B through doors and tunnels angles",
+        "goodWhen": [
+          "mid is free",
+          "B site is hard to rush directly"
+        ],
+        "notes": [
+          "needs one tunnels partner",
+          "watch window crossfire"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "mid",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Dust II T preset for numpad 5: [fake] B tunnels go A long.",
+      "name": "Fake B to A long",
+      "description": "Show B pressure and rotate into long.",
       "creator": "System",
       "message": "[fake] B tunnels go A long",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull CT rotation toward B and thin A hold",
+        "goodWhen": [
+          "CTs rotate hard on B contact",
+          "long control can still be taken"
+        ],
+        "notes": [
+          "do not lose players in fake",
+          "timing through spawn matters"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "A",
+          "B",
+          "long"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Dust II T preset for numpad 6: late long smoke cross.",
+      "name": "Late long take",
+      "description": "Take long later in the round and finish A.",
       "creator": "System",
       "message": "late long smoke cross",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish CTs that leave long after early quiet rounds",
+        "goodWhen": [
+          "enemy gives long after opening fight",
+          "team wants simple late A"
+        ],
+        "notes": [
+          "message is short by design",
+          "pair with patient spawn positions"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "long",
+          "timing"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Dust II T preset for numpad 7: [silent] B tunnels popflash.",
+      "name": "Silent B tunnels",
+      "description": "Walk tunnels and pop onto B with one flash.",
       "creator": "System",
       "message": "[silent] B tunnels popflash",
-      "meta": {}
+      "meta": {
+        "purpose": "Catch B anchors before they call full rotate",
+        "goodWhen": [
+          "enemy mid is overactive",
+          "B player peeks too much"
+        ],
+        "notes": [
+          "stay quiet in upper tunnels",
+          "great low-complexity call"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "silent",
+          "tunnels"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Dust II T preset for numpad 8: short explode smoke CT.",
+      "name": "Short burst A",
+      "description": "Take cat and burst onto A.",
       "creator": "System",
       "message": "short explode smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Hit A through cat with limited utility demand",
+        "goodWhen": [
+          "short is free",
+          "long fight is unfavorable"
+        ],
+        "notes": [
+          "goose still needs clearing",
+          "AWP can punish if cat is slow"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "short",
+          "burst"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Dust II T preset for numpad 9: smoke xbox take short go A.",
+      "name": "Xbox short A",
+      "description": "Use xbox smoke to claim short and scale A.",
       "creator": "System",
       "message": "smoke xbox take short go A",
-      "meta": {}
+      "meta": {
+        "purpose": "Cross mid safely and gain cat control",
+        "goodWhen": [
+          "mid cross is contested",
+          "you want reliable short access"
+        ],
+        "notes": [
+          "one player should watch lower tunnels push",
+          "great default replacement"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "mid",
+          "xbox",
+          "short"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Long control to split",
+      "description": "Take long first, then add short players for A split.",
+      "creator": "System",
+      "message": "take long 3 then 2 short go A smoke CT",
+      "meta": {
+        "purpose": "Force A anchor to fight two fronts",
+        "goodWhen": [
+          "long control is easy",
+          "cat can join late safely"
+        ],
+        "notes": [
+          "good against goose-only holds",
+          "timing matters more than utility"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "long",
+          "short",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Delayed B tunnels",
+      "description": "Stay hidden and hit B after one minute.",
+      "creator": "System",
+      "message": "hide tunnels till 1:00 then go B flash out",
+      "meta": {
+        "purpose": "Punish tunnel pushes and early rotate assumptions",
+        "goodWhen": [
+          "CT B pushes for info",
+          "A defender rotates off too soon"
+        ],
+        "notes": [
+          "silence is important",
+          "one player can fake cat lightly"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "delay",
+          "tunnels"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Mid split A",
+      "description": "Use mid and cat pressure into A without full long fight.",
+      "creator": "System",
+      "message": "mid take xbox smoke 3 short 2 mid doors go A",
+      "meta": {
+        "purpose": "Hit A without depending on long control",
+        "goodWhen": [
+          "CT long setup is strong",
+          "your spawns favor mid"
+        ],
+        "notes": [
+          "watch CT lower pushes",
+          "strong versus long stacks"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "A",
+          "mid",
+          "short",
+          "split"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Dust II CT preset for numpad 1: 3 long.",
+      "name": "Triple long",
+      "description": "Commit three players to long control.",
       "creator": "System",
       "message": "3 long",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny T long and establish early map control",
+        "goodWhen": [
+          "you have strong long spawns",
+          "Ts favor fast long often"
+        ],
+        "notes": [
+          "leaves B and mid lighter",
+          "do not overstay after winning"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "long",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Dust II CT preset for numpad 2: mid peek.",
+      "name": "Mid peek",
+      "description": "Peek mid early for info or opening damage.",
       "creator": "System",
       "message": "mid peek",
-      "meta": {}
+      "meta": {
+        "purpose": "Learn if Ts cross mid or favor lower tunnels",
+        "goodWhen": [
+          "you have favorable spawn",
+          "enemy repeats xbox smoke patterns"
+        ],
+        "notes": [
+          "avoid repeating predictably",
+          "fall back fast after contact"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "mid",
+          "peek",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Dust II CT preset for numpad 3: push tunnels.",
+      "name": "Tunnels push",
+      "description": "Push tunnels to stop B buildup.",
       "creator": "System",
       "message": "push tunnels",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish passive tunnel rounds and gather quick B info",
+        "goodWhen": [
+          "Ts like slow B",
+          "you have support flash"
+        ],
+        "notes": [
+          "dangerous versus anti-push hold",
+          "clear close left carefully"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "push",
+          "tunnels"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Dust II CT preset for numpad 4: 2 B hold.",
+      "name": "Double B hold",
+      "description": "Standard two-player B setup.",
       "creator": "System",
       "message": "2 B hold",
-      "meta": {}
+      "meta": {
+        "purpose": "Keep B stable while leaving enough A/mid support",
+        "goodWhen": [
+          "you need balance",
+          "enemy site choice is mixed"
+        ],
+        "notes": [
+          "window and platform roles should be clear",
+          "safe base setup"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "hold",
+          "standard"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Dust II CT preset for numpad 5: stack A.",
+      "name": "A stack",
+      "description": "Gamble extra bodies on A.",
       "creator": "System",
       "message": "stack A",
-      "meta": {}
+      "meta": {
+        "purpose": "Stop repeated A long and short rounds decisively",
+        "goodWhen": [
+          "Ts keep ending A",
+          "you have good read on spawns/patterns"
+        ],
+        "notes": [
+          "B becomes vulnerable",
+          "best after a pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Dust II CT preset for numpad 6: retake B.",
+      "name": "B retake",
+      "description": "Delay B and prepare to retake with rotates.",
       "creator": "System",
       "message": "retake B",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid dying to tunnel bursts and window splits",
+        "goodWhen": [
+          "T utility is strong",
+          "B anchor often gets isolated"
+        ],
+        "notes": [
+          "save nades for site retake",
+          "call early if giving site"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Dust II CT preset for numpad 7: short control.",
+      "name": "Short control",
+      "description": "Hold or fight for catwalk control.",
       "creator": "System",
       "message": "short control",
-      "meta": {}
+      "meta": {
+        "purpose": "Prevent easy short A hits and support mid",
+        "goodWhen": [
+          "Ts use xbox smoke often",
+          "A site needs extra help"
+        ],
+        "notes": [
+          "do not get isolated from site",
+          "works well with mid peek info"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "short",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Dust II CT preset for numpad 8: double mid.",
+      "name": "Double mid",
+      "description": "Use two players to deny mid access.",
       "creator": "System",
       "message": "double mid",
-      "meta": {}
+      "meta": {
+        "purpose": "Shut down mid-to-B and cat buildup",
+        "goodWhen": [
+          "enemy likes mid splits",
+          "your B player can anchor safely"
+        ],
+        "notes": [
+          "long becomes lighter",
+          "rotate one off if no contact"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "hold",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Dust II CT preset for numpad 9: save crossfire.",
+      "name": "Save setup",
+      "description": "Play compact and trade-focused for economy.",
       "creator": "System",
-      "message": "save crossfire",
-      "meta": {}
+      "message": "save setup",
+      "meta": {
+        "purpose": "Protect rifles and avoid giving opening picks",
+        "goodWhen": [
+          "economy is weak",
+          "you are up or down a key weapon"
+        ],
+        "notes": [
+          "avoid solo fights",
+          "trade in pairs"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Long pit anchor",
+      "description": "Use pit to stabilize long after early contest.",
+      "creator": "System",
+      "message": "long hold pit + car",
+      "meta": {
+        "purpose": "Make long retake harder for Ts after first contest",
+        "goodWhen": [
+          "you win long opening often",
+          "pit player is comfortable anchoring"
+        ],
+        "notes": [
+          "mid must still be called quickly",
+          "do not leave pit unsupported"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "long",
+          "pit",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B anti-rush",
+      "description": "Prepare to stop a fast tunnels burst.",
+      "creator": "System",
+      "message": "B anti-rush window + platform",
+      "meta": {
+        "purpose": "Delay B rushes until mid rotates can help",
+        "goodWhen": [
+          "Ts open many B rounds",
+          "you have supportive flash"
+        ],
+        "notes": [
+          "first contact should fall into second player",
+          "do not both get blinded"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "anti-rush",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Cat info push",
+      "description": "Take early cat info with support.",
+      "creator": "System",
+      "message": "push short for info",
+      "meta": {
+        "purpose": "Find out if Ts are building cat or crossing mid elsewhere",
+        "goodWhen": [
+          "enemy lacks strong short presence",
+          "you need info fast"
+        ],
+        "notes": [
+          "dangerous versus held top mid",
+          "fall if no trade path"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "short",
+          "push",
+          "info"
+        ]
+      }
     }
   ]
 }
