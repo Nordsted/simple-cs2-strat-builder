@@ -250,37 +250,27 @@ button.primary {
 
 .strategy-row {
   display: grid;
-  grid-template-columns: minmax(110px, 130px) minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: minmax(88px, 100px) minmax(0, 1fr);
+  gap: 0.9rem;
   align-items: start;
   background: linear-gradient(180deg, rgba(6, 22, 14, 0.9), rgba(4, 15, 10, 0.96));
   border: 1px solid rgba(125, 255, 177, 0.1);
   border-radius: 18px;
-  padding: 0.95rem;
+  padding: 0.9rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .strategy-slot-column {
-  display: grid;
-  gap: 0.15rem;
-  padding-top: 0.1rem;
-}
-
-.strategy-slot-column span {
-  color: var(--muted);
-  font-size: 0.92rem;
+  padding-top: 0.2rem;
 }
 
 .strategy-main-column {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.65rem;
 }
 
 .strategy-row-header {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: start;
+  display: block;
 }
 
 .strategy-row-header h3 {
@@ -293,10 +283,17 @@ button.primary {
   line-height: 1.5;
 }
 
-.strategy-row-actions {
+.strategy-controls-row {
   display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.strategy-row-actions {
+  display: inline-flex;
   gap: 0.6rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 
 .strategy-badges {
@@ -320,6 +317,7 @@ button.primary {
 .meta-badge-status {
   color: var(--text);
   border-color: rgba(89, 240, 143, 0.32);
+  background: rgba(13, 40, 25, 0.92);
 }
 
 .meta-badge-meta {
@@ -329,6 +327,7 @@ button.primary {
 
 .strategy-message-input {
   margin: 0;
+  flex: 1 1 auto;
 }
 
 .strategy-message-input input,
@@ -413,6 +412,7 @@ button.primary {
     grid-template-columns: 1fr;
   }
 
+  .strategy-controls-row,
   .strategy-row-actions,
   .side-picker-header,
   .dialog-header,
