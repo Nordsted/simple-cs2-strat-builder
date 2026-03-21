@@ -19,6 +19,7 @@ const state = {
   selectedMap: "",
   selectedSide: "T",
   slots: [],
+  activePickerSlot: null,
 };
 
 const mapSelect = document.querySelector("#mapSelect");
@@ -28,9 +29,6 @@ const showButton = document.querySelector("#showButton");
 const copyStatus = document.querySelector("#copyStatus");
 const commandDialog = document.querySelector("#commandDialog");
 const dialogTextarea = document.querySelector("#dialogTextarea");
-const slotDialog = document.querySelector("#slotDialog");
-const slotDialogTitle = document.querySelector("#slotDialogTitle");
-const slotDialogOptions = document.querySelector("#slotDialogOptions");
 const sideButtons = Array.from(document.querySelectorAll("[data-side]"));
 
 init();
@@ -81,7 +79,14 @@ function registerEvents() {
     }
 
     dialogTextarea.value = command;
-    commandDialog.showModal();
+    if (typeof commandDialog.showModal === "function") {
+      commandDialog.showModal();
+      dialogTextarea.focus();
+      dialogTextarea.select();
+      return;
+    }
+
+    copyStatus.textContent = "Dialog is not supported in this browser. Copy from the text that was selected.";
     dialogTextarea.focus();
     dialogTextarea.select();
   });
@@ -140,6 +145,7 @@ function createSlotFromStrategy(slotNumber, strategy) {
 
 function resetSlotsFromSelection() {
   const relevantStrategies = getRelevantStrategies();
+  state.activePickerSlot = null;
   state.slots = Array.from({ length: MAX_SLOTS }, (_, index) => {
     const slotNumber = index + 1;
     const strategy = relevantStrategies[index] || null;
@@ -164,11 +170,25 @@ function renderBindingsEditor() {
   });
 
   bindingsEditor.querySelectorAll("[data-slot-pick]").forEach((button) => {
-    button.addEventListener("click", () => openSlotDialog(Number(button.dataset.slotPick)));
+    button.addEventListener("click", () => toggleSlotPicker(Number(button.dataset.slotPick)));
   });
 
   bindingsEditor.querySelectorAll("[data-slot-clear]").forEach((button) => {
     button.addEventListener("click", () => clearSlot(Number(button.dataset.slotClear)));
+  });
+
+  bindingsEditor.querySelectorAll("[data-picker-apply]").forEach((button) => {
+    button.addEventListener("click", () => {
+      applyStrategyToSlot(Number(button.dataset.slotNumber), Number(button.dataset.pickerApply));
+    });
+  });
+
+  bindingsEditor.querySelectorAll("[data-picker-close]").forEach((button) => {
+    button.addEventListener("click", () => toggleSlotPicker(Number(button.dataset.pickerClose)));
+  });
+
+  bindingsEditor.querySelectorAll("[data-picker-clear]").forEach((button) => {
+    button.addEventListener("click", () => clearSlot(Number(button.dataset.pickerClear)));
   });
 }
 
@@ -177,18 +197,21 @@ function renderSlotRow(slot) {
   const description = slot.strategy
     ? slot.strategy.description
     : "Pick any strategy for this map and side, or type a custom team message.";
+  const isPickerOpen = state.activePickerSlot === slot.slotNumber;
 
   return `
     <article class="strategy-row" data-slot-row="${slot.slotNumber}">
       <div class="strategy-main-column">
         <div class="strategy-row-header">
-          <div class="strategy-title-row">
-            <span class="strategy-slot-label">Numpad ${slot.slotNumber}</span>
-            <h3>${escapeHTML(title)}</h3>
+          <div class="strategy-title-copy">
+            <div class="strategy-title-row">
+              <span class="strategy-slot-label">Numpad ${slot.slotNumber}</span>
+              <h3>${escapeHTML(title)}</h3>
+            </div>
+            <p class="strategy-row-description">${escapeHTML(description)}</p>
           </div>
           <div class="strategy-badges strategy-badges-primary">${renderSlotBadges(slot, "primary")}</div>
         </div>
-        <p class="strategy-row-description">${escapeHTML(description)}</p>
         <div class="strategy-badges strategy-badges-secondary" data-slot-badges="${slot.slotNumber}">${renderSlotBadges(slot, "secondary")}</div>
         <div class="strategy-controls-row">
           <label class="strategy-message-input">
@@ -201,10 +224,11 @@ function renderSlotRow(slot) {
             />
           </label>
           <div class="strategy-row-actions">
-            <button type="button" class="ghost-button" data-slot-pick="${slot.slotNumber}">Pick strat</button>
+            <button type="button" class="ghost-button" data-slot-pick="${slot.slotNumber}">${isPickerOpen ? "Close picker" : "Pick strat"}</button>
             <button type="button" class="ghost-button" data-slot-clear="${slot.slotNumber}">Clear</button>
           </div>
         </div>
+        ${isPickerOpen ? renderInlinePicker(slot.slotNumber) : ""}
       </div>
     </article>
   `;
@@ -287,61 +311,62 @@ function formatMetaValue(value) {
   return String(value);
 }
 
-function openSlotDialog(slotNumber) {
+function toggleSlotPicker(slotNumber) {
+  state.activePickerSlot = state.activePickerSlot === slotNumber ? null : slotNumber;
+  renderBindingsEditor();
+}
+
+function renderInlinePicker(slotNumber) {
   const options = getRelevantStrategies();
-  slotDialogTitle.textContent = `Pick a strategy for numpad ${slotNumber}`;
+  const optionCards = options
+    .map(
+      (strategy) => `
+        <button
+          type="button"
+          class="slot-option"
+          data-slot-number="${slotNumber}"
+          data-picker-apply="${strategy.id}"
+        >
+          <div class="slot-option-header">
+            <strong>${escapeHTML(strategy.name)}</strong>
+            <span>${escapeHTML(strategy.creator)}</span>
+          </div>
+          <span>${escapeHTML(strategy.description)}</span>
+          <code>${escapeHTML(strategy.message)}</code>
+          <div class="strategy-badges">${renderMetaBadges(strategy.meta).join("")}</div>
+        </button>
+      `,
+    )
+    .join("");
 
-  const cards = options.map(
-    (strategy, index) => `
-      <button type="button" class="slot-option" data-strategy-id="${strategy.id}">
-        <div class="slot-option-header">
-          <strong>${escapeHTML(strategy.name)}</strong>
-          <span>Order ${index + 1}</span>
-        </div>
-        <span>${escapeHTML(strategy.description)}</span>
-        <code>${escapeHTML(strategy.message)}</code>
-        <div class="strategy-badges">
-          ${[
-            renderBadge(strategy.creator, "creator"),
-            ...renderMetaBadges(strategy.meta),
-          ].join("")}
-        </div>
-      </button>
-    `,
-  );
-
-  cards.unshift(`
-    <button type="button" class="slot-option clear-option" data-slot-clear-dialog="true">
-      <strong>Clear this slot</strong>
-      <span>Leave this numpad key empty until you assign another strategy or type a message.</span>
-    </button>
-  `);
-
-  if (options.length === 0) {
-    cards.push(`
+  const emptyState = options.length
+    ? optionCards
+    : `
       <div class="slot-empty-state">
         No strategies are available for this map and side yet. You can still type a custom message.
       </div>
-    `);
-  }
+    `;
 
-  slotDialogOptions.innerHTML = cards.join("");
+  return `
+    <section class="slot-picker-panel" aria-label="Strategy picker for numpad ${slotNumber}">
+      <div class="slot-picker-panel-header">
+        <h4>Pick a strategy for numpad ${slotNumber}</h4>
+        <div class="slot-picker-panel-actions">
+          <button type="button" class="ghost-button" data-picker-clear="${slotNumber}">Clear slot</button>
+          <button type="button" class="ghost-button" data-picker-close="${slotNumber}">Done</button>
+        </div>
+      </div>
+      <div class="slot-dialog-options">
+        ${emptyState}
+      </div>
+    </section>
+  `;
+}
 
-  slotDialogOptions.querySelectorAll("[data-strategy-id]").forEach((button) => {
-    button.addEventListener("click", () => {
-      applyStrategyToSlot(slotNumber, Number(button.dataset.strategyId));
-      slotDialog.close();
-    });
-  });
-
-  slotDialogOptions.querySelectorAll("[data-slot-clear-dialog]").forEach((button) => {
-    button.addEventListener("click", () => {
-      clearSlot(slotNumber);
-      slotDialog.close();
-    });
-  });
-
-  slotDialog.showModal();
+function renderMetaBadges(meta) {
+  return Object.entries(getVisibleMetaEntries(meta || {})).map(([key, value]) =>
+    renderBadge(`${humanizeKey(key)}: ${formatMetaValue(value)}`, "meta"),
+  );
 }
 
 function applyStrategyToSlot(slotNumber, strategyId) {
@@ -351,11 +376,15 @@ function applyStrategyToSlot(slotNumber, strategyId) {
   }
 
   state.slots[slotNumber - 1] = createSlotFromStrategy(slotNumber, strategy);
+  state.activePickerSlot = null;
   renderBindingsEditor();
 }
 
 function clearSlot(slotNumber) {
   state.slots[slotNumber - 1] = createEmptySlot(slotNumber);
+  if (state.activePickerSlot === slotNumber) {
+    state.activePickerSlot = null;
+  }
   renderBindingsEditor();
 }
 

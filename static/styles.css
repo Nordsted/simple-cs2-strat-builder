@@ -37,9 +37,9 @@ select {
 }
 
 .layout {
-  width: min(1240px, calc(100vw - 2rem));
+  width: min(1360px, calc(100vw - 1.5rem));
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  padding: 1.6rem 0 3rem;
 }
 
 .card {
@@ -48,7 +48,7 @@ select {
   background: linear-gradient(180deg, rgba(9, 33, 21, 0.96), rgba(4, 20, 12, 0.92));
   border: 1px solid var(--border);
   border-radius: 24px;
-  padding: 1.35rem;
+  padding: 1.2rem;
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
 }
@@ -61,17 +61,11 @@ select {
   pointer-events: none;
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.5rem;
-  align-items: center;
-}
-
 .hero-copy,
-.builder-sidebar,
+.builder-toolbar,
 .builder-editor,
-.dialog-content {
+.dialog-content,
+.status {
   position: relative;
   z-index: 1;
 }
@@ -79,24 +73,6 @@ select {
 .hero h1,
 .hero p {
   max-width: 68ch;
-}
-
-.hero-badge {
-  display: grid;
-  gap: 0.35rem;
-  padding: 1.1rem 1.2rem;
-  min-width: 220px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(9, 36, 23, 0.94), rgba(15, 62, 38, 0.82));
-  border: 1px solid rgba(125, 255, 177, 0.22);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 40px rgba(46, 199, 108, 0.15);
-}
-
-.hero-badge span {
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.74rem;
 }
 
 .eyebrow {
@@ -119,15 +95,13 @@ code,
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
 
-label,
-.side-picker {
+label {
   display: grid;
-  gap: 0.55rem;
-  margin-bottom: 1rem;
 }
 
 select,
@@ -173,14 +147,20 @@ button.primary {
 
 .builder {
   display: grid;
-  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
 }
 
-.builder-sidebar,
-.builder-editor {
-  min-width: 0;
+.builder-toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 330px) minmax(270px, 1fr) auto;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.toolbar-field,
+.toolbar-field select {
+  width: 100%;
 }
 
 .builder-editor {
@@ -194,32 +174,19 @@ button.primary {
 .button-stack {
   display: grid;
   gap: 0.75rem;
-  margin-bottom: 1rem;
 }
 
-.compact-note {
-  display: grid;
-  gap: 0.5rem;
-  margin: 0;
-  line-height: 1.55;
-}
-
-.compact-note p {
-  margin: 0;
+.button-stack-inline {
+  grid-template-columns: repeat(2, minmax(150px, 180px));
+  justify-content: end;
 }
 
 .side-picker {
-  padding: 1rem;
+  padding: 0.7rem;
+  margin: 0;
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(10, 34, 22, 0.88), rgba(6, 19, 13, 0.95));
   border: 1px solid rgba(125, 255, 177, 0.12);
-}
-
-.side-picker-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: baseline;
 }
 
 .side-button-group {
@@ -229,18 +196,60 @@ button.primary {
 }
 
 .side-button {
-  background: linear-gradient(180deg, rgba(10, 28, 18, 0.88), rgba(6, 17, 11, 0.98));
+  --side-surface-top: rgba(10, 28, 18, 0.88);
+  --side-surface-bottom: rgba(6, 17, 11, 0.98);
+  --side-border: rgba(125, 255, 177, 0.16);
+  --side-border-strong: rgba(125, 255, 177, 0.4);
+  --side-selected-top: rgba(38, 74, 52, 0.96);
+  --side-selected-bottom: rgba(13, 40, 25, 0.98);
+  --side-glow: rgba(89, 240, 143, 0.18);
+  background: linear-gradient(180deg, var(--side-surface-top), var(--side-surface-bottom));
+  border-color: var(--side-border);
+  color: var(--text);
   font-weight: 700;
 }
 
+.side-button[data-side="T"] {
+  --side-surface-top: rgba(71, 42, 10, 0.94);
+  --side-surface-bottom: rgba(37, 20, 4, 0.98);
+  --side-border: rgba(240, 181, 70, 0.28);
+  --side-border-strong: rgba(255, 205, 96, 0.7);
+  --side-selected-top: rgba(180, 111, 24, 0.94);
+  --side-selected-bottom: rgba(106, 57, 10, 0.98);
+  --side-glow: rgba(240, 181, 70, 0.28);
+}
+
+.side-button[data-side="CT"] {
+  --side-surface-top: rgba(16, 44, 74, 0.94);
+  --side-surface-bottom: rgba(6, 20, 38, 0.98);
+  --side-border: rgba(92, 171, 255, 0.28);
+  --side-border-strong: rgba(132, 201, 255, 0.72);
+  --side-selected-top: rgba(44, 106, 178, 0.94);
+  --side-selected-bottom: rgba(13, 48, 92, 0.98);
+  --side-glow: rgba(92, 171, 255, 0.28);
+}
+
 .side-button.is-selected {
-  background: linear-gradient(135deg, rgba(89, 240, 143, 0.22), rgba(46, 199, 108, 0.28));
-  border-color: rgba(89, 240, 143, 0.55);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 26px rgba(46, 199, 108, 0.18);
+  background: linear-gradient(135deg, var(--side-selected-top), var(--side-selected-bottom));
+  border-color: var(--side-border-strong);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 26px var(--side-glow);
+}
+
+.status {
+  min-height: 1.25rem;
+  margin: 0;
 }
 
 .editor-header {
   margin-bottom: 0.9rem;
+}
+
+.editor-header h2 {
+  margin-bottom: 0.45rem;
+}
+
+.compact-copy {
+  margin-bottom: 0;
 }
 
 .bindings-editor {
@@ -252,13 +261,13 @@ button.primary {
   background: linear-gradient(180deg, rgba(6, 22, 14, 0.9), rgba(4, 15, 10, 0.96));
   border: 1px solid rgba(125, 255, 177, 0.1);
   border-radius: 18px;
-  padding: 0.75rem;
+  padding: 0.9rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .strategy-main-column {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.65rem;
 }
 
 .strategy-row-header {
@@ -266,6 +275,11 @@ button.primary {
   gap: 0.75rem;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.strategy-title-copy {
+  display: grid;
+  gap: 0.45rem;
 }
 
 .strategy-title-row {
@@ -361,6 +375,32 @@ button.primary {
   min-height: 0;
 }
 
+.slot-picker-panel {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 255, 177, 0.1);
+  background: linear-gradient(180deg, rgba(5, 19, 12, 0.96), rgba(5, 17, 11, 0.9));
+}
+
+.slot-picker-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.slot-picker-panel-header h4 {
+  margin: 0;
+}
+
+.slot-picker-panel-actions {
+  display: inline-flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
 .command-box,
 #dialogTextarea {
   background: #030d08;
@@ -374,6 +414,7 @@ button.primary {
 
 .slot-dialog-options {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 0.75rem;
 }
 
@@ -403,10 +444,6 @@ button.primary {
   padding: 0.7rem;
 }
 
-.clear-option {
-  border-style: dashed;
-}
-
 .dialog-content {
   min-width: min(720px, calc(100vw - 3rem));
 }
@@ -431,16 +468,22 @@ button.primary {
   border: 0;
 }
 
-@media (max-width: 960px) {
-  .builder,
-  .hero {
+@media (max-width: 1080px) {
+  .builder-toolbar {
     grid-template-columns: 1fr;
   }
 
+  .button-stack-inline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+}
+
+@media (max-width: 960px) {
   .strategy-row-header,
   .strategy-controls-row,
   .strategy-row-actions,
-  .side-picker-header,
+  .slot-picker-panel-header,
   .dialog-header,
   .slot-option-header {
     flex-direction: column;
