@@ -312,6 +312,7 @@ button.primary {
   display: flex;
   gap: 0.6rem;
   align-items: stretch;
+  font-size: 0.9rem;
 }
 
 .strategy-row-actions {
