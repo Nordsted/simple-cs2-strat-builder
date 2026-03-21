@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CS2 Chat Strat Builder</title>
+    <title>CS2 Strat Builder</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -19,8 +19,9 @@
       </section>
 
       <section class="builder card">
-        <div class="builder-sidebar">
-          <label>
+        <div class="builder-toolbar">
+          <label class="toolbar-field">
+            <span class="sr-only">Select map</span>
             <select id="mapSelect"></select>
           </label>
 
@@ -31,18 +32,21 @@
             </div>
           </section>
 
-          <div class="button-stack">
+          <div class="button-stack button-stack-inline">
             <button id="copyButton" class="primary">Copy config</button>
             <button id="showButton">Show config</button>
           </div>
-
-          <p id="copyStatus" class="status"></p>
         </div>
+
+        <p id="copyStatus" class="status" aria-live="polite"></p>
 
         <div class="builder-editor">
           <div class="editor-header">
             <div>
-              <h2>Numpad binds</h2>
+              <h2>Numpad strategy rows</h2>
+              <p class="lead compact-copy">
+                Each row stays compact while <code>say_team</code> is still added automatically on export.
+              </p>
             </div>
           </div>
 
@@ -55,19 +59,9 @@
       <form method="dialog" class="dialog-content">
         <div class="dialog-header">
           <h3>Copy the config manually</h3>
-          <button>Close</button>
+          <button type="submit">Close</button>
         </div>
         <textarea id="dialogTextarea" rows="8" readonly></textarea>
-      </form>
-    </dialog>
-
-    <dialog id="slotDialog">
-      <form method="dialog" class="dialog-content">
-        <div class="dialog-header">
-          <h3 id="slotDialogTitle">Pick a strat</h3>
-          <button>Close</button>
-        </div>
-        <div id="slotDialogOptions" class="slot-dialog-options"></div>
       </form>
     </dialog>
 
