@@ -327,7 +327,6 @@ function renderInlinePicker(slotNumber) {
         >
           <div class="slot-option-header">
             <strong>${escapeHTML(strategy.name)}</strong>
-            <span>${escapeHTML(strategy.creator)}</span>
           </div>
           <span>${escapeHTML(strategy.description)}</span>
           <code>${escapeHTML(strategy.message)}</code>

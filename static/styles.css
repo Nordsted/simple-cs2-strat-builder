@@ -71,11 +71,6 @@ select {
   z-index: 1;
 }
 
-.hero h1,
-.hero p {
-  max-width: 68ch;
-}
-
 .hero {
   padding-block: 0.8rem;
 }
@@ -94,7 +89,6 @@ select {
 .hero .lead {
   margin-bottom: 0;
   font-size: 0.95rem;
-  max-width: 58ch;
 }
 
 .eyebrow {
@@ -165,6 +159,7 @@ button.primary {
 
 .ghost-button {
   background: rgba(5, 18, 11, 0.75);
+  font-size: 0.8rem;
 }
 
 .builder {
@@ -334,7 +329,7 @@ button.primary {
   display: flex;
   gap: 0.6rem;
   align-items: stretch;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .strategy-row-actions {
