@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.railway.com/v2.json",
+  "build": {
+    "builder": "RAILPACK"
+  },
+  "deploy": {
+    "healthcheckPath": "/healthz",
+    "healthcheckTimeout": 60,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10,
+    "startCommand": "python3 app.py"
+  }
+}
