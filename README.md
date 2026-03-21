@@ -31,7 +31,10 @@ Built-in strategy seed data now lives in one file per map:
 - `strats/mirage.json`
 - `strats/nuke.json`
 - `strats/overpass.json`
+- `strats/train.json`
+- `strats/vertigo.json`
 
+The repository also keeps `strats/strats_baseline.json` as the source bundle used to refresh those per-map files.
 That makes it easy to add or edit map-specific strategies without touching the backend code.
 
 ## Verification

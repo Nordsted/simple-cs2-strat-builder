@@ -4,147 +4,580 @@
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Inferno T preset for numpad 1: rush B banana flash over car smoke CT.",
+      "name": "Fast banana B",
+      "description": "Explode B through banana with fast utility.",
       "creator": "System",
       "message": "rush B banana flash over car smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Beat banana control and get onto B before rotates",
+        "goodWhen": [
+          "you have strong banana spawns",
+          "CTs play passive deep B"
+        ],
+        "notes": [
+          "one player clears close right",
+          "coffins may stay open early"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "banana",
+          "rush"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Inferno T preset for numpad 2: take banana molly car smoke CT.",
+      "name": "Banana take",
+      "description": "Take banana first, then choose a B finish.",
       "creator": "System",
       "message": "take banana molly car smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Secure banana control and force CT utility early",
+        "goodWhen": [
+          "you want info before committing",
+          "enemy contests car often"
+        ],
+        "notes": [
+          "save one smoke for site",
+          "watch sandbags re-peek"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "banana",
+          "control",
+          "B"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Inferno T preset for numpad 3: apps + short go A smoke moto + library.",
+      "name": "Apps short A",
+      "description": "Split A through apartments and short.",
       "creator": "System",
       "message": "apps + short go A smoke moto + library",
-      "meta": {}
+      "meta": {
+        "purpose": "Break A hold from two directions and cut rotates",
+        "goodWhen": [
+          "mid control is available",
+          "arch side is vulnerable"
+        ],
+        "notes": [
+          "needs timing from apps and short",
+          "pit may still fight"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "apps",
+          "short",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Inferno T preset for numpad 4: [fake] banana smoke CT go A short.",
+      "name": "Fake banana to A",
+      "description": "Show banana pressure, then rotate into A.",
       "creator": "System",
       "message": "[fake] banana smoke CT go A short",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull one or two CTs toward B before finishing A",
+        "goodWhen": [
+          "enemy rotates fast off banana utility",
+          "A players hold passive"
+        ],
+        "notes": [
+          "do not lose players in banana",
+          "rotate quickly through mid"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "banana",
+          "A"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Inferno T preset for numpad 5: A site smoke moto + library flash over.",
+      "name": "A site hit",
+      "description": "Simple A execute with core lane smokes.",
       "creator": "System",
       "message": "A site smoke moto + library flash over",
-      "meta": {}
+      "meta": {
+        "purpose": "Isolate site defenders and deny arch rotate line",
+        "goodWhen": [
+          "team has full buy utility",
+          "AWP is posted arch"
+        ],
+        "notes": [
+          "pit still needs clearing",
+          "best with one apps lurk"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "group",
+          "smokes"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Inferno T preset for numpad 6: [silent] apps popflash out balcony.",
+      "name": "Silent apps pop",
+      "description": "Walk apartments and burst balcony/site.",
       "creator": "System",
       "message": "[silent] apps popflash out balcony",
-      "meta": {}
+      "meta": {
+        "purpose": "Catch A anchors without giving early rotate warning",
+        "goodWhen": [
+          "enemy leaves apps lightly watched",
+          "you want low-noise A pressure"
+        ],
+        "notes": [
+          "stay quiet in halls",
+          "strong with one lane lurk"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "apps",
+          "silent"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Inferno T preset for numpad 7: mid to B smoke CT + coffins.",
+      "name": "Mid to B",
+      "description": "Come through arch/CT pressure into B.",
       "creator": "System",
       "message": "mid to B smoke CT + coffins",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish overfocus on banana by attacking from lane rotation path",
+        "goodWhen": [
+          "banana is over-defended",
+          "mid is free to take"
+        ],
+        "notes": [
+          "needs lane control first",
+          "watch site boost angles"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "B",
+          "mid",
+          "rotate-cut"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Inferno T preset for numpad 8: B site smoke CT + coffins flash over.",
+      "name": "B site execute",
+      "description": "Full B commitment with core site smokes.",
       "creator": "System",
       "message": "B site smoke CT + coffins flash over",
-      "meta": {}
+      "meta": {
+        "purpose": "Take B with a simple, readable utility pattern",
+        "goodWhen": [
+          "you already have banana",
+          "team wants low-complexity execute"
+        ],
+        "notes": [
+          "dark/new box still need clearing",
+          "strong after early banana take"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "banana",
+          "group"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Inferno T preset for numpad 9: hide banana till 1:00 then explode B smoke CT + coffins.",
+      "name": "Delayed banana B",
+      "description": "Stay hidden in banana and hit when the clock reaches one minute.",
       "creator": "System",
       "message": "hide banana till 1:00 then explode B smoke CT + coffins",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish early CT re-aggression or over-rotation",
+        "goodWhen": [
+          "CTs re-clear banana often",
+          "you want to draw A players off first"
+        ],
+        "notes": [
+          "stay disciplined on sound",
+          "great against banana pushers"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "banana",
+          "delay"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Second mid wrap A",
+      "description": "Take second mid and wrap into A.",
+      "creator": "System",
+      "message": "take second mid apps + short go A smoke moto",
+      "meta": {
+        "purpose": "Avoid heavy banana and pressure A from layered routes",
+        "goodWhen": [
+          "CT B setup is strong",
+          "enemy lane player over-rotates"
+        ],
+        "notes": [
+          "pit still matters",
+          "works well with one late lurk top mid"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "apps",
+          "short",
+          "wrap"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Banana fake then apartments",
+      "description": "Sell B presence and end A through apartments.",
+      "creator": "System",
+      "message": "show banana 2 then 5 apps go A smoke library",
+      "meta": {
+        "purpose": "Trigger B-heavy rotate and exploit thinner A defense",
+        "goodWhen": [
+          "CTs overhelp banana",
+          "you have strong apartment timing"
+        ],
+        "notes": [
+          "fake players must survive",
+          "best with one short lurk"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "fake",
+          "A",
+          "banana",
+          "apps"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast lane A",
+      "description": "Use lane pressure and quick A utility.",
+      "creator": "System",
+      "message": "fast lane smoke moto + library go A",
+      "meta": {
+        "purpose": "Beat delayed arch support and isolate site anchor",
+        "goodWhen": [
+          "you have strong lane spawn",
+          "enemy lane peeks are weak"
+        ],
+        "notes": [
+          "pit can still multi-kill",
+          "flash over site helps first man"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "lane",
+          "fast"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Inferno CT preset for numpad 1: 3 B banana.",
+      "name": "Triple banana",
+      "description": "Three players contest banana at round start.",
       "creator": "System",
       "message": "3 B banana",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny T banana control and burn their utility",
+        "goodWhen": [
+          "team has good B spawns",
+          "Ts open many rounds banana"
+        ],
+        "notes": [
+          "do not overstay after gaining control",
+          "one can rotate out after utility"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "banana",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Inferno CT preset for numpad 2: push banana early.",
+      "name": "Banana push",
+      "description": "Push down banana early for info or picks.",
       "creator": "System",
       "message": "push banana early",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish passive T starts and gain fast information",
+        "goodWhen": [
+          "Ts play slow banana often",
+          "you have flash support"
+        ],
+        "notes": [
+          "dangerous versus anti-rush nades",
+          "fall back after contact"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "push",
+          "banana"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Inferno CT preset for numpad 3: 2 B hold.",
+      "name": "Double B hold",
+      "description": "Standard two-player B hold.",
       "creator": "System",
       "message": "2 B hold",
-      "meta": {}
+      "meta": {
+        "purpose": "Keep banana and site stable while A has enough support",
+        "goodWhen": [
+          "you need balanced coverage",
+          "Ts vary site choice"
+        ],
+        "notes": [
+          "anchor and rotator roles should be clear",
+          "safe default hold"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "hold",
+          "standard"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Inferno CT preset for numpad 4: arch + short A.",
+      "name": "Arch short A",
+      "description": "Two-point A defense from arch and short.",
       "creator": "System",
       "message": "arch + short A",
-      "meta": {}
+      "meta": {
+        "purpose": "Trade A lane and apartments pressure from layered angles",
+        "goodWhen": [
+          "enemy likes lane control",
+          "mid info is good"
+        ],
+        "notes": [
+          "pit still needs coverage",
+          "arch player must time rotate carefully"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hold",
+          "arch",
+          "short"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Inferno CT preset for numpad 5: stack A.",
+      "name": "A stack",
+      "description": "Gamble extra players on A.",
       "creator": "System",
       "message": "stack A",
-      "meta": {}
+      "meta": {
+        "purpose": "Shut down repeated A site pressure",
+        "goodWhen": [
+          "Ts hit A several rounds in a row",
+          "banana control seems quiet"
+        ],
+        "notes": [
+          "gives up banana depth",
+          "best after strong read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Inferno CT preset for numpad 6: retake B.",
+      "name": "B retake setup",
+      "description": "Delay B and retake with saved utility.",
       "creator": "System",
       "message": "retake B",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid dying to layered B executes",
+        "goodWhen": [
+          "Ts have strong B utility",
+          "your B anchor gets isolated often"
+        ],
+        "notes": [
+          "save molly/smoke if possible",
+          "communicate when giving site"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Inferno CT preset for numpad 7: mid push info.",
+      "name": "Mid info push",
+      "description": "Push for mid information early.",
       "creator": "System",
       "message": "mid push info",
-      "meta": {}
+      "meta": {
+        "purpose": "Learn if Ts lean banana or second mid",
+        "goodWhen": [
+          "enemy uses slow defaults",
+          "you need info to rotate B support"
+        ],
+        "notes": [
+          "do not overextend into T spawn",
+          "works best with support flash"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Inferno CT preset for numpad 8: double apps.",
+      "name": "Double apartments",
+      "description": "Commit more pressure to apartments defense.",
       "creator": "System",
       "message": "double apps",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish repeated apps pops and wraps",
+        "goodWhen": [
+          "enemy favors apartments",
+          "A anchors struggle versus balcony bursts"
+        ],
+        "notes": [
+          "lane becomes lighter",
+          "need clear trade spacing"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "apps",
+          "hold"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Inferno CT preset for numpad 9: save crossfire.",
+      "name": "Save crossfire",
+      "description": "Protect economy with safer crossfires.",
       "creator": "System",
       "message": "save crossfire",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid isolated duels when economy matters",
+        "goodWhen": [
+          "money is low",
+          "you are down a player"
+        ],
+        "notes": [
+          "do not peek banana or lane alone",
+          "play off teammates"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "crossfire"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Car anti-rush",
+      "description": "Use car and support to stop fast banana.",
+      "creator": "System",
+      "message": "car anti-rush banana",
+      "meta": {
+        "purpose": "Punish five-man banana bursts at the choke",
+        "goodWhen": [
+          "Ts rush B often",
+          "you have early support utility"
+        ],
+        "notes": [
+          "needs instant trade support",
+          "not ideal if Ts molly car every round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "banana",
+          "anti-rush"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Pit anchor A",
+      "description": "Play A around pit with delayed support.",
+      "creator": "System",
+      "message": "A hold pit + site",
+      "meta": {
+        "purpose": "Make lane/A bursts costly with deep anchor positions",
+        "goodWhen": [
+          "enemy lacks strong pit clears",
+          "you have good pit player"
+        ],
+        "notes": [
+          "library must avoid getting isolated",
+          "good versus lane-heavy hits"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "pit",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Half-wall banana info",
+      "description": "Fight for early banana info without full commit.",
+      "creator": "System",
+      "message": "half wall banana info then fall",
+      "meta": {
+        "purpose": "See early T numbers and preserve players",
+        "goodWhen": [
+          "you want info but not a full banana battle",
+          "utility is limited"
+        ],
+        "notes": [
+          "do not get trapped by second wave nades",
+          "fall after first contact"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "banana",
+          "info",
+          "hold"
+        ]
+      }
     }
   ]
 }

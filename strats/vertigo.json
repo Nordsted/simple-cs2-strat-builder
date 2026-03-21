@@ -1,0 +1,580 @@
+{
+  "mapSlug": "vertigo",
+  "mapName": "Vertigo",
+  "strategies": [
+    {
+      "side": "T",
+      "name": "A ramp take",
+      "description": "Take A ramp and build toward site.",
+      "creator": "System",
+      "message": "take A ramp smoke bridge flash over",
+      "meta": {
+        "purpose": "Secure the key route into A with manageable utility",
+        "goodWhen": [
+          "team has good A spawns",
+          "enemy ramp hold is passive"
+        ],
+        "notes": [
+          "sandbags still matter",
+          "good opener before full commit"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "ramp",
+          "control"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast A ramp",
+      "description": "Hit A quickly through ramp.",
+      "creator": "System",
+      "message": "rush A ramp smoke bridge flash over",
+      "meta": {
+        "purpose": "Beat defender setup and claim site space early",
+        "goodWhen": [
+          "strong A spawns",
+          "enemy ramp control is weak"
+        ],
+        "notes": [
+          "close angles still need clearing",
+          "simple pug call"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "ramp",
+          "rush"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Mid to A",
+      "description": "Use mid pressure to support an A finish.",
+      "creator": "System",
+      "message": "mid control then A smoke bridge",
+      "meta": {
+        "purpose": "Open A without only relying on ramp",
+        "goodWhen": [
+          "mid is available",
+          "enemy A ramp setup is strong"
+        ],
+        "notes": [
+          "timing between mid and A matters",
+          "great vs static ramp holds"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "mid",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "B stairs take",
+      "description": "Take B stairs before deciding to finish.",
+      "creator": "System",
+      "message": "take B stairs smoke CT",
+      "meta": {
+        "purpose": "Gain safe B access and test defender reaction",
+        "goodWhen": [
+          "enemy B is lightly contested",
+          "A ramp is expensive to fight"
+        ],
+        "notes": [
+          "save one flash for site",
+          "works as setup and finish"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stairs",
+          "control"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast B site",
+      "description": "Commit to B quickly with a simple smoke.",
+      "creator": "System",
+      "message": "rush B stairs smoke CT flash site",
+      "meta": {
+        "purpose": "Beat B anchors before they can layer utility",
+        "goodWhen": [
+          "team has B spawns",
+          "enemy rotates slowly to B"
+        ],
+        "notes": [
+          "close corners still matter",
+          "good low-complexity round"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stairs",
+          "rush"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fake B to A",
+      "description": "Show B utility and switch to A.",
+      "creator": "System",
+      "message": "[fake] B stairs smoke CT go A ramp",
+      "meta": {
+        "purpose": "Pull one rotator from A before the real hit",
+        "goodWhen": [
+          "enemy rotates quickly off B presence",
+          "A ramp can still be taken"
+        ],
+        "notes": [
+          "do not lose players in the fake",
+          "transition fast"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "B",
+          "A"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Silent A ramp",
+      "description": "Walk A ramp and burst late.",
+      "creator": "System",
+      "message": "[silent] A ramp walk then swing site smoke bridge",
+      "meta": {
+        "purpose": "Catch ramp anchors before full rotate warning",
+        "goodWhen": [
+          "enemy ramp player repositions early",
+          "you want a quieter round"
+        ],
+        "notes": [
+          "stay silent",
+          "great mixed-buy option"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "ramp",
+          "silent"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "A split ramp mid",
+      "description": "Pressure A from ramp and mid.",
+      "creator": "System",
+      "message": "3 A ramp 2 mid go A smoke bridge",
+      "meta": {
+        "purpose": "Create two entry timings onto A",
+        "goodWhen": [
+          "mid is open",
+          "enemy overfocuses ramp fight"
+        ],
+        "notes": [
+          "must synchronize",
+          "better against bridge-only hold"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "ramp",
+          "mid",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Delayed B stairs",
+      "description": "Wait and hit B after one minute.",
+      "creator": "System",
+      "message": "hide B stairs till 1:00 then go B smoke CT flash site",
+      "meta": {
+        "purpose": "Punish CT info pushes and early rotate assumptions",
+        "goodWhen": [
+          "CTs push stairs or mid",
+          "A has shown enough noise earlier"
+        ],
+        "notes": [
+          "stay quiet",
+          "good anti-push round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "delay",
+          "stairs"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Mid lurk to B",
+      "description": "Use mid timing to support a B finish.",
+      "creator": "System",
+      "message": "2 mid 3 B stairs smoke CT go B",
+      "meta": {
+        "purpose": "Pin B defenders from more than one angle",
+        "goodWhen": [
+          "mid is under-defended",
+          "B anchor hides close site"
+        ],
+        "notes": [
+          "timing matters",
+          "good versus static B setups"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "mid",
+          "stairs",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "A ramp re-hit",
+      "description": "Show A ramp, back off, then hit again.",
+      "creator": "System",
+      "message": "show A ramp 2 then 5 A ramp smoke bridge go A",
+      "meta": {
+        "purpose": "Bait defender utility and punish over-rotation",
+        "goodWhen": [
+          "enemy dumps early ramp utility",
+          "team can reset discipline"
+        ],
+        "notes": [
+          "needs patience",
+          "great after repeated A control rounds"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "A",
+          "ramp",
+          "timing"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "B to mid fake A",
+      "description": "Show B and convert through mid toward A.",
+      "creator": "System",
+      "message": "show B stairs then mid 2 go A ramp smoke bridge",
+      "meta": {
+        "purpose": "Move defenders off A before a split-style finish",
+        "goodWhen": [
+          "enemy rotates fast from B",
+          "mid lane is available"
+        ],
+        "notes": [
+          "fake must be believable but safe",
+          "A team should wait for cue"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "fake",
+          "A",
+          "B",
+          "mid"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A ramp control",
+      "description": "Contest or stabilize A ramp.",
+      "creator": "System",
+      "message": "A ramp control",
+      "meta": {
+        "purpose": "Deny free A approach and gather info",
+        "goodWhen": [
+          "you have strong A spawns",
+          "Ts favor ramp often"
+        ],
+        "notes": [
+          "do not overpeek after first info",
+          "safe baseline on Vertigo"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "ramp",
+          "control"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B stairs hold",
+      "description": "Stable two-player B defense.",
+      "creator": "System",
+      "message": "2 B hold",
+      "meta": {
+        "purpose": "Keep B secure while A fights for ramp",
+        "goodWhen": [
+          "you want a balanced setup",
+          "enemy site choice is mixed"
+        ],
+        "notes": [
+          "stairs and site roles should be clear",
+          "safe opener"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "hold",
+          "standard"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Mid info push",
+      "description": "Push mid for information.",
+      "creator": "System",
+      "message": "mid push info",
+      "meta": {
+        "purpose": "Learn whether Ts are leaning A or B",
+        "goodWhen": [
+          "enemy plays slow defaults",
+          "support can trade quickly"
+        ],
+        "notes": [
+          "dangerous if held",
+          "fall back after first contact"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "push",
+          "info"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A stack",
+      "description": "Gamble extra players on A.",
+      "creator": "System",
+      "message": "stack A",
+      "meta": {
+        "purpose": "Punish repeated A ramp rounds",
+        "goodWhen": [
+          "Ts end A often",
+          "you have a good read"
+        ],
+        "notes": [
+          "B becomes weak",
+          "best after pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "stack"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B stack",
+      "description": "Gamble extra players on B.",
+      "creator": "System",
+      "message": "stack B",
+      "meta": {
+        "purpose": "Punish repeated B stairs hits",
+        "goodWhen": [
+          "Ts favor B",
+          "A pressure has been low"
+        ],
+        "notes": [
+          "A gets lighter",
+          "good after pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stack"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A retake",
+      "description": "Delay A and retake together.",
+      "creator": "System",
+      "message": "retake A",
+      "meta": {
+        "purpose": "Avoid dying into layered bridge/ramp utility",
+        "goodWhen": [
+          "enemy A hits are well-drilled",
+          "A anchor gets isolated"
+        ],
+        "notes": [
+          "save utility if possible",
+          "communicate site loss early"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "retake"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B retake",
+      "description": "Delay B and retake with support.",
+      "creator": "System",
+      "message": "retake B",
+      "meta": {
+        "purpose": "Avoid isolated losses on the cramped B site",
+        "goodWhen": [
+          "enemy B executes are strong",
+          "stairs player gets boxed in"
+        ],
+        "notes": [
+          "save nades if possible",
+          "group before retaking"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "retake"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Double A ramp",
+      "description": "Use two players to secure ramp.",
+      "creator": "System",
+      "message": "double A ramp",
+      "meta": {
+        "purpose": "Deny simple ramp control and force Ts elsewhere",
+        "goodWhen": [
+          "enemy keeps taking ramp for free",
+          "you have a strong ramp duo"
+        ],
+        "notes": [
+          "mid or B becomes lighter",
+          "good anti-ramp round"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "ramp",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Save crossfire",
+      "description": "Compact setup for weak economy.",
+      "creator": "System",
+      "message": "save crossfire",
+      "meta": {
+        "purpose": "Protect rifles and force Ts to clear layered angles",
+        "goodWhen": [
+          "money is low",
+          "you lose opening duel"
+        ],
+        "notes": [
+          "avoid solo peeks",
+          "play paired angles"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A anti-rush",
+      "description": "Prepare to stop fast A ramp rounds.",
+      "creator": "System",
+      "message": "A anti-rush ramp + site",
+      "meta": {
+        "purpose": "Delay quick ramp floods until rotate help arrives",
+        "goodWhen": [
+          "Ts rush A often",
+          "you have support flash ready"
+        ],
+        "notes": [
+          "first player slows, second trades",
+          "do not both get blinded"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "anti-rush",
+          "ramp"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B anti-rush",
+      "description": "Prepare for fast B stairs rounds.",
+      "creator": "System",
+      "message": "B anti-rush stairs + site",
+      "meta": {
+        "purpose": "Stop B bursts before Ts can flood the site",
+        "goodWhen": [
+          "Ts rush B often",
+          "your B duo has utility"
+        ],
+        "notes": [
+          "crossfire beats solo hero play",
+          "watch mid support timing"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "anti-rush",
+          "stairs"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Mid hold passive",
+      "description": "Watch mid without fully pushing.",
+      "creator": "System",
+      "message": "mid passive hold",
+      "meta": {
+        "purpose": "Gather safe info and support both sites",
+        "goodWhen": [
+          "enemy punishes mid pushes",
+          "you still need central awareness"
+        ],
+        "notes": [
+          "do not overextend",
+          "good economy-preserving option"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "mid",
+          "hold",
+          "passive"
+        ]
+      }
+    }
+  ]
+}

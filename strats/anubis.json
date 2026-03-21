@@ -4,147 +4,580 @@
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Anubis T preset for numpad 1: rush B main smoke CT + heaven flash.",
+      "name": "Fast B main",
+      "description": "Quick B hit through main with core smokes.",
       "creator": "System",
       "message": "rush B main smoke CT + heaven flash",
-      "meta": {}
+      "meta": {
+        "purpose": "Beat B setup before rotations settle",
+        "goodWhen": [
+          "team has good B spawns",
+          "enemy B hold is passive"
+        ],
+        "notes": [
+          "close right still matters",
+          "great simple opener"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "main",
+          "rush"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Anubis T preset for numpad 2: B main + mid split smoke CT.",
+      "name": "B main mid split",
+      "description": "Hit B from main and mid together.",
       "creator": "System",
       "message": "B main + mid split smoke CT",
-      "meta": {}
+      "meta": {
+        "purpose": "Force B defenders to split attention and cut rotate lane",
+        "goodWhen": [
+          "mid is available",
+          "enemy B setup is static"
+        ],
+        "notes": [
+          "timing between main and mid matters",
+          "heaven pressure helps finish"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "mid",
+          "main",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Anubis T preset for numpad 3: mid control smoke connector.",
+      "name": "Mid control",
+      "description": "Take mid and open connector decisions.",
       "creator": "System",
       "message": "mid control smoke connector",
-      "meta": {}
+      "meta": {
+        "purpose": "Gain space for either B split or A pressure later",
+        "goodWhen": [
+          "enemy mid is lightly contested",
+          "team wants map control first"
+        ],
+        "notes": [
+          "do not overrun alone",
+          "connector smoke reduces early risk"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "mid",
+          "control",
+          "connector"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Anubis T preset for numpad 4: A main + mid split smoke heaven.",
+      "name": "A main mid split",
+      "description": "Pressure A from main and mid.",
       "creator": "System",
       "message": "A main + mid split smoke heaven",
-      "meta": {}
+      "meta": {
+        "purpose": "Open A through two paths and cut strong rotate sightline",
+        "goodWhen": [
+          "mid is free",
+          "enemy A player overfocuses main"
+        ],
+        "notes": [
+          "best with clear timing",
+          "site boxes still need clearing"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "main",
+          "mid",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Anubis T preset for numpad 5: [fake] A main smoke CT go B.",
+      "name": "Fake A to B",
+      "description": "Show A pressure and switch to B.",
       "creator": "System",
       "message": "[fake] A main smoke CT go B",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull mid/A support away from B before the real hit",
+        "goodWhen": [
+          "enemy rotates quickly",
+          "B anchor is usually alone"
+        ],
+        "notes": [
+          "fake players should survive",
+          "move through safe lanes fast"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "A",
+          "B"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Anubis T preset for numpad 6: B site smoke CT + heaven.",
+      "name": "B site execute",
+      "description": "Full B utility to isolate the site.",
       "creator": "System",
       "message": "B site smoke CT + heaven",
-      "meta": {}
+      "meta": {
+        "purpose": "Cut the two biggest B rotate/vision lanes",
+        "goodWhen": [
+          "full buy utility is available",
+          "team wants simple coordinated call"
+        ],
+        "notes": [
+          "main group must scale together",
+          "great after mid pressure rounds"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "group",
+          "smokes"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Anubis T preset for numpad 7: [silent] A main popflash.",
+      "name": "Silent A main",
+      "description": "Walk A main and burst with one popflash.",
       "creator": "System",
       "message": "[silent] A main popflash",
-      "meta": {}
+      "meta": {
+        "purpose": "Catch A anchors before full rotate warning",
+        "goodWhen": [
+          "enemy gives main control",
+          "mid pressure already distracts defenders"
+        ],
+        "notes": [
+          "stay silent until the flash",
+          "great on mixed buys too"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "main",
+          "silent"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Anubis T preset for numpad 8: mid to B explode flash out.",
+      "name": "Mid to B burst",
+      "description": "Take mid and explode toward B.",
       "creator": "System",
       "message": "mid to B explode flash out",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish B setups that watch only main",
+        "goodWhen": [
+          "mid path is free",
+          "main can hold attention lightly"
+        ],
+        "notes": [
+          "one player should cut heaven if possible",
+          "timing is important"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "mid",
+          "burst"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Anubis T preset for numpad 9: hide B main till 1:00 then go B smoke CT + heaven.",
+      "name": "Delayed B main",
+      "description": "Hide in B main and hit after one minute.",
       "creator": "System",
       "message": "hide B main till 1:00 then go B smoke CT + heaven",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish canal or mid info pushes and late B re-clears",
+        "goodWhen": [
+          "CTs get curious for info",
+          "enemy rotates early toward A"
+        ],
+        "notes": [
+          "silence matters",
+          "strong anti-push round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "delay",
+          "main"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Canal lean to A",
+      "description": "Use canals pressure to support an A finish.",
+      "creator": "System",
+      "message": "show canals 2 then 5 A main + mid go A smoke heaven",
+      "meta": {
+        "purpose": "Distract defenders before a two-lane A hit",
+        "goodWhen": [
+          "enemy overreacts to canals presence",
+          "A needs opening space"
+        ],
+        "notes": [
+          "fake players must not die",
+          "good versus active mid defenders"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "fake",
+          "A",
+          "canals",
+          "mid"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Mid to A wrap",
+      "description": "Take mid and wrap toward A.",
+      "creator": "System",
+      "message": "take mid then wrap A smoke heaven",
+      "meta": {
+        "purpose": "Pressure A from a less direct route",
+        "goodWhen": [
+          "A main is hard to take",
+          "mid control is easier than site entry"
+        ],
+        "notes": [
+          "connector pathing must be clean",
+          "works well with one A main lurk"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "mid",
+          "wrap"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Fast double-lane B",
+      "description": "Use main and mid quickly into B together.",
+      "creator": "System",
+      "message": "2 mid 3 B main smoke CT go B",
+      "meta": {
+        "purpose": "Trade out isolated B anchor from two fronts",
+        "goodWhen": [
+          "mid is uncontested",
+          "B anchor hides default angles"
+        ],
+        "notes": [
+          "must synchronize",
+          "simple split for structured pugs"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "mid",
+          "main",
+          "split"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Anubis CT preset for numpad 1: mid aggressive.",
+      "name": "Aggressive mid",
+      "description": "Contest mid early.",
       "creator": "System",
       "message": "mid aggressive",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny easy mid control and gain fast info",
+        "goodWhen": [
+          "you have good spawn",
+          "Ts favor slow mid starts"
+        ],
+        "notes": [
+          "do not repeat every round",
+          "fall after contact"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Anubis CT preset for numpad 2: 3 B hold.",
+      "name": "Triple B hold",
+      "description": "Lean heavier into B defense.",
       "creator": "System",
       "message": "3 B hold",
-      "meta": {}
+      "meta": {
+        "purpose": "Stop frequent B main pressure decisively",
+        "goodWhen": [
+          "Ts hit B often",
+          "you have read on B bias"
+        ],
+        "notes": [
+          "A gets lighter",
+          "best after a pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "hold",
+          "stack-lean"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Anubis CT preset for numpad 3: push canals.",
+      "name": "Canals push",
+      "description": "Push canals for info or flank path.",
       "creator": "System",
       "message": "push canals",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish passive canal control and learn T map spread",
+        "goodWhen": [
+          "enemy ignores canals",
+          "support can trade"
+        ],
+        "notes": [
+          "dangerous if held",
+          "do not overchase"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "canals",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Anubis CT preset for numpad 4: A main control.",
+      "name": "A main control",
+      "description": "Fight or stabilize around A main.",
       "creator": "System",
       "message": "A main control",
-      "meta": {}
+      "meta": {
+        "purpose": "Prevent free A setup and support mid rotate line",
+        "goodWhen": [
+          "enemy likes A contact",
+          "you need more A stability"
+        ],
+        "notes": [
+          "mid still needs call discipline",
+          "good baseline option"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "main",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Anubis CT preset for numpad 5: stack B.",
+      "name": "B stack",
+      "description": "Gamble extra players on B.",
       "creator": "System",
       "message": "stack B",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish repeated B endings",
+        "goodWhen": [
+          "Ts keep finishing B",
+          "mid pressure is predictable"
+        ],
+        "notes": [
+          "A becomes vulnerable",
+          "best after read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Anubis CT preset for numpad 6: retake A.",
+      "name": "A retake",
+      "description": "Delay A and retake together.",
       "creator": "System",
       "message": "retake A",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid losing isolated fights to A main-mid splits",
+        "goodWhen": [
+          "enemy has strong A entry utility",
+          "A anchor is getting traded"
+        ],
+        "notes": [
+          "save utility if possible",
+          "call site give-up early"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Anubis CT preset for numpad 7: mid boost.",
+      "name": "Mid boost",
+      "description": "Use a boost to watch or contest mid.",
       "creator": "System",
       "message": "mid boost",
-      "meta": {}
+      "meta": {
+        "purpose": "Get unusual vision and early information in mid",
+        "goodWhen": [
+          "Ts repeat the same mid path",
+          "you need info without full push"
+        ],
+        "notes": [
+          "do not overuse",
+          "rotate quickly if nothing seen"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "boost",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Anubis CT preset for numpad 8: double mid.",
+      "name": "Double mid",
+      "description": "Use two players to deny mid access.",
       "creator": "System",
       "message": "double mid",
-      "meta": {}
+      "meta": {
+        "purpose": "Stop easy mid control that opens both bombsites",
+        "goodWhen": [
+          "enemy wins mid too often",
+          "B can anchor safely"
+        ],
+        "notes": [
+          "A or B becomes lighter",
+          "rotate one off with good info"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "mid",
+          "hold",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Anubis CT preset for numpad 9: save crossfire.",
+      "name": "Save crossfire",
+      "description": "Compact trade setup for fragile economy.",
       "creator": "System",
       "message": "save crossfire",
-      "meta": {}
+      "meta": {
+        "purpose": "Protect rifles and force Ts into layered clears",
+        "goodWhen": [
+          "economy is low",
+          "you are down a player"
+        ],
+        "notes": [
+          "avoid opening duels",
+          "pair angles intentionally"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "B anti-rush",
+      "description": "Prepare to stop fast B main rounds.",
+      "creator": "System",
+      "message": "B anti-rush main + site",
+      "meta": {
+        "purpose": "Delay fast B before mid rotates arrive",
+        "goodWhen": [
+          "Ts rush B often",
+          "you have support flash"
+        ],
+        "notes": [
+          "one slows, one trades",
+          "do not both get blinded"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "anti-rush",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Canals lurk catch",
+      "description": "Hold deeper canals to catch late lurks.",
+      "creator": "System",
+      "message": "canals hold deep",
+      "meta": {
+        "purpose": "Punish slow canal pressure and delay flanks",
+        "goodWhen": [
+          "enemy likes late canal lurks",
+          "you need safer info than a push"
+        ],
+        "notes": [
+          "do not isolate from team",
+          "good with strong mid calls"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "canals",
+          "hold",
+          "info"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "A passive hold",
+      "description": "Hold A from safer deeper angles.",
+      "creator": "System",
+      "message": "A passive hold",
+      "meta": {
+        "purpose": "Trade better against layered A utility",
+        "goodWhen": [
+          "enemy has strong A execute patterns",
+          "you need safer A defense"
+        ],
+        "notes": [
+          "mid player must call rotate quickly",
+          "play for team trade"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hold",
+          "passive"
+        ]
+      }
     }
   ]
 }

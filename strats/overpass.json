@@ -4,147 +4,584 @@
   "strategies": [
     {
       "side": "T",
-      "name": "T slot 1",
-      "description": "Overpass T preset for numpad 1: rush B monster smoke bridge flash over.",
+      "name": "Fast monster B",
+      "description": "Hit B quickly through monster.",
       "creator": "System",
       "message": "rush B monster smoke bridge flash over",
-      "meta": {}
+      "meta": {
+        "purpose": "Beat B setup and get onto site before full rotate",
+        "goodWhen": [
+          "team has strong monster spawn",
+          "enemy B setup is passive"
+        ],
+        "notes": [
+          "water/short support still matters",
+          "simple opener"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "monster",
+          "rush"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 2",
-      "description": "Overpass T preset for numpad 2: monster + short split smoke heaven.",
+      "name": "Monster short split",
+      "description": "Pressure B from monster and short.",
       "creator": "System",
       "message": "monster + short split smoke heaven",
-      "meta": {}
+      "meta": {
+        "purpose": "Overwhelm B from two directions and cut heaven support",
+        "goodWhen": [
+          "connector is available",
+          "enemy B anchor overfocuses monster"
+        ],
+        "notes": [
+          "timing matters",
+          "great versus static pillar holds"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "monster",
+          "short",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 3",
-      "description": "Overpass T preset for numpad 3: mid control connector smoke.",
+      "name": "Connector control",
+      "description": "Take connector to open map options.",
       "creator": "System",
       "message": "mid control connector smoke",
-      "meta": {}
+      "meta": {
+        "purpose": "Gain central pathing into B or A later",
+        "goodWhen": [
+          "enemy fountain control is weak",
+          "team wants information first"
+        ],
+        "notes": [
+          "do not overfight bathrooms early",
+          "good setup round"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "mid",
+          "connector",
+          "control"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 4",
-      "description": "Overpass T preset for numpad 4: long + short go A smoke truck.",
+      "name": "Long short A",
+      "description": "Split A from long and short.",
       "creator": "System",
       "message": "long + short go A smoke truck",
-      "meta": {}
+      "meta": {
+        "purpose": "Pressure A from two routes while blocking truck line",
+        "goodWhen": [
+          "you can reach long or bathrooms",
+          "enemy A setup is static"
+        ],
+        "notes": [
+          "bank still matters later",
+          "good simple split"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "long",
+          "short",
+          "split"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 5",
-      "description": "Overpass T preset for numpad 5: [fake] long smoke A go B monster.",
+      "name": "Fake A to B",
+      "description": "Show A utility then end B through monster.",
       "creator": "System",
       "message": "[fake] long smoke A go B monster",
-      "meta": {}
+      "meta": {
+        "purpose": "Pull one or two defenders off B before the real hit",
+        "goodWhen": [
+          "enemy rotates quickly on A utility",
+          "monster is free to re-hit"
+        ],
+        "notes": [
+          "do not die in long fake",
+          "move fast through map"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "fake",
+          "A",
+          "B",
+          "monster"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 6",
-      "description": "Overpass T preset for numpad 6: B site smoke heaven + bridge.",
+      "name": "B site execute",
+      "description": "Commit to B with basic support smokes.",
       "creator": "System",
       "message": "B site smoke heaven + bridge",
-      "meta": {}
+      "meta": {
+        "purpose": "Cut key B support lanes and force anchor fights",
+        "goodWhen": [
+          "team has full buy utility",
+          "you already have monster or short presence"
+        ],
+        "notes": [
+          "pillar and barrels still need clearing",
+          "strong coordinated hit"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "group",
+          "smokes"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 7",
-      "description": "Overpass T preset for numpad 7: A long contact flash.",
+      "name": "A long contact",
+      "description": "Take long and pressure A without much noise.",
       "creator": "System",
       "message": "A long contact flash",
-      "meta": {}
+      "meta": {
+        "purpose": "Catch A players before full rotate call",
+        "goodWhen": [
+          "long is available",
+          "enemy bathrooms player overpeeks"
+        ],
+        "notes": [
+          "message is intentionally short",
+          "works on mixed buys too"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "long",
+          "contact"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 8",
-      "description": "Overpass T preset for numpad 8: fast B explode flash monster.",
+      "name": "Fast B burst",
+      "description": "Quick B burst through monster with flash support.",
       "creator": "System",
       "message": "fast B explode flash monster",
-      "meta": {}
+      "meta": {
+        "purpose": "Overrun B before support arrives",
+        "goodWhen": [
+          "enemy B is lightly held",
+          "you want a simple high-tempo call"
+        ],
+        "notes": [
+          "water support helps a lot",
+          "strong after quiet rounds"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "monster",
+          "burst"
+        ]
+      }
     },
     {
       "side": "T",
-      "name": "T slot 9",
-      "description": "Overpass T preset for numpad 9: hide connector till 1:00 then go A smoke truck + bank.",
+      "name": "Delayed A long",
+      "description": "Wait around connector/long and hit A after one minute.",
       "creator": "System",
       "message": "hide connector till 1:00 then go A smoke truck + bank",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish early bathroom pushes and late A under-rotation",
+        "goodWhen": [
+          "CTs push for info",
+          "enemy leaves A too early"
+        ],
+        "notes": [
+          "stay disciplined",
+          "great anti-push round"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "delay",
+          "connector",
+          "long"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Bathrooms to A",
+      "description": "Take bathrooms and finish A through map control.",
+      "creator": "System",
+      "message": "take bathrooms then long + short go A smoke truck",
+      "meta": {
+        "purpose": "Build a safer A finish around space advantage",
+        "goodWhen": [
+          "bathrooms are free",
+          "enemy A rotates slowly"
+        ],
+        "notes": [
+          "good setup into finish",
+          "watch party push timing"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "bathrooms",
+          "long",
+          "short"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Connector to B split",
+      "description": "Use connector timing with monster into B.",
+      "creator": "System",
+      "message": "2 connector 3 monster smoke heaven go B",
+      "meta": {
+        "purpose": "Hit B from multiple paths and break pillar setups",
+        "goodWhen": [
+          "connector is open",
+          "monster pressure alone stalls"
+        ],
+        "notes": [
+          "must synchronize",
+          "strong versus passive B"
+        ],
+        "difficulty": "hard",
+        "tags": [
+          "B",
+          "connector",
+          "monster",
+          "split"
+        ]
+      }
+    },
+    {
+      "side": "T",
+      "name": "Silent bathrooms A",
+      "description": "Walk bathrooms and burst A late.",
+      "creator": "System",
+      "message": "[silent] bathrooms walk then swing A smoke truck",
+      "meta": {
+        "purpose": "Catch A defenders before full rotate warning",
+        "goodWhen": [
+          "bathrooms are uncontested",
+          "enemy focuses connector/monster more"
+        ],
+        "notes": [
+          "stay quiet until contact",
+          "good mixed-buy call"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "bathrooms",
+          "silent"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 1",
-      "description": "Overpass CT preset for numpad 1: fountain control.",
+      "name": "Fountain control",
+      "description": "Contest fountain and early map space.",
       "creator": "System",
       "message": "fountain control",
-      "meta": {}
+      "meta": {
+        "purpose": "Deny easy bathroom and connector entry",
+        "goodWhen": [
+          "you have strong spawns",
+          "Ts open slowly"
+        ],
+        "notes": [
+          "do not overextend into held lines",
+          "good baseline info play"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "fountain",
+          "control"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 2",
-      "description": "Overpass CT preset for numpad 2: 3 B hold.",
+      "name": "Triple B hold",
+      "description": "Open with heavier B presence.",
       "creator": "System",
       "message": "3 B hold",
-      "meta": {}
+      "meta": {
+        "purpose": "Shut down repeated monster and short pressure",
+        "goodWhen": [
+          "Ts favor B",
+          "you have read on early B paths"
+        ],
+        "notes": [
+          "A gets lighter",
+          "rotate one out if no contact"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "hold",
+          "start"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 3",
-      "description": "Overpass CT preset for numpad 3: push monster.",
+      "name": "Monster push",
+      "description": "Push monster for early info or control.",
       "creator": "System",
       "message": "push monster",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish passive B defaults and get quick read",
+        "goodWhen": [
+          "enemy likes slow monster",
+          "you have flash support"
+        ],
+        "notes": [
+          "dangerous if held",
+          "fall back after first info"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "monster",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 4",
-      "description": "Overpass CT preset for numpad 4: A crossfire.",
+      "name": "A crossfire",
+      "description": "Layered A hold around site and support lanes.",
       "creator": "System",
       "message": "A crossfire",
-      "meta": {}
+      "meta": {
+        "purpose": "Trade well against long/short A pressure",
+        "goodWhen": [
+          "enemy favors A executes",
+          "you want safer A structure"
+        ],
+        "notes": [
+          "truck and bank roles should be clear",
+          "safe baseline"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "hold",
+          "crossfire"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 5",
-      "description": "Overpass CT preset for numpad 5: stack B.",
+      "name": "B stack",
+      "description": "Gamble extra players on B.",
       "creator": "System",
       "message": "stack B",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish repeated B site endings",
+        "goodWhen": [
+          "Ts finish B often",
+          "A pressure has been light"
+        ],
+        "notes": [
+          "A weakens",
+          "best after pattern read"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "B",
+          "stack"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 6",
-      "description": "Overpass CT preset for numpad 6: retake A.",
+      "name": "A retake",
+      "description": "Delay A and retake with utility.",
       "creator": "System",
       "message": "retake A",
-      "meta": {}
+      "meta": {
+        "purpose": "Avoid dying into truck/bank smoke sets",
+        "goodWhen": [
+          "enemy A splits are strong",
+          "A anchors get isolated often"
+        ],
+        "notes": [
+          "save utility if possible",
+          "group before retaking"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "retake"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 7",
-      "description": "Overpass CT preset for numpad 7: connector control.",
+      "name": "Connector control",
+      "description": "Use connector as a central defensive space.",
       "creator": "System",
       "message": "connector control",
-      "meta": {}
+      "meta": {
+        "purpose": "Read rotations early and deny free B split pathing",
+        "goodWhen": [
+          "enemy likes connector",
+          "you need more central info"
+        ],
+        "notes": [
+          "can be smoked off",
+          "good with fountain support"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "connector",
+          "control",
+          "mid"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 8",
-      "description": "Overpass CT preset for numpad 8: long push.",
+      "name": "Long push",
+      "description": "Take long aggressively for info.",
       "creator": "System",
       "message": "long push",
-      "meta": {}
+      "meta": {
+        "purpose": "Punish passive long starts and learn A bias fast",
+        "goodWhen": [
+          "enemy gives long often",
+          "support can trade"
+        ],
+        "notes": [
+          "do not chase too far",
+          "fall after information"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "A",
+          "long",
+          "push",
+          "info"
+        ]
+      }
     },
     {
       "side": "CT",
-      "name": "CT slot 9",
-      "description": "Overpass CT preset for numpad 9: save setup.",
+      "name": "Save setup",
+      "description": "Compact economy-conscious defense.",
       "creator": "System",
       "message": "save setup",
-      "meta": {}
+      "meta": {
+        "purpose": "Preserve rifles and avoid early isolated losses",
+        "goodWhen": [
+          "money is weak",
+          "you are down a player"
+        ],
+        "notes": [
+          "avoid solo peeks",
+          "trade together"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "save",
+          "economy"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Bathrooms passive",
+      "description": "Hold bathrooms from safer angles.",
+      "creator": "System",
+      "message": "bathrooms passive hold",
+      "meta": {
+        "purpose": "Delay A map control without risking early duel losses",
+        "goodWhen": [
+          "enemy wins fountain often",
+          "you need safer A info"
+        ],
+        "notes": [
+          "fall back before getting pinched",
+          "good economy-preserving option"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "bathrooms",
+          "hold"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Short anti-rush",
+      "description": "Prepare for fast B short pressure.",
+      "creator": "System",
+      "message": "B anti-rush short + site",
+      "meta": {
+        "purpose": "Delay a fast split toward B until rotates arrive",
+        "goodWhen": [
+          "Ts use short pressure often",
+          "your B duo has utility"
+        ],
+        "notes": [
+          "first player slows, second trades",
+          "watch monster cue too"
+        ],
+        "difficulty": "medium",
+        "tags": [
+          "B",
+          "anti-rush",
+          "short"
+        ]
+      }
+    },
+    {
+      "side": "CT",
+      "name": "Party info",
+      "description": "Use party side to learn T spread.",
+      "creator": "System",
+      "message": "party info then fall",
+      "meta": {
+        "purpose": "Get early read on bathroom/long intent safely",
+        "goodWhen": [
+          "you need A information without full push",
+          "enemy punishes fountain aggression"
+        ],
+        "notes": [
+          "do not overcommit",
+          "great with AWP support behind"
+        ],
+        "difficulty": "easy",
+        "tags": [
+          "A",
+          "party",
+          "info"
+        ]
+      }
     }
   ]
 }
