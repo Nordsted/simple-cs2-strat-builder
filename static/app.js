@@ -1,17 +1,18 @@
 const NUMPAD_KEYS = {
-  1: "KP_END",
-  2: "KP_DOWNARROW",
-  3: "KP_PGDN",
-  4: "KP_LEFTARROW",
-  5: "KP_5",
-  6: "KP_RIGHTARROW",
-  7: "KP_HOME",
-  8: "KP_UPARROW",
-  9: "KP_PGUP",
+  1: "kp_1",
+  2: "kp_2",
+  3: "kp_3",
+  4: "kp_4",
+  5: "kp_5",
+  6: "kp_6",
+  7: "kp_7",
+  8: "kp_8",
+  9: "kp_9",
 };
 
 const TEAM_CHAT_PREFIX = "say_team";
 const MAX_SLOTS = 9;
+const SUMMARY_BIND_KEY = "kp_0";
 
 const state = {
   maps: [],
@@ -395,7 +396,40 @@ function buildCommandFromState() {
     commands.push(`bind ${NUMPAD_KEYS[index + 1]} "${escapedValue}"`);
   });
 
+  const summaryCommand = buildSummaryCommand();
+  if (summaryCommand) {
+    commands.push(`bind ${SUMMARY_BIND_KEY} "${summaryCommand}"`);
+  }
+
   return commands.join("; ");
+}
+
+function buildSummaryCommand() {
+  const summaryParts = state.slots
+    .map((slot) => {
+      const title = getSlotSummaryTitle(slot);
+      if (!title) {
+        return "";
+      }
+      return `${slot.slotNumber}. ${title}`;
+    })
+    .filter(Boolean);
+
+  if (!summaryParts.length) {
+    return "";
+  }
+
+  return `${TEAM_CHAT_PREFIX} ${summaryParts.join(" | ")}`.replaceAll('"', "'");
+}
+
+function getSlotSummaryTitle(slot) {
+  if (slot.strategy?.name) {
+    return normalizeCommand(slot.strategy.name);
+  }
+  if (slot.message) {
+    return normalizeCommand(slot.message);
+  }
+  return "";
 }
 
 function normalizeCommand(value) {

@@ -1,6 +1,6 @@
 # CS2 Chat Strat Builder
 
-A lightweight web app for Counter-Strike 2 strategies in team chat. Users can choose a map, pick a side, select a strategy, and generate one combined console command with binds for numpad 1-9.
+A lightweight web app for Counter-Strike 2 strategies in team chat. Users can choose a map, pick a side, select a strategy, and generate one combined console command with binds for numpad 1-9 plus a `kp_0` summary bind.
 
 ## Tech stack
 
@@ -14,7 +14,8 @@ This stack is intentionally small to keep CPU, RAM, and disk usage low, making i
 ## Features
 
 - Filter strategies by map and side (`T` or `CT`).
-- Generate one chained CS2 command with `bind` commands for numpad 1-9.
+- Generate one chained CS2 command with `bind` commands for `kp_1`-`kp_9`.
+- Add a `kp_0` bind that posts a numbered summary of the selected strat titles in team chat.
 - Copy the command to the clipboard.
 - Open a selectable fallback view when clipboard access is unavailable.
 - Save your own community strategies into SQLite.
