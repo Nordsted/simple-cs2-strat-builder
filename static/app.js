@@ -343,18 +343,15 @@ function renderInlinePicker(slotNumber) {
     ? optionCards
     : `
       <div class="slot-empty-state">
-        No strategies are available for this map and side yet. You can still type a custom message.
+        No strats for this map/side.
       </div>
     `;
 
   return `
     <section class="slot-picker-panel" aria-label="Strategy picker for numpad ${slotNumber}">
-      <div class="slot-picker-panel-header">
-        <h4>Pick a strategy for numpad ${slotNumber}</h4>
-        <div class="slot-picker-panel-actions">
-          <button type="button" class="ghost-button" data-picker-clear="${slotNumber}">Clear slot</button>
-          <button type="button" class="ghost-button" data-picker-close="${slotNumber}">Done</button>
-        </div>
+      <div class="slot-picker-panel-actions">
+        <button type="button" class="ghost-button" data-picker-clear="${slotNumber}">Clear</button>
+        <button type="button" class="ghost-button" data-picker-close="${slotNumber}">Close</button>
       </div>
       <div class="slot-dialog-options">
         ${emptyState}
