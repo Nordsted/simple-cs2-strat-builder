@@ -5,5 +5,4 @@ RUN adduser -D -u 10001 appuser && mkdir -p /app/data && chown -R appuser:appuse
 USER appuser
 EXPOSE 8080
 ENV PORT=8080 DATABASE_PATH=/app/data/strats.db
-VOLUME ["/app/data"]
 CMD ["python3", "app.py"]

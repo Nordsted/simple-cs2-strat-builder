@@ -82,7 +82,7 @@ python3 app.py
 
 and use `GET /healthz` as the deployment health check.
 
-If you create a persistent Railway volume, set `DATABASE_PATH` to a file inside that mounted volume so community strategies survive redeploys.
+If you create a persistent Railway volume, set `DATABASE_PATH` to a file inside that mounted volume so community strategies survive redeploys. The local `Dockerfile` no longer declares a Docker `VOLUME`, because Railway requires platform-managed volumes instead.
 
 ## Raspberry Pi notes
 
