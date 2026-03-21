@@ -296,25 +296,40 @@ class AppHandler(SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, HEAD")
         super().end_headers()
 
     def do_OPTIONS(self):
         self.send_response(HTTPStatus.NO_CONTENT)
         self.end_headers()
 
+    def do_HEAD(self):
+        if self.handle_json_get(send_body=False):
+            return
+        if urlparse(self.path).path == "/":
+            self.path = "/index.html"
+        return super().do_HEAD()
+
     def do_GET(self):
-        parsed = urlparse(self.path)
-        if parsed.path == "/healthz":
-            return self.write_json({"status": "ok"})
-        if parsed.path == "/api/data":
-            with get_connection() as conn:
-                return self.write_json(
-                    {"maps": list_maps(conn), "strategies": list_strategies(conn)}
-                )
-        if parsed.path == "/":
+        if self.handle_json_get(send_body=True):
+            return
+        if urlparse(self.path).path == "/":
             self.path = "/index.html"
         return super().do_GET()
+
+    def handle_json_get(self, send_body):
+        parsed = urlparse(self.path)
+        if parsed.path == "/healthz":
+            self.write_json({"status": "ok"}, send_body=send_body)
+            return True
+        if parsed.path == "/api/data":
+            with get_connection() as conn:
+                self.write_json(
+                    {"maps": list_maps(conn), "strategies": list_strategies(conn)},
+                    send_body=send_body,
+                )
+            return True
+        return False
 
     def do_POST(self):
         parsed = urlparse(self.path)
@@ -335,13 +350,14 @@ class AppHandler(SimpleHTTPRequestHandler):
         except ValueError as error:
             self.write_json({"error": str(error)}, status=HTTPStatus.BAD_REQUEST)
 
-    def write_json(self, payload, status=HTTPStatus.OK):
+    def write_json(self, payload, status=HTTPStatus.OK, send_body=True):
         body = json.dumps(payload).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
-        self.wfile.write(body)
+        if send_body:
+            self.wfile.write(body)
 
 
 def create_server():

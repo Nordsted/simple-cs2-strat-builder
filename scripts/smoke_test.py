@@ -91,15 +91,14 @@ def main():
                 "side": "CT",
                 "name": "A fast rotate",
                 "description": "Rotate quickly and call the crossfire.",
-                "bindings": {
-                    "1": "say_team smoke short",
-                    "2": "say_team flash site",
-                },
+                "message": "smoke short then flash site",
+                "meta": {"origin": "smoke-test"},
             },
         )
         assert status == 201
         assert created["source"] == "database"
-        assert "bind KP_END" in created["command"]
+        assert created["message"] == "smoke short then flash site"
+        assert created["meta"] == {"origin": "smoke-test"}
     finally:
         process.terminate()
         try:

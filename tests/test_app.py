@@ -1,7 +1,11 @@
 import json
 import tempfile
+import threading
 import unittest
+import urllib.request
 from pathlib import Path
+
+from http.server import ThreadingHTTPServer
 
 import app
 
@@ -79,6 +83,36 @@ class AppTestCase(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             app.read_strategy_seed(invalid_file)
+
+    def test_health_endpoint_supports_get_and_head(self):
+        self.write_seed(
+            "mirage.json",
+            {
+                "mapSlug": "mirage",
+                "mapName": "Mirage",
+                "strategies": [],
+            },
+        )
+        app.init_db()
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), app.AppHandler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+
+        try:
+            base_url = f"http://127.0.0.1:{server.server_port}"
+            with urllib.request.urlopen(f"{base_url}/healthz", timeout=5) as response:
+                self.assertEqual(response.status, 200)
+                self.assertEqual(json.loads(response.read().decode("utf-8")), {"status": "ok"})
+
+            request = urllib.request.Request(f"{base_url}/healthz", method="HEAD")
+            with urllib.request.urlopen(request, timeout=5) as response:
+                self.assertEqual(response.status, 200)
+                self.assertEqual(response.read(), b"")
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
 
     def test_init_db_seeds_message_first_schema_and_serializes_meta(self):
         self.write_seed(
